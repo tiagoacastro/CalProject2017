@@ -22,3 +22,17 @@ vector <string> Parser::readLines(string file)
 		return lines;
 	}
 
+vector <SharingSpot> Parser::readSharingSpots(string file)
+{
+	return NULL;
+}
+
+vector <Node> Parser::readNodes(string file)
+{
+	return NULL;
+}
+
+vector <Street> Parser::readStreets(string file)
+{
+	return NULL;
+}

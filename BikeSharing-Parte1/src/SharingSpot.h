@@ -1,14 +1,14 @@
-/*
- * SharingSpot.h
- *
- *  Created on: 24/03/2018
- *      Author: ricar
- */
 
 #ifndef SHARINGSPOT_H_
 #define SHARINGSPOT_H_
 
 class SharingSpot {
+
+private:
+
+public:
+	SharingSpot();
+	~SharingSpot();
 };
 
 #endif /* SHARINGSPOT_H_ */

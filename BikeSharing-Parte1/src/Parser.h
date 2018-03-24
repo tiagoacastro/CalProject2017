@@ -13,6 +13,10 @@
 #include <string>
 #include <fstream>
 
+#include "SharingSpot.h"
+#include "Node.h"
+#include "Street.h"
+
 using namespace std;
 
 class Parser {
@@ -21,7 +25,9 @@ class Parser {
 		static vector <string> readLines(string file); //Reads lines from file and stores it in a vector.
 
 	public:
-		//functions to read each file.
+		static vector <SharingSpot> readSharingSpots(string file);
+		static vector <Node> readNodes(string file);
+		static vector <Street> readStreets(string file);
 };
 
 
