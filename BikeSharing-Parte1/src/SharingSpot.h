@@ -1,8 +1,9 @@
+#include "Node.h"
 
 #ifndef SHARINGSPOT_H_
 #define SHARINGSPOT_H_
 
-class SharingSpot {
+class SharingSpot: public Node{
 
 private:
 

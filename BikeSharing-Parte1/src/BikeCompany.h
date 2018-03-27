@@ -4,6 +4,7 @@
 #include "Node.h"
 #include "Street.h"
 #include "SharingSpot.h"
+#include <vector>
 
 using namespace std;
 
