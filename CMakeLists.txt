@@ -16,4 +16,4 @@ add_executable(CalProject2017
         BikeSharing-Parte1/src/SharingSpot.cpp
         BikeSharing-Parte1/src/SharingSpot.h
         BikeSharing-Parte1/src/Street.cpp
-        BikeSharing-Parte1/src/Street.h)
+        BikeSharing-Parte1/src/Street.h BikeSharing-Parte1/src/User.cpp BikeSharing-Parte1/src/User.h)
