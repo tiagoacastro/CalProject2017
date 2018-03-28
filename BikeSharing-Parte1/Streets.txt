@@ -1,0 +1,54 @@
+23824629;Avenida Marginal;True
+24005211;Passeio Dom Luís I;True
+28206150;Avenida Valbom;False
+28206157;Rua José Félix de Moura e Lima;False
+28206167;Travessa da Ressureição;False
+28206175;Rua da Saudade;False
+28206176;Rua Fernandez Thomaz;False
+28206184;Largo Mestre Henrique Anjos;False
+28286179;Rua das Flôres;False
+28286264;Rua da Palmeira;False
+30009197;Rua Afonso Sanches;False
+30009199;Rua Visconde da Luz;False
+30009200;Rua Manuel Joaquim de Avelar;False
+30010127;Avenida Combatentes da Grande Guerra;True
+30010128;Rua Alexandre Herculano;False
+30010129;Rua Nova da Alfarrobeira;True
+52105595;Largo Doutor Passos Vela;True
+52105598;Largo do Prior;True
+95418185;Rua do Gama;True
+95418228;Travessa do Prior;True
+99963986;Rua da Bela Vista;True
+99963992;Travessa da Alfarrobeira;False
+99964002;;False
+99964037;;False
+99964055;Travessa do Poço Novo;False
+99964057;Rua Afonso Sanches;False
+99964060;;False
+99964069;;False
+99964082;Beco do Poço Novo;False
+99964087;Travessa do Visconde da Luz;False
+99964095;Beco dos Inválidos;False
+99964100;Rua Carlos Ribeiro;True
+99964140;Rua Nova da Alfarrobeira;True
+99964144;Rua do Poço Novo;False
+117169197;Travessa da Conceição;False
+117169204;;False
+134923758;Travessa dos Navegantes;False
+147322668;Rua Fernandez Thomaz;False
+147322682;;False
+147322685;;False
+184418704;;False
+184418705;Rua Latino Coelho;False
+185651270;Largo do Prior;False
+194537557;;False
+194537559;Rua dos Navegantes;False
+194537560;Travessa do Colégio;False
+194547894;;False
+194547896;Beco dos Inválidos;False
+202981577;Largo Mestre Henrique Anjos;False
+202981578;Rua Alexandre Herculano;False
+202981583;Rua do Poço Novo;False
+495845264;;False
+564675739;Rua Frederico Arouca;False
+564675741;Rua da Saudade;False

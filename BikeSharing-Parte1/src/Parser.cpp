@@ -11,61 +11,80 @@
 
 using namespace std;
 
-vector <string> Parser::readLines(string file)
-	{
-		vector<string> lines;
+vector <string> Parser::readLines(string file) {
+    vector<string> lines;
+    string line;
 
-		ifstream inFile(file.c_str());
-		if (inFile.is_open()) {
-			string line;
-
-			while (getline(inFile, line))
-				lines.push_back(line);
-			inFile.close();
-		}
-		return lines;
-	}
+    ifstream inFile(file);
+    if (inFile.is_open()) {
+        while (getline(inFile, line)) {
+            lines.push_back(line);
+        }
+        inFile.close();
+    }
+    return lines;
+}
 
 SharingSpot Parser::createSharingSpot(string &line){
 
 }
 
 Node Parser::createNode(string &line) {
-    int id;
+    unsigned long long int id;
     double latitude, longitude;
     double latRadians, longRadians;
 
     try { next(id, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the SharingSpot data in the correct format.\n";
-        return nullptr;
+        cout << "Please insert the Node data in the correct format.\n";
     }
 
     try { next(latitude, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the SharingSpot data in the correct format.\n";
-        return nullptr;
+        cout << "Please insert the Node data in the correct format.\n";
     }
 
     try { next(longitude, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the SharingSpot data in the correct format.\n";
-        return nullptr;
+        cout << "Please insert the Node data in the correct format.\n";
     }
 
     try { next(longRadians, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the SharingSpot data in the correct format.\n";
-        return nullptr;
+        cout << "Please insert the Node data in the correct format.\n";
     }
 
     latRadians = stod(line);
 
-    //Constructor
+    Node n(id,latRadians,longRadians);
+
+    return n;
+}
+
+Street Parser::createStreet(string &line) {
+
+    unsigned long long int id;
+    string name , bothways;
+
+    try { next(id, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Street data in the correct format.\n";
+    }
+
+    try { next(name, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Street data in the correct format.\n";
+    }
+
+    try { next(bothways, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Street data in the correct format.\n";
+    }
+
+    Street s(id,name,true);
+    if (bothways == "False")
+        s.setTwoWays(false);
+    return s;
 }
 
 vector <SharingSpot> Parser::readSharingSpots(string file)
 {
 }
 
-vector <Node> Parser::readNodes(string file)
-{
+vector <Node> Parser::readNodes(string file) {
     vector<string> lines = readLines(file);
     vector <Node> nodes;
 
@@ -76,10 +95,16 @@ vector <Node> Parser::readNodes(string file)
     return nodes;
 }
 
-vector <Street> Parser::readStreets(string file)
-{
-    vector<Street> s;
-	return s;
+vector <Street> Parser::readStreets(string file) {
+
+    vector<string> lines = readLines(file);
+    vector <Street> streets;
+
+    for (auto &line : lines) {
+        streets.push_back(createStreet(line));
+    }
+
+    return streets;
 }
 
 void Parser::next(string &piece, string &line, string separator) {
@@ -93,7 +118,7 @@ void Parser::next(string &piece, string &line, string separator) {
     }
 }
 
-void Parser::next(int &elem,string &piece, string separator) {
+void Parser::next(unsigned long long int &elem,string &piece, string separator) {
 
     string elemstring;
     size_t i;
@@ -101,7 +126,7 @@ void Parser::next(int &elem,string &piece, string separator) {
     next(elemstring, piece, separator);
     try {
 
-        elem = stoi(elemstring, &i);
+        elem = stoull(elemstring, &i);
 
     } catch (std::invalid_argument &i) {
         err = true;

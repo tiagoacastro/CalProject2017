@@ -27,12 +27,15 @@ class Parser {
 		vector <string> readLines(string file); //Reads lines from file and stores it in a vector.
 
 	public:
+		Parser() {};
         vector <SharingSpot> readSharingSpots(string file);
 		vector <Node> readNodes(string file);
 		vector <Street> readStreets(string file);
 
         SharingSpot createSharingSpot(string &line);
+
         Node createNode(string &line);
+		Street createStreet(string &line);
 
     /**
         * @brief separates string based on the separator
@@ -40,7 +43,7 @@ class Parser {
         * @param piece string &piece
         * @param separator string separator
         */
-        void next(int &elem, string &piece, string separator);
+        void next(unsigned long long int &elem, string &piece, string separator);
 
         void next(double &elem, string &piece, string separator);
 

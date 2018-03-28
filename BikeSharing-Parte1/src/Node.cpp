@@ -1,11 +1,17 @@
 
 #include "Node.h"
 
+Node::Node(unsigned long long int id, double latitude, double longitude){
+    this->id = id;
+    this->latitude = latitude;
+    this->longitude = longitude;
+}
+
 unsigned int Node::getId() const {
     return id;
 }
 
-void Node::setId(unsigned int id) {
+void Node::setId(unsigned long id) {
     Node::id = id;
 }
 

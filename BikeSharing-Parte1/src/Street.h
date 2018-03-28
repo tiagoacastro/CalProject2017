@@ -9,7 +9,7 @@ class Street
 {
 
 private:
-    unsigned int id;
+    unsigned long long int id;
     string name;
     bool twoWays;
     double slope;
@@ -17,10 +17,10 @@ private:
 	Node* node2;
 
 public:
-	Street();
-	~Street();
-    unsigned int getId() const;
-    void setId(unsigned int id);
+	Street() {};
+	Street(unsigned long long int id, string name, bool twoWays);
+    unsigned long long int getId() const;
+    void setId(unsigned long long int id);
     const string &getName() const;
     void setName(const string &name);
     bool isTwoWays() const;
