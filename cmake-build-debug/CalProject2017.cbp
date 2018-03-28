@@ -116,6 +116,18 @@
 		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/Street.h">
 			<Option target="CalProject2017"/>
 		</Unit>
+		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/User.cpp">
+			<Option target="CalProject2017"/>
+		</Unit>
+		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/User.h">
+			<Option target="CalProject2017"/>
+		</Unit>
+		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/exceptions.cpp">
+			<Option target="CalProject2017"/>
+		</Unit>
+		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/exceptions.h">
+			<Option target="CalProject2017"/>
+		</Unit>
 		<Unit filename="C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/BikeSharing-Parte1/src/main.cpp">
 			<Option target="CalProject2017"/>
 		</Unit>

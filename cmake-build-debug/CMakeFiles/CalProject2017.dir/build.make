@@ -224,6 +224,54 @@ CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj.provides: CM
 CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj.provides.build: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj
 
 
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj: CMakeFiles/CalProject2017.dir/flags.make
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj: ../BikeSharing-Parte1/src/exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\exceptions.cpp.obj -c C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\exceptions.cpp
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\exceptions.cpp > CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\exceptions.cpp.i
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\exceptions.cpp -o CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\exceptions.cpp.s
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.requires:
+
+.PHONY : CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.requires
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.provides: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.provides.build
+.PHONY : CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.provides
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.provides.build: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj
+
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj: CMakeFiles/CalProject2017.dir/flags.make
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj: ../BikeSharing-Parte1/src/User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\User.cpp.obj -c C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\User.cpp
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\User.cpp > CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\User.cpp.i
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\BikeSharing-Parte1\src\User.cpp -o CMakeFiles\CalProject2017.dir\BikeSharing-Parte1\src\User.cpp.s
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.requires:
+
+.PHONY : CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.requires
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.provides: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.provides.build
+.PHONY : CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.provides
+
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.provides.build: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj
+
+
 # Object files for target CalProject2017
 CalProject2017_OBJECTS = \
 "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/BikeCompany.cpp.obj" \
@@ -232,7 +280,9 @@ CalProject2017_OBJECTS = \
 "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Node.cpp.obj" \
 "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Parser.cpp.obj" \
 "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/SharingSpot.cpp.obj" \
-"CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj"
+"CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj" \
+"CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj" \
+"CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj"
 
 # External object files for target CalProject2017
 CalProject2017_EXTERNAL_OBJECTS =
@@ -244,11 +294,13 @@ CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Node.cp
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Parser.cpp.obj
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/SharingSpot.cpp.obj
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj
+CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj
+CalProject2017.exe: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/build.make
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/linklibs.rsp
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/objects1.rsp
 CalProject2017.exe: CMakeFiles/CalProject2017.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable CalProject2017.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tiago\Desktop\Faculdade\CAL\CalProject2017\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CalProject2017.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CalProject2017.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -263,6 +315,8 @@ CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharin
 CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Parser.cpp.obj.requires
 CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/SharingSpot.cpp.obj.requires
 CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj.requires
+CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj.requires
+CMakeFiles/CalProject2017.dir/requires: CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj.requires
 
 .PHONY : CMakeFiles/CalProject2017.dir/requires
 

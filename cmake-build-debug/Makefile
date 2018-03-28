@@ -284,6 +284,60 @@ BikeSharing-Parte1/src/Street.cpp.s:
 	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.s
 .PHONY : BikeSharing-Parte1/src/Street.cpp.s
 
+BikeSharing-Parte1/src/User.obj: BikeSharing-Parte1/src/User.cpp.obj
+
+.PHONY : BikeSharing-Parte1/src/User.obj
+
+# target to build an object file
+BikeSharing-Parte1/src/User.cpp.obj:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj
+.PHONY : BikeSharing-Parte1/src/User.cpp.obj
+
+BikeSharing-Parte1/src/User.i: BikeSharing-Parte1/src/User.cpp.i
+
+.PHONY : BikeSharing-Parte1/src/User.i
+
+# target to preprocess a source file
+BikeSharing-Parte1/src/User.cpp.i:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.i
+.PHONY : BikeSharing-Parte1/src/User.cpp.i
+
+BikeSharing-Parte1/src/User.s: BikeSharing-Parte1/src/User.cpp.s
+
+.PHONY : BikeSharing-Parte1/src/User.s
+
+# target to generate assembly for a file
+BikeSharing-Parte1/src/User.cpp.s:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.s
+.PHONY : BikeSharing-Parte1/src/User.cpp.s
+
+BikeSharing-Parte1/src/exceptions.obj: BikeSharing-Parte1/src/exceptions.cpp.obj
+
+.PHONY : BikeSharing-Parte1/src/exceptions.obj
+
+# target to build an object file
+BikeSharing-Parte1/src/exceptions.cpp.obj:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj
+.PHONY : BikeSharing-Parte1/src/exceptions.cpp.obj
+
+BikeSharing-Parte1/src/exceptions.i: BikeSharing-Parte1/src/exceptions.cpp.i
+
+.PHONY : BikeSharing-Parte1/src/exceptions.i
+
+# target to preprocess a source file
+BikeSharing-Parte1/src/exceptions.cpp.i:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.i
+.PHONY : BikeSharing-Parte1/src/exceptions.cpp.i
+
+BikeSharing-Parte1/src/exceptions.s: BikeSharing-Parte1/src/exceptions.cpp.s
+
+.PHONY : BikeSharing-Parte1/src/exceptions.s
+
+# target to generate assembly for a file
+BikeSharing-Parte1/src/exceptions.cpp.s:
+	$(MAKE) -f CMakeFiles\CalProject2017.dir\build.make CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.s
+.PHONY : BikeSharing-Parte1/src/exceptions.cpp.s
+
 BikeSharing-Parte1/src/main.obj: BikeSharing-Parte1/src/main.cpp.obj
 
 .PHONY : BikeSharing-Parte1/src/main.obj
@@ -338,6 +392,12 @@ help:
 	@echo ... BikeSharing-Parte1/src/Street.obj
 	@echo ... BikeSharing-Parte1/src/Street.i
 	@echo ... BikeSharing-Parte1/src/Street.s
+	@echo ... BikeSharing-Parte1/src/User.obj
+	@echo ... BikeSharing-Parte1/src/User.i
+	@echo ... BikeSharing-Parte1/src/User.s
+	@echo ... BikeSharing-Parte1/src/exceptions.obj
+	@echo ... BikeSharing-Parte1/src/exceptions.i
+	@echo ... BikeSharing-Parte1/src/exceptions.s
 	@echo ... BikeSharing-Parte1/src/main.obj
 	@echo ... BikeSharing-Parte1/src/main.i
 	@echo ... BikeSharing-Parte1/src/main.s

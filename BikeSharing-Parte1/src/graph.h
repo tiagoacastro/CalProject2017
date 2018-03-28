@@ -8,6 +8,8 @@
 #include <queue>
 #include <stdio.h>
 #include <climits>
+#include <iostream>
+#include "MutablePriorityQueue.h"
 using namespace std;
 
 template <class T> class Edge;

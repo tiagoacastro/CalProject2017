@@ -78,7 +78,8 @@ vector <Node> Parser::readNodes(string file)
 
 vector <Street> Parser::readStreets(string file)
 {
-	return NULL;
+    vector<Street> s;
+	return s;
 }
 
 void Parser::next(string &piece, string &line, string separator) {

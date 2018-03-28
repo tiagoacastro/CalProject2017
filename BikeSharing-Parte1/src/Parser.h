@@ -32,7 +32,7 @@ class Parser {
 		vector <Street> readStreets(string file);
 
         SharingSpot createSharingSpot(string &line);
-        Node createNode(string &line)
+        Node createNode(string &line);
 
     /**
         * @brief separates string based on the separator

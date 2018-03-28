@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Parser.cpp.obj"
   "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/SharingSpot.cpp.obj"
   "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/Street.cpp.obj"
+  "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj"
+  "CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj"
   "CalProject2017.pdb"
   "CalProject2017.exe"
   "CalProject2017.exe.manifest"
