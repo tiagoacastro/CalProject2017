@@ -2,6 +2,7 @@
 #define STREET_H_
 
 #include <string>
+#include "Node.h"
 using namespace std;
 
 class Street
@@ -12,6 +13,8 @@ private:
     string name;
     bool twoWays;
     double slope;
+	Node* node1;
+	Node* node2;
 
 public:
 	Street();

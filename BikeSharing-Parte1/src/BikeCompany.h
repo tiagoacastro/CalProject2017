@@ -23,7 +23,7 @@ public:
 	~BikeCompany ();
 
 	// "Get" functions
-    Graph getGraph() {return this->graph;}
+    Graph<Node> getGraph() {return this->graph;}
 	vector<Node> getNodes() {return this->nodes;}
 	vector<Street> getStreets() {return this->streets;}
 	vector<SharingSpot> getSharingSpots() {return this->sharingSpots;}
