@@ -28,26 +28,67 @@ class Parser {
 		vector <string> readLines(string file); //Reads lines from file and stores it in a vector.
 
 	public:
+		/**
+		 * @brief default constructor of a Parser object
+		 */
 		Parser() {};
+		/**
+		 * @brief Returns a vector with all the SharingSpots created from the file passed as argument
+		 * @param file string
+		 * @return vector <SharingSpot>
+		 */
         vector <SharingSpot> readSharingSpots(string file);
+		/**
+		 * @brief Returns a vector with all the nodes after being created from the data read from the file with the name passed as parameter
+		 * @param file string
+		 * @return vector <Node>
+		 */
 		vector <Node> readNodes(string file);
+		/**
+		 * @brief Returns a vector with all the streets after being created from the data read from the file with the name passed as parameter
+		 * @param file string
+		 * @return vector <Street>
+		 */
 		vector <Street> readStreets(string file);
+		/**
+		 * @brief Returns a vector with all the relations after being created from the data read from the file with the name passed as parameter
+		 * @param file string
+		 * @return vector <Relation>
+		 */
 		vector <Relation> readRelations(string file);
 
-        SharingSpot createSharingSpot(string &line);
-
+		/**
+		 * Auxiliary function that creates and returns a Node based on the data in the line
+		 * @param line
+		 * @return Node
+		 */
         Node createNode(string &line);
+	 	 /**
+		 * Auxiliary function that creates and returns a Street based on the data in the line
+		 * @param line
+		 * @return Street
+		 */
 		Street createStreet(string &line);
+		 /**
+		 * Auxiliary function that creates and returns a Relation based on the data in the line
+		 * @param line
+		 * @return Relation
+		 */
 		Relation createRelation(string &line);
 
    		/**
         * @brief separates string based on the separator
-        * @param elem int &elem
+        * @param elem unsigned long long int &elem
         * @param piece string &piece
         * @param separator string separator
         */
         void next(unsigned long long int &elem, string &piece, string separator);
-
+		/**
+        * @brief separates string based on the separator
+        * @param elem double &elem
+        * @param piece string &piece
+        * @param separator string separator
+        */
         void next(double &elem, string &piece, string separator);
 
         /**

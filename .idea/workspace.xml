@@ -23,12 +23,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="BikeCompany.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Relation.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/Relation.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="326">
               <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BikeCompany.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="903">
+              <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+              <folding>
+                <element signature="e#47#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,21 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Parser.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+            <state relative-caret-position="1539">
+              <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
               <folding>
                 <element signature="e#110#127#0" expanded="true" />
               </folding>
@@ -133,12 +145,12 @@
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/SharingSpot.h" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Street.cpp" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Street.h" />
-        <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.h" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Relation.h" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Relation.cpp" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.cpp" />
         <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/main.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.h" />
       </list>
     </option>
   </component>
@@ -180,6 +192,12 @@
               <item name="CalProject2017" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CAL-PROJECT1" type="462c0819:PsiDirectoryNode" />
               <item name="BikeSharing-Parte1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CalProject2017" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="CAL-PROJECT1" type="462c0819:PsiDirectoryNode" />
+              <item name="BikeSharing-Parte1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -239,12 +257,12 @@
       <workItem from="1522252632983" duration="403000" />
       <workItem from="1522270686570" duration="7805000" />
       <workItem from="1522329717078" duration="4904000" />
-      <workItem from="1522345697477" duration="2303000" />
+      <workItem from="1522345697477" duration="6174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17796000" />
+    <option name="totallyTimeSpent" value="21667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -474,29 +492,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/SharingSpot.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding>
-            <element signature="e#47#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,16 +537,6 @@
         <state relative-caret-position="-126">
           <caret line="26" column="52" lean-forward="false" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
-          <folding>
-            <element signature="e#110#127#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,6 +584,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -602,11 +600,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/Parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="87" column="28" lean-forward="false" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+          <folding>
+            <element signature="e#110#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BikeSharing-Parte1/src/BikeCompany.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="903">
+          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding>
+            <element signature="e#47#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
