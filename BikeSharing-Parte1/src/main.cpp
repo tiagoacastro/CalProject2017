@@ -10,6 +10,7 @@ int main()
     vector <Node> nodes = p.readNodes("C:\\Users\\jonas\\Desktop\\CAL-PROJECT\\BikeSharing-Parte1\\Nodes.txt");
     vector <Street> streets = p.readStreets("C:\\Users\\jonas\\Desktop\\CAL-PROJECT\\BikeSharing-Parte1\\Streets.txt");
 
+
     cout << "done";
 
     return 0;

@@ -1,17 +1,15 @@
 #include "User.h"
 
-unsigned int User::getId() const {
-    return id;
+User::User(PaymentMethod paymentMethod, string paymentInformation){
+    this->paymentMethod = paymentMethod;
+    this->paymentInformation = paymentInformation;
 }
 
-void User::setId(unsigned int id) {
-    User::id = id;
+const PaymentMethod &User::getPaymentMethod() const {
+    return paymentMethod;
 }
 
-const string &User::getPayingMethod() const {
-    return payingMethod;
+const string &User::getPaymentInformation() const {
+    return paymentInformation;
 }
 
-void User::setPayingMethod(const string &payingMethod) {
-    User::payingMethod = payingMethod;
-}

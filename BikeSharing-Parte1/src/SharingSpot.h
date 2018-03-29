@@ -9,10 +9,16 @@ private:
 	bool freeSpot;
 
 public:
-	SharingSpot();
-	~SharingSpot();
+	/**
+	 * Sharing spot constructor (wether it is free or not is calculated here)
+	 * @param n		node where the sharing spot will be placed
+	 */
+	explicit SharingSpot(Node n);
+	/**
+    * Getter which returns wether the sharing spot is free or not
+    * @return if the spot is free or not
+    */
     bool isFreeSpot() const;
-    void setFreeSpot(bool freeSpot);
 };
 
 #endif /* SHARINGSPOT_H_ */

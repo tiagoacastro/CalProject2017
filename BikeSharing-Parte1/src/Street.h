@@ -17,16 +17,38 @@ private:
 	Node* node2;
 
 public:
-	Street() {};
+	/**
+	 * Street constructor where the slope is randomly calculated
+	 * @param id 		street id
+	 * @param name  	street name
+	 * @param twoWays	flag that checks if the street is both ways
+	 */
 	Street(unsigned long long int id, string name, bool twoWays);
+	/**
+	 * Getter which returns the street id
+	 * @return id
+	 */
     unsigned long long int getId() const;
-    void setId(unsigned long long int id);
+	/**
+	 * Getter which returns the street name
+	 * @return name
+	 */
     const string &getName() const;
-    void setName(const string &name);
+	/**
+	 * Getter which returns the flag that says if the street is both ways
+	 * @return two ways flag
+	 */
     bool isTwoWays() const;
-    void setTwoWays(bool twoWays);
+	/**
+	 * Getter which returns the street slope
+	 * @return slope
+	 */
     double getSlope() const;
-    void setSlope(double slope);
+	/**
+	 * Setter which sets the twoWays flag
+	 * @param twoWays  		value to wich the twoWays flag will be changed
+	 */
+	void setTwoWays(bool twoWays);
 };
 
 

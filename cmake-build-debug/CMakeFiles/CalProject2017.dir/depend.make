@@ -37,5 +37,10 @@ CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/User.cpp.obj: ../BikeSharin
 CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj: ../BikeSharing-Parte1/src/exceptions.cpp
 CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/exceptions.cpp.obj: ../BikeSharing-Parte1/src/exceptions.h
 
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/Node.h
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/Parser.h
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/SharingSpot.h
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/Street.h
+CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/exceptions.h
 CMakeFiles/CalProject2017.dir/BikeSharing-Parte1/src/main.cpp.obj: ../BikeSharing-Parte1/src/main.cpp
 

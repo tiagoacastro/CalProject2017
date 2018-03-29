@@ -10,14 +10,32 @@ protected:
     double latitude;
 
 public:
-    Node(unsigned long long int id, double latitude, double longitude);
+    /**
+    * Node default constructor
+    */
     Node(){};
+    /**
+	 * Node constructor
+	 * @param id 		    node id
+	 * @param latitude  	node latitude
+	 * @param longitude 	node longitude
+	 */
+    Node(unsigned long long int id, double latitude, double longitude);
+    /**
+	 * Getter which returns the node id
+	 * @return id
+	 */
     unsigned int getId() const;
-    void setId(unsigned long id);
+    /**
+	 * Getter which returns the node Longitude
+	 * @return longitude
+	 */
     double getLongitude() const;
-    void setLongitude(double longitude);
+    /**
+	 * Getter which returns the node Latitude
+	 * @return latitude
+	 */
     double getLatitude() const;
-    void setLatitude(double latitude);
 };
 
 #endif /* NODE_H_ */
