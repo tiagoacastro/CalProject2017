@@ -80,8 +80,25 @@ Street Parser::createStreet(string &line) {
     return s;
 }
 
-vector <SharingSpot> Parser::readSharingSpots(string file)
-{
+Relation Parser::createRelation(string &line) {
+
+    unsigned long long int roadID, node1ID, node2ID;
+
+    try { next(roadID, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Relation data in the correct format.\n";
+    }
+
+    try { next(node1ID, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Relation data in the correct format.\n";
+    }
+
+    try { next(node2ID, line, ";"); } catch (InvalidFormat) {
+        cout << "Please insert the Relation data in the correct format.\n";
+    }
+
+    Relation r(roadID,node1ID,node2ID);
+
+    return r;
 }
 
 vector <Node> Parser::readNodes(string file) {
@@ -106,6 +123,20 @@ vector <Street> Parser::readStreets(string file) {
 
     return streets;
 }
+
+vector <Relation> Parser::readRelations(string file) {
+
+    vector<string> lines = readLines(file);
+    vector <Relation> relations;
+
+    for (auto &line : lines) {
+        relations.push_back(createRelation(line));
+    }
+
+    return relations;
+}
+
+//Helper Functions
 
 void Parser::next(string &piece, string &line, string separator) {
     int temp = line.find_first_of(separator);

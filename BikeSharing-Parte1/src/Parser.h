@@ -17,6 +17,7 @@
 #include "SharingSpot.h"
 #include "Node.h"
 #include "Street.h"
+#include "Relation.h"
 #include "exceptions.h"
 
 using namespace std;
@@ -31,11 +32,13 @@ class Parser {
         vector <SharingSpot> readSharingSpots(string file);
 		vector <Node> readNodes(string file);
 		vector <Street> readStreets(string file);
+		vector <Relation> readRelations(string file);
 
         SharingSpot createSharingSpot(string &line);
 
         Node createNode(string &line);
 		Street createStreet(string &line);
+		Relation createRelation(string &line);
 
    		/**
         * @brief separates string based on the separator
