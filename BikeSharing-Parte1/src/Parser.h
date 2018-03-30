@@ -31,13 +31,7 @@ class Parser {
 		/**
 		 * @brief default constructor of a Parser object
 		 */
-		Parser() {};
-		/**
-		 * @brief Returns a vector with all the SharingSpots created from the file passed as argument
-		 * @param file string
-		 * @return vector <SharingSpot>
-		 */
-        vector <SharingSpot> readSharingSpots(string file);
+		Parser() = default;
 		/**
 		 * @brief Returns a vector with all the nodes after being created from the data read from the file with the name passed as parameter
 		 * @param file string
@@ -99,7 +93,7 @@ class Parser {
         */
         void next(string &piece, string &line, string separator);
 
-    /**
+        /**
         * @brief checks if input is valid
         * @param s string &s
         * @return true if input is valid and false otherwise

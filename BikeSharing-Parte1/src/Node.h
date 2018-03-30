@@ -13,7 +13,7 @@ public:
     /**
     * Node default constructor
     */
-    Node(){};
+    Node() = default;
     /**
 	 * Node constructor
 	 * @param id 		    node id

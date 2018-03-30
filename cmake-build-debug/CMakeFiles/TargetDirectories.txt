@@ -1,3 +1,0 @@
-C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/cmake-build-debug/CMakeFiles/CalProject2017.dir
-C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tiago/Desktop/Faculdade/CAL/CalProject2017/cmake-build-debug/CMakeFiles/rebuild_cache.dir

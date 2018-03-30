@@ -25,10 +25,6 @@ vector <string> Parser::readLines(string file) {
     return lines;
 }
 
-SharingSpot Parser::createSharingSpot(string &line){
-
-}
-
 Node Parser::createNode(string &line) {
     unsigned long long int id;
     double latitude, longitude;
@@ -184,7 +180,7 @@ void Parser::next(double &elem, string &piece, string separator) {
 
 }
 
-bool validString(string &s) {
+bool Parser::validString(string &s) {
 
     getline(cin, s);
 
