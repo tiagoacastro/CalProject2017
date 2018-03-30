@@ -14,6 +14,10 @@ private:
 
 public:
     /**
+	 * User default constructor
+	 */
+    User() = default;
+    /**
 	 * User constructor
      * @param paymentMethod			    payment method
      * @param paymentInformation		payment information(creditcard number or paypal email)
