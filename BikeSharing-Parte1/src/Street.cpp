@@ -1,5 +1,8 @@
 #include "Street.h"
 
+Street::Street (unsigned long long int id): id (id)
+{
+}
 
 unsigned long long int Street::getId() const {
     return id;
@@ -25,4 +28,9 @@ Street::Street(unsigned long long int id, string name, bool twoWays) {
 
 void Street::setTwoWays(bool twoWays) {
     Street::twoWays = twoWays;
+}
+
+bool Street::operator ==(const Street &s2) const
+{
+	return id == s2.getId();
 }

@@ -1,6 +1,6 @@
 #include "Parser.h"
+//#include "BikeCompany.h"
 #include "Utilities.h"
-#include "User.h"
 using namespace std;
 
 User askUser(){
@@ -67,15 +67,25 @@ User askUser(){
     }
 }
 
+
+
 int main()
 {
     Parser p;
     vector <Node> nodes = p.readNodes("BikeSharing-Parte1\\Nodes.txt");
     vector <Street> streets = p.readStreets("BikeSharing-Parte1\\Streets.txt");
     vector <Relation> relations = p.readRelations("BikeSharing-Parte1\\Relations.txt");
+    vector <SharingSpot> sharingSpots; //TODO
     User user = askUser();
 
-    //BikeCompany company(nodes, streets, sharingSpot, relations, user);
+//    BikeCompany company(nodes, streets, sharingSpots, relations, user);
+//
+//    Graph <Node> g = company.getGraph();
+//    cout << g.getNumVertex() << endl;
+//    for (int i = 0; i < 10; i++)
+//    {
+//    	cout << g.
+//    }
 
     return 0;
 }

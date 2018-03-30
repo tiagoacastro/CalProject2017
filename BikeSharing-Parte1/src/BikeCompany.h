@@ -30,6 +30,11 @@ public:
     * @param user			user information
     */
 	BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const vector<Relation> &relations, const User &user);
+
+	/**
+	 * Fills graph with the vertexs and the edges
+	 */
+	void createGraph();
 	/**
     * Getter which returns the graph
     * @return graph

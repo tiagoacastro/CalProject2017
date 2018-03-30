@@ -1,6 +1,7 @@
 #ifndef NODE_H_
 #define NODE_H_
 
+#include <cmath>
 
 class Node {
 
@@ -14,6 +15,8 @@ public:
     * Node default constructor
     */
     Node() = default;
+
+    Node(unsigned long long int id);
     /**
 	 * Node constructor
 	 * @param id 		    node id
@@ -36,6 +39,19 @@ public:
 	 * @return latitude
 	 */
     double getLatitude() const;
+    /**
+     * Overload for the '==' operator for the Node class
+     * @param n2			Node to compare
+     * @return Returns true if both nodes have same id
+     */
+	bool operator==(const Node &n2) const;
+
+	/**
+	 * Calculates the distance between two nodes.
+	 * @param n2			Second node.
+	 * @return Distance between both nodes.
+	 */
+    double calculateDistance (Node &n2);
 };
 
 #endif /* NODE_H_ */

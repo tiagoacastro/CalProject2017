@@ -15,6 +15,7 @@ private:
     double slope;
 
 public:
+    Street (unsigned long long int id);
 	/**
 	 * Street constructor where the slope is randomly calculated
 	 * @param id 		street id
@@ -47,6 +48,13 @@ public:
 	 * @param twoWays  		value to wich the twoWays flag will be changed
 	 */
 	void setTwoWays(bool twoWays);
+    /**
+     * Overload for the '==' operator for the Street class
+     * @param s2			Street to compare
+     * @return Returns true if both streets have same id
+     */
+	bool operator==(const Street &s2) const;
+
 };
 
 

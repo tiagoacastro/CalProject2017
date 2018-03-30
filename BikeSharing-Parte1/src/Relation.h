@@ -10,9 +10,9 @@
  */
 class Relation{
     /**
-     * Private attribute that saves the id of the road.
+     * Private attribute that saves the id of the street.
      */
-    unsigned long long int roadID;
+    unsigned long long int streetID;
     /**
      *  Private attribute that saves the id of the first node of the road.
      */
@@ -25,12 +25,12 @@ public:
     /**
      * Constructor of the class.
      */
-    Relation(unsigned long long int roadID,unsigned long long int node1ID,unsigned long long int node2ID);
+    Relation(unsigned long long int streetID,unsigned long long int node1ID,unsigned long long int node2ID);
     /**
-     * Getter that returns the id of the road.
+     * Getter that returns the id of the street.
      * @return roadID.
      */
-    unsigned long long int getRoadID();
+    unsigned long long int getStreetID();
     /**
      * Getter that returns the id of the first node.
      * @return node1ID.

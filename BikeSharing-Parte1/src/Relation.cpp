@@ -4,14 +4,14 @@
 
 #include "Relation.h"
 
-Relation::Relation(unsigned long long int roadID, unsigned long long int node1ID, unsigned long long int node2ID) {
-    this->roadID = roadID;
+Relation::Relation(unsigned long long int streetID, unsigned long long int node1ID, unsigned long long int node2ID) {
+    this->streetID = streetID;
     this->node1ID = node1ID;
     this->node2ID = node2ID;
 }
 
-unsigned long long int Relation::getRoadID() {
-    return roadID;
+unsigned long long int Relation::getStreetID() {
+    return streetID;
 }
 
 unsigned long long int Relation::getNode1ID() {
