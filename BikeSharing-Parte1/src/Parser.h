@@ -12,6 +12,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <random>
 
 #include "SharingSpot.h"
 #include "Node.h"
@@ -36,7 +37,7 @@ class Parser {
 		 * @param file string
 		 * @return vector <Node>
 		 */
-		vector <Node> readNodes(string file);
+		vector <Node> readNodes(string file, vector <SharingSpot> &spots);
 		/**
 		 * @brief Returns a vector with all the streets after being created from the data read from the file with the name passed as parameter
 		 * @param file string

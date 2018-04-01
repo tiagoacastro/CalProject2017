@@ -1,6 +1,7 @@
 #include "Parser.h"
 //#include "BikeCompany.h"
 #include "Utilities.h"
+#include "User.h"
 using namespace std;
 
 User askUser(){
@@ -72,11 +73,14 @@ User askUser(){
 int main()
 {
     Parser p;
-    vector <Node> nodes = p.readNodes("BikeSharing-Parte1\\Nodes.txt");
-    vector <Street> streets = p.readStreets("BikeSharing-Parte1\\Streets.txt");
-    vector <Relation> relations = p.readRelations("BikeSharing-Parte1\\Relations.txt");
-    vector <SharingSpot> sharingSpots; //TODO
-    User user = askUser();
+    vector <SharingSpot> sharingSpots;
+    vector <Node> nodes = p.readNodes("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Nodes.txt", sharingSpots);
+    vector <Street> streets = p.readStreets("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Streets.txt");
+    vector <Relation> relations = p.readRelations("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Relations.txt");
+    //User user = askUser();
+
+    cout << nodes.size() << endl;
+    cout << sharingSpots.size();
 
 //    BikeCompany company(nodes, streets, sharingSpots, relations, user);
 //

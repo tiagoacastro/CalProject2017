@@ -97,12 +97,28 @@ Relation Parser::createRelation(string &line) {
     return r;
 }
 
-vector <Node> Parser::readNodes(string file) {
+vector <Node> Parser::readNodes(string file, vector <SharingSpot> &spots) {
     vector<string> lines = readLines(file);
     vector <Node> nodes;
+    int rand;
 
     for (auto &line : lines) {
-        nodes.push_back(createNode(line));
+
+        Node n = createNode(line);
+
+        nodes.push_back(n);
+
+        
+        rand = std::rand()%5+1;
+
+        switch(rand) {
+            case 1:
+                spots.push_back(SharingSpot(n));
+                break;
+            default:
+                break;
+        }
+
     }
 
     return nodes;
