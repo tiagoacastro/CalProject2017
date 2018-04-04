@@ -26,13 +26,26 @@ class Vertex {
 	vector<Edge<T> > adj;  // list of outgoing edges
 	bool visited;          // auxiliary field used by dfs and bfs
 	bool processing;       // auxiliary field used by isDAG
+	double dist = 0;
+	Vertex<T> *path = NULL;
 	int indegree;          // auxiliary field used by topsort
+	int queueIndex = 0;    // required by MutablePriorityQueue
+
 
 	void addEdge(Vertex<T> *dest, double w);
 	bool removeEdgeTo(Vertex<T> *d);
 public:
 	Vertex(T in);
+	bool operator<(Vertex<T> & vertex) const // // required by MutablePriorityQueue
+	{
+		return this->dist < vertex.getDist();
+	}
+	double getDist()
+	{
+		return dist;
+	}
 	friend class Graph<T>;
+	friend class MutablePriorityQueue<Vertex<T>>;
 };
 
 template <class T>

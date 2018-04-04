@@ -34,5 +34,6 @@ void BikeCompany::createGraph()
 		}
 
 		it++;
+
 	}
 }

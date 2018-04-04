@@ -81,12 +81,11 @@ int main()
     vector <Relation> relations = p.readRelations("Relations.txt");
     User user = askUser();
 
-    cout << nodes.size() << endl;
-    cout << sharingSpots.size() << endl;
-
     BikeCompany company(nodes, streets, sharingSpots, relations, user);
 
-    Graph <Node> g = company.getGraph();
+//    Graph <Node> g = company.getGraph();
+//    g.dijkstraShortestPath(Node (258723347));
+//    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));
 
     return 0;
 }
