@@ -1,6 +1,4 @@
-#ifndef NODE_H_
-#define NODE_H_
-
+#pragma once
 #include <cmath>
 
 class Node {
@@ -54,4 +52,3 @@ public:
     double calculateDistance (Node &n2);
 };
 
-#endif /* NODE_H_ */

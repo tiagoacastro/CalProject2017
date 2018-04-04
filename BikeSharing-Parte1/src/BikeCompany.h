@@ -1,5 +1,4 @@
-#ifndef BIKECOMPANY_H_
-#define BIKECOMPANY_H_
+#pragma once
 
 #include <vector>
 #include "graph.h"
@@ -8,6 +7,7 @@
 #include "SharingSpot.h"
 #include "User.h"
 #include "Relation.h"
+#include <algorithm>
 using namespace std;
 
 class BikeCompany {
@@ -66,5 +66,3 @@ public:
     */
     User getUser() {return this->user;}
 };
-
-#endif /* BIKECOMPANY_H_ */

@@ -1,5 +1,4 @@
-#ifndef USER_H_
-#define USER_H_
+#pragma once
 
 #include <string>
 using namespace std;
@@ -34,6 +33,3 @@ public:
     */
     const string &getPaymentInformation() const;
 };
-
-
-#endif /*USER_H_*/

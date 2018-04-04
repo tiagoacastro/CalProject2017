@@ -1,5 +1,4 @@
-﻿#ifndef _CONNECTION_
-#define _CONNECTION_
+﻿#pragma once
 
 #include <cstdio>
 #include <cstdlib>
@@ -33,4 +32,3 @@ class Connection {
 #endif
 };
 
-#endif

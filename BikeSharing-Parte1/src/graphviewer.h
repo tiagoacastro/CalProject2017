@@ -1,5 +1,4 @@
-﻿#ifndef _GRAPH_VIEWER_H_
-#define _GRAPH_VIEWER_H_
+﻿#pragma once
 
 #ifdef linux
 #include <unistd.h>
@@ -326,4 +325,3 @@ private:
 	void initialize(int, int, bool, int);
 };
 
-#endif

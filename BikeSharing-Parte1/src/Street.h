@@ -1,6 +1,4 @@
-#ifndef STREET_H_
-#define STREET_H_
-
+#pragma once
 #include <string>
 #include "Node.h"
 using namespace std;
@@ -56,6 +54,3 @@ public:
 	bool operator==(const Street &s2) const;
 
 };
-
-
-#endif /* STREET_H_ */

@@ -6,8 +6,7 @@
  *      Author: João Pascoal Faria
  */
 
-#ifndef SRC_MUTABLEPRIORITYQUEUE_H_
-#define SRC_MUTABLEPRIORITYQUEUE_H_
+#pragma once
 
 #include <vector>
 
@@ -102,5 +101,3 @@ void MutablePriorityQueue<T>::set(unsigned i, T * x) {
 	H[i] = x;
 	x->queueIndex = i;
 }
-
-#endif /* SRC_MUTABLEPRIORITYQUEUE_H_ */

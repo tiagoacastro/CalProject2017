@@ -1,7 +1,8 @@
+#pragma once
 #include "Parser.h"
-//#include "BikeCompany.h"
+#include "BikeCompany.h"
 #include "Utilities.h"
-#include "User.h"
+//#include "User.h"
 using namespace std;
 
 User askUser(){
@@ -66,6 +67,7 @@ User askUser(){
             }
             return User(PaymentMethod::PayPal, info);
     }
+    return User();
 }
 
 
@@ -74,10 +76,10 @@ int main()
 {
     Parser p;
     vector <SharingSpot> sharingSpots;
-    vector <Node> nodes = p.readNodes("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Nodes.txt", sharingSpots);
-    vector <Street> streets = p.readStreets("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Streets.txt");
-    vector <Relation> relations = p.readRelations("C:\\Users\\jonas\\Desktop\\CAL-PROJECT1\\BikeSharing-Parte1\\Relations.txt");
-    //User user = askUser();
+    vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
+    vector <Street> streets = p.readStreets("Streets.txt");
+    vector <Relation> relations = p.readRelations("Relations.txt");
+    User user = askUser();
 
     cout << nodes.size() << endl;
     cout << sharingSpots.size();

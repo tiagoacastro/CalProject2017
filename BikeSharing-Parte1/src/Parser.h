@@ -5,8 +5,7 @@
  *      Author: ricar
  */
 
-#ifndef PARSER_H_
-#define PARSER_H_
+#pragma once
 
 #include <vector>
 #include <string>
@@ -100,7 +99,3 @@ class Parser {
         */
         bool validString(string &s);
 };
-
-
-
-#endif /* PARSER_H_ */

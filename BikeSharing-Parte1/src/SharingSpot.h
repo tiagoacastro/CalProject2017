@@ -1,6 +1,4 @@
-#ifndef SHARINGSPOT_H_
-#define SHARINGSPOT_H_
-
+#pragma once
 #include "Node.h"
 
 class SharingSpot: public Node{
@@ -20,5 +18,3 @@ public:
     */
     bool isFreeSpot() const;
 };
-
-#endif /* SHARINGSPOT_H_ */

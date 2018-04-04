@@ -1,9 +1,4 @@
-//
-// Created by jonas on 28/03/2018.
-//
-
-#ifndef CALPROJECT2017_EXCEPTIONS_H
-#define CALPROJECT2017_EXCEPTIONS_H
+#pragma once
 
 #include <string>
 
@@ -16,5 +11,3 @@ class InvalidFormat {
      */
     InvalidFormat();
 };
-
-#endif //CALPROJECT2017_EXCEPTIONS_H

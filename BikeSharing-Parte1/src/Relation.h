@@ -1,9 +1,4 @@
-//
-// Created by jonas on 29/03/2018.
-//
-
-#ifndef CALPROJECT2017_RELATION_H
-#define CALPROJECT2017_RELATION_H
+#pragma once
 
 /**
  * Relation-Class that represents the relation of the roads with the nodes.
@@ -43,6 +38,3 @@ public:
     unsigned long long int getNode2ID();
 };
 
-
-
-#endif //CALPROJECT2017_RELATION_H

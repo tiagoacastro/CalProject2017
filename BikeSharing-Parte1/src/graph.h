@@ -1,8 +1,7 @@
 /*
  * Graph.h
  */
-#ifndef GRAPH_H_
-#define GRAPH_H_
+#pragma once
 
 #include <vector>
 #include <queue>
@@ -16,7 +15,7 @@ template <class T> class Edge;
 template <class T> class Graph;
 template <class T> class Vertex;
 
-int INF = INT_MAX;
+#define INF INT_MAX
 
 
 /****************** Provided structures  ********************/
@@ -450,5 +449,3 @@ vector<T> Graph<T>::getPath(const T &origin, const T &dest) const {
 	reverse(res.begin(), res.end());
 	return res;
 }
-
-#endif /* GRAPH_H_ */

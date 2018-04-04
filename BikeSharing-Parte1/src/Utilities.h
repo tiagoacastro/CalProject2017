@@ -1,6 +1,4 @@
-#ifndef UTILITIES_H_
-#define UTILITIES_H_
-
+#pragma once
 #include <iostream>
 #include <limits>
 #include <algorithm>
@@ -38,4 +36,3 @@ namespace Utilities {
 }
 /*! @} End of Doxygen Utilities group*/
 
-#endif //UTILITIES_H_
