@@ -33,5 +33,6 @@ void BikeCompany::createGraph()
 			this->graph.addEdge( (*node2), (*node1), edgeWeight);
 		}
 
+		it++;
 	}
 }

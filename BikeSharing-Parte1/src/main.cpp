@@ -82,16 +82,11 @@ int main()
     User user = askUser();
 
     cout << nodes.size() << endl;
-    cout << sharingSpots.size();
+    cout << sharingSpots.size() << endl;
 
-//    BikeCompany company(nodes, streets, sharingSpots, relations, user);
-//
-//    Graph <Node> g = company.getGraph();
-//    cout << g.getNumVertex() << endl;
-//    for (int i = 0; i < 10; i++)
-//    {
-//    	cout << g.
-//    }
+    BikeCompany company(nodes, streets, sharingSpots, relations, user);
+
+    Graph <Node> g = company.getGraph();
 
     return 0;
 }
