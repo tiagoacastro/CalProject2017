@@ -76,7 +76,34 @@ Street Parser::createStreet(string &line) {
     return s;
 }
 
-Relation Parser::createRelation(string &line) {
+bool findStreetID(vector<int> streets, int streetID){
+
+    for(int i = 0; i < streets.size(); i++) {
+        if (streets.at(i) == streetID)
+            return true;
+    }
+    return false;
+}
+
+int findStreet(vector<Street> streets, int id){
+
+    for(int i = 0; i < streets.size(); i++) {
+        if (streets.at(i).getId() == id)
+            return i;
+    }
+    return -1;
+}
+
+int findNode(vector<Node> nodes, int id){
+
+    for(int i = 0; i < nodes.size(); i++) {
+        if (nodes.at(i).getId() == id)
+            return i;
+    }
+    return -1;
+}
+
+void Parser::createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <int> &streetsID) {
 
     unsigned long long int roadID, node1ID, node2ID;
 
@@ -92,9 +119,22 @@ Relation Parser::createRelation(string &line) {
         cout << "Please insert the Relation data in the correct format.\n";
     }
 
-    Relation r(roadID,node1ID,node2ID);
+    int i = findStreet(streets ,roadID);
+    int j1 = findNode(nodes, node1ID);
+    int j2 = findNode(nodes, node2ID);
 
-    return r;
+    if (!findStreetID(streetsID,roadID))  {
+        streets.at(i).setInicialNodeID(nodes.at(j1).getId());
+        streetsID.push_back(streets.at(i).getId());
+    }
+
+    nodes.at(j1).addStreet(streets.at(i),nodes.at(j2));
+
+    if (streets.at(i).isTwoWays()){
+        nodes.at(j2).addStreet(streets.at(i),nodes.at(j1));
+    }
+
+    streets.at(i).setFinalNodeID(nodes.at(j2).getId());
 }
 
 vector <Node> Parser::readNodes(string file, vector <SharingSpot> &spots) {
@@ -136,16 +176,16 @@ vector <Street> Parser::readStreets(string file) {
     return streets;
 }
 
-vector <Relation> Parser::readRelations(string file) {
+void Parser::readRelations(string file,vector <Street> &streets, vector <Node> &nodes ) {
 
     vector<string> lines = readLines(file);
-    vector <Relation> relations;
+    vector <int> ids;
 
     for (auto &line : lines) {
-        relations.push_back(createRelation(line));
-    }
 
-    return relations;
+        createRelation(line, streets,nodes, ids);
+
+    }
 }
 
 //Helper Functions

@@ -75,10 +75,11 @@ int main()
     vector <SharingSpot> sharingSpots;
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
-    p.readRelations("Relations.txt");
-    User user = askUser();
+    p.readRelations("", streets,nodes);
+    cout << streets.at(0).getInicialNodeID() << endl;
+    //User user = askUser();
 
-    BikeCompany company(nodes, streets, sharingSpots, user);
+   // BikeCompany company(nodes, streets, sharingSpots, user);
     /*Graph <Node> g = company.getGraph();
     g.dijkstraShortestPath(Node (258723347));
     vector <Node> v = g.getPath(Node (258723347), Node (1605526218));*/

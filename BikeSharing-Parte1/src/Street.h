@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Node.h"
+
 using namespace std;
 
 class Street
@@ -12,8 +12,8 @@ private:
     string name;
     bool twoWays;
     double slope;
-	Node finalNode;
-	Node inicialNode;
+	int finalNodeID;
+	int inicialNodeID;
 
 public:
     Street (unsigned long long int id);
@@ -28,6 +28,15 @@ public:
 	 * Getter which returns the street id
 	 * @return id
 	 */
+
+	void setInicialNodeID(int n);
+
+	void setFinalNodeID(int n);
+
+	int getInicialNodeID();
+
+	int getFinalNodeID();
+
     unsigned long long int getId() const;
 	/**
 	 * Getter which returns the street name

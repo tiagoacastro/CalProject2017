@@ -12,6 +12,9 @@ Node::Node(unsigned long long int id, double latitude, double longitude){
     this->longitude = longitude;
 }
 
+void Node::addStreet(Street street, Node node) {
+	this->streets.push_back(make_pair(street,node));
+}
 unsigned int Node::getId() const {
     return id;
 }

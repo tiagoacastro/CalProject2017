@@ -42,12 +42,9 @@ class Parser {
 		 * @return vector <Street>
 		 */
 		vector <Street> readStreets(string file);
-		/**
-		 * @brief Returns a vector with all the relations after being created from the data read from the file with the name passed as parameter
-		 * @param file string
-		 * @return vector <Relation>
-		 */
-		vector <Relation> readRelations(string file);
+
+
+		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes );
 
 		/**
 		 * Auxiliary function that creates and returns a Node based on the data in the line
@@ -61,12 +58,9 @@ class Parser {
 		 * @return Street
 		 */
 		Street createStreet(string &line);
-		 /**
-		 * Auxiliary function that creates and returns a Relation based on the data in the line
-		 * @param line
-		 * @return Relation
-		 */
-		Relation createRelation(string &line);
+
+
+		void createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <int> &streetsID);
 
    		/**
         * @brief separates string based on the separator

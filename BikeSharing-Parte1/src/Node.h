@@ -1,6 +1,6 @@
 #pragma once
 #include <cmath>
-#include "street.h"
+#include "Street.h"
 
 class Node {
 
@@ -52,5 +52,7 @@ public:
 	 * @return Distance between both nodes.
 	 */
     double calculateDistance (Node &n2);
+
+    void addStreet(Street street, Node node);
 };
 

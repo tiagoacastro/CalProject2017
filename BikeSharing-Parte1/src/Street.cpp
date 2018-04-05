@@ -20,6 +20,23 @@ double Street::getSlope() const {
     return slope;
 }
 
+void Street::setInicialNodeID(int n){
+    this->inicialNodeID = n;
+}
+
+void Street::setFinalNodeID(int n){
+    this->finalNodeID = n;
+}
+
+int Street::getInicialNodeID() {
+    return this->inicialNodeID;
+}
+
+int Street::getFinalNodeID() {
+    return this->finalNodeID;
+}
+
+
 Street::Street(unsigned long long int id, string name, bool twoWays) {
     this->id = id;
     this->name = name;
