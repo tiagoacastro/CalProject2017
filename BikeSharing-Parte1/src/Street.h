@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 #include "Node.h"
 using namespace std;
 
@@ -11,6 +12,8 @@ private:
     string name;
     bool twoWays;
     double slope;
+	Node finalNode;
+	Node inicialNode;
 
 public:
     Street (unsigned long long int id);

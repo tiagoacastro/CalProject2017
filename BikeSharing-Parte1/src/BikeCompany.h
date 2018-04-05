@@ -6,7 +6,6 @@
 #include "Street.h"
 #include "SharingSpot.h"
 #include "User.h"
-#include "Relation.h"
 #include <algorithm>
 using namespace std;
 
@@ -17,7 +16,6 @@ private:
 	vector<Node> nodes;
 	vector<Street> streets;
 	vector<SharingSpot> sharingSpots;
-	vector<Relation> relations;
     User user;
 
 public:
@@ -29,7 +27,7 @@ public:
     * @param relations		vector with all the relations between streets and nodes
     * @param user			user information
     */
-	BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const vector<Relation> &relations, const User &user);
+	BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user);
 
 	/**
 	 * Fills graph with the vertexs and the edges
@@ -55,11 +53,6 @@ public:
     * @return vector with all the sharing spots
     */
 	vector<SharingSpot> getSharingSpots() {return this->sharingSpots;}
-	/**
-    * Getter which returns a vector with all the relations between the streets and nodes
-    * @return vector with all the relations between the streets and nodes
-    */
-	vector<Relation> getRelations() {return this->relations;}
 	/**
     * Getter which returns the user information
     * @return user information

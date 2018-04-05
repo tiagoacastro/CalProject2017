@@ -1,5 +1,6 @@
 #pragma once
 #include <cmath>
+#include "street.h"
 
 class Node {
 
@@ -7,6 +8,7 @@ protected:
     unsigned long id;
     double longitude;
     double latitude;
+    vector<pair<Street, Node>> streets;
 
 public:
     /**
