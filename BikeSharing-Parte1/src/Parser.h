@@ -16,7 +16,6 @@
 #include "SharingSpot.h"
 #include "Node.h"
 #include "Street.h"
-#include "Relation.h"
 #include "exceptions.h"
 
 using namespace std;

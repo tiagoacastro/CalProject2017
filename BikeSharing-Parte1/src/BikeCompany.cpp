@@ -1,13 +1,14 @@
 #include "BikeCompany.h"
 
-BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const vector<Relation> &relations, const User &user) :
-        nodes(nodes), streets(streets), sharingSpots(sharingSpots), relations(relations), user(user)
+BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user) :
+        nodes(nodes), streets(streets), sharingSpots(sharingSpots), user(user)
 {
 	createGraph();
 }
 
 void BikeCompany::createGraph()
 {
+	/*
 	vector <Relation> vRelations = this->relations;
 	vector <Node> vNodes = this->nodes;
 	vector <Street> vStreets = this->streets;
@@ -36,6 +37,7 @@ void BikeCompany::createGraph()
 		it++;
 
 	}
+	 */
 }
 
 void BikeCompany::printGraph()

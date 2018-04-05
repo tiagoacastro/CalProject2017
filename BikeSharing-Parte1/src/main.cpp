@@ -2,7 +2,6 @@
 #include "Parser.h"
 #include "BikeCompany.h"
 #include "Utilities.h"
-//#include "User.h"
 using namespace std;
 
 User askUser(){
@@ -70,22 +69,19 @@ User askUser(){
     return User();
 }
 
-
-
 int main()
 {
     Parser p;
     vector <SharingSpot> sharingSpots;
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
-    vector <Relation> relations = p.readRelations("Relations.txt");
+    p.readRelations("Relations.txt");
     User user = askUser();
 
-    BikeCompany company(nodes, streets, sharingSpots, relations, user);
-
-//    Graph <Node> g = company.getGraph();
-//    g.dijkstraShortestPath(Node (258723347));
-//    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));
+    BikeCompany company(nodes, streets, sharingSpots, user);
+    /*Graph <Node> g = company.getGraph();
+    g.dijkstraShortestPath(Node (258723347));
+    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));*/
 
     return 0;
 }
