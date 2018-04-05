@@ -7,6 +7,7 @@
 #include "SharingSpot.h"
 #include "User.h"
 #include "Relation.h"
+#include "graphviewer.h"
 #include <algorithm>
 using namespace std;
 
@@ -39,6 +40,7 @@ public:
     * Getter which returns the graph
     * @return graph
     */
+	void printGraph();
     Graph<Node> getGraph() {return this->graph;}
 	/**
     * Getter which returns a vector with all the nodes

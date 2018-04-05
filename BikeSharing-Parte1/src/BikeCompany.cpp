@@ -37,3 +37,20 @@ void BikeCompany::createGraph()
 
 	}
 }
+
+void BikeCompany::printGraph()
+{
+//		GraphViewer *gv = new GraphViewer(600, 600, true);
+//
+//		gv->createWindow(600, 600);
+//
+//		int edgeId = 0;
+//
+//		for (unsigned int i = 0; i < graph.getNumVertex();i++)
+//		{
+//			gv->addNode (i);
+//			gv->addEdge (edgeId, i, i-1, )
+//		}
+
+//		getchar();
+}
