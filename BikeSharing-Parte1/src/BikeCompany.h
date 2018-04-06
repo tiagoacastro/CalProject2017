@@ -25,7 +25,6 @@ public:
 	* @param nodes  		vector with all the nodes from the files (not filtered)
     * @param streets  		vector with all the streets from the files (not filtered)
     * @param sharingSpots	vector with all the sharing spots (some of the nodes that were chosen)
-    * @param relations		vector with all the relations between streets and nodes
     * @param user			user information
     */
 	BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user);
