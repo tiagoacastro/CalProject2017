@@ -34,3 +34,7 @@ bool Street::operator ==(const Street &s2) const
 {
 	return id == s2.getId();
 }
+
+void Street::addNode(Node n) {
+    this->nodes.push_back(n);
+}

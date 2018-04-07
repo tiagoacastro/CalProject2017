@@ -1,6 +1,6 @@
 #pragma once
 #include <cmath>
-#include "Street.h"
+#include <vector>
 
 class Node {
 
@@ -8,7 +8,7 @@ protected:
     unsigned long long id;
     double longitude;
     double latitude;
-    vector<Street> streets;
+    vector<int> streets;
 
 public:
     /**
@@ -55,6 +55,6 @@ public:
 	 * Adds a street do the node
 	 * @param street    street to be added
 	 */
-    void addStreet(Street street);
+    void addStreet(int streetID);
 };
 

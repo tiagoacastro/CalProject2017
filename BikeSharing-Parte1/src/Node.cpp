@@ -12,9 +12,6 @@ Node::Node(unsigned long long int id, double latitude, double longitude){
     this->longitude = longitude;
 }
 
-void Node::addStreet(Street street) {
-	this->streets.push_back(street));
-}
 unsigned long long Node::getId() const {
     return id;
 }
@@ -44,4 +41,8 @@ double Node::calculateDistance (Node &n2)
 	double c = 2 * atan2( sqrt(a), sqrt (1-a));
 
 	return c * EARTH_RADIUS;
+}
+
+void Node::addStreet(int streetID) {
+	this->streets.push_back(streetID);
 }

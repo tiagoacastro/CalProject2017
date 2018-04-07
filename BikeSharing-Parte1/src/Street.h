@@ -56,4 +56,10 @@ public:
      */
 	bool operator==(const Street &s2) const;
 
+	void addNode(Node n);
+
+	vector<Node> getNodes() {
+		return this->nodes;
+	}
+
 };
