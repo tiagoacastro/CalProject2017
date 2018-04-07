@@ -28,7 +28,6 @@ public:
     * @param user			user information
     */
 	BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user);
-
 	/**
 	 * Fills graph with the vertexs and the edges
 	 */
@@ -37,8 +36,10 @@ public:
 	 * Prints graph using GraphViewer
 	 */
 	void printGraph();
-	void getClosestSharingSpot (const Node &currentPosition);
-	void drawPath (const Node &currentPosition, const Node &closestSharingSpot);
+
+	//void getClosestSharingSpot (const Node &currentPosition);
+
+	//void drawPath (const Node &currentPosition, const Node &closestSharingSpot);
 	/**
     * Getter which returns the graph
     * @return graph

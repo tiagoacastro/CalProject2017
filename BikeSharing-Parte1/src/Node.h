@@ -8,7 +8,7 @@ protected:
     unsigned long id;
     double longitude;
     double latitude;
-    vector<pair<Street, Node>> streets;
+    vector<Street> streets;
 
 public:
     /**

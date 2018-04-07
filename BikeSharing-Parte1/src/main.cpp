@@ -1,4 +1,3 @@
-#pragma once
 #include "Parser.h"
 #include "BikeCompany.h"
 #include "Utilities.h"
@@ -76,7 +75,7 @@ int main()
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
     p.readRelations("", streets,nodes);
-    User user = askUser();
+    //User user = askUser();
 
 //    for (auto elem:streets)
 //    {

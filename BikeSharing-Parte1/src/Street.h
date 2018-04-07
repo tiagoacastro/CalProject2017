@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Node.h"
 
 using namespace std;
 
@@ -12,11 +13,10 @@ private:
     string name;
     bool twoWays;
     double slope;
-	int finalNodeID;
-	int inicialNodeID;
+	vector<Node> Nodes;
 
 public:
-    Street (unsigned long long int id);
+    explicit Street (unsigned long long int id);
 	/**
 	 * Street constructor where the slope is randomly calculated
 	 * @param id 		street id
