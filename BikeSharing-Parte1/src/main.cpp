@@ -76,13 +76,22 @@ int main()
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
     p.readRelations("", streets,nodes);
-    cout << streets.at(0).getInicialNodeID() << endl;
-    //User user = askUser();
+    User user = askUser();
 
-   // BikeCompany company(nodes, streets, sharingSpots, user);
-    /*Graph <Node> g = company.getGraph();
-    g.dijkstraShortestPath(Node (258723347));
-    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));*/
+//    for (auto elem:streets)
+//    {
+//    	cout << elem.getInicialNodeID() << endl;
+//    	cout << elem.getName() << endl;
+//    	cout << elem.getFinalNodeID() << endl << endl;
+//    }
+
+
+
+//    BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
+//    company.printGraph();
+//    Graph <Node> g = company.getGraph();
+//    g.dijkstraShortestPath(Node (258723347));
+//    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));
 
     return 0;
 }

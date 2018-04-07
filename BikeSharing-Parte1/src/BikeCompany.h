@@ -34,10 +34,15 @@ public:
 	 */
 	void createGraph();
 	/**
+	 * Prints graph using GraphViewer
+	 */
+	void printGraph();
+	void getClosestSharingSpot (const Node &currentPosition);
+	void drawPath (const Node &currentPosition, const Node &closestSharingSpot);
+	/**
     * Getter which returns the graph
     * @return graph
     */
-	void printGraph();
     Graph<Node> getGraph() {return this->graph;}
 	/**
     * Getter which returns a vector with all the nodes

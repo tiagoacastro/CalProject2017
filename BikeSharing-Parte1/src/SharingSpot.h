@@ -8,7 +8,7 @@ private:
 
 public:
 	/**
-	 * Sharing spot constructor (wether it is free or not is calculated here)
+	 * Sharing spot constructor (whether it is free or not is calculated here)
 	 * @param n		node where the sharing spot will be placed
 	 */
 	explicit SharingSpot(Node n);

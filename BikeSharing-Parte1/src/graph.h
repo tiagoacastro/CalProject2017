@@ -64,9 +64,11 @@ class Graph {
 
 	void dfsVisit(Vertex<T> *v,  vector<T> & res) const;
 	Vertex<T> *findVertex(const T &in) const;
+	Edge <T>  findEdge (const Vertex <T> * origin, const Vertex <T> * dest) const;
 	bool dfsIsDAG(Vertex<T> *v) const;
 public:
 	int getNumVertex() const;
+	vector <Vertex<T> *> getVertexSet() {return this->vertexSet;};
 	bool addVertex(const T &in);
 	bool removeVertex(const T &in);
 	bool addEdge(const T &sourc, const T &dest, double w);
@@ -79,7 +81,7 @@ public:
 	Vertex <T> *initSingleSource(const T &origin);
 	bool relax(Vertex<T> *v, Vertex<T> *w, double weight);
 	void dijkstraShortestPath(const T &origin);
-	vector<T> getPath(const T &origin, const T &dest) const;
+	vector<T> getPath(const T &origin, const T &dest, double &totalWeight) const;
 
 };
 
@@ -108,6 +110,21 @@ Vertex<T> * Graph<T>::findVertex(const T &in) const {
 	return NULL;
 }
 
+template <class T>
+Edge <T> Graph<T>::findEdge (const Vertex<T> * origin, const Vertex<T> * dest) const
+{
+	typename vector <Edge<T>>::const_iterator it = origin->adj.begin();
+	typename vector <Edge<T>>::const_iterator itend = origin->adj.end();
+
+	while (it != itend)
+	{
+		if ((*it).dest == dest)
+			return (*it);
+
+		it++;
+	}
+
+}
 /****************** 1a) addVertex ********************/
 
 /*
@@ -452,13 +469,17 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
 }
 
 template<class T>
-vector<T> Graph<T>::getPath(const T &origin, const T &dest) const {
+vector<T> Graph<T>::getPath(const T &origin, const T &dest, double &totalWeight) const {
 	vector<T> res;
 	auto v = findVertex(dest);
 	if (v == nullptr || v->dist == INF)
 		return res;
 	for (; v != nullptr; v = v->path)
+	{
 		res.push_back(v->info);
+		Edge <T> e = findEdge(findVertex(origin), findVertex(dest));
+		totalWeight += e.weight;
+	}
 	reverse(res.begin(), res.end());
 	return res;
 }
