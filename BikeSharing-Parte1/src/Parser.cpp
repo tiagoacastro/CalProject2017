@@ -85,20 +85,35 @@ bool findStreetID(vector<int> streets, int streetID){
     return false;
 }
 
-int findStreet(vector<Street> streets, int id){
+int findStreet(vector<Street> streets, unsigned long long id){
 
-    for(int i = 0; i < streets.size(); i++) {
-        if (streets.at(i).getId() == id)
-            return i;
+    int left = 0, right = streets.size()-1;
+
+    while(left <=right){
+
+        int middle = (left + right)/2;
+        if (streets.at(middle).getId() < id) {
+            left = middle + 1;
+        }else if(id < streets.at(middle).getId()) {
+            right = middle -1;
+        } else return middle;
     }
     return -1;
 }
 
-int findNode(vector<Node> nodes, unsigned long long int id){
 
-    for(int i = 0; i < nodes.size(); i++) {
-        if (nodes.at(i).getId() == id)
-            return i;
+int findNode(vector<Node> nodes, unsigned long long id){
+
+    int left = 0, right = nodes.size()-1;
+
+    while(left <=right){
+
+        int middle = (left + right)/2;
+        if (nodes.at(middle).getId() < id) {
+            left = middle + 1;
+        }else if(id < nodes.at(middle).getId()) {
+            right = middle -1;
+        } else return middle;
     }
     return -1;
 }
