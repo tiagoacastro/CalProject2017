@@ -13,7 +13,7 @@ private:
     string name;
     bool twoWays;
     double slope;
-	vector<Node> Nodes;
+	vector<Node> nodes;
 
 public:
     explicit Street (unsigned long long int id);
