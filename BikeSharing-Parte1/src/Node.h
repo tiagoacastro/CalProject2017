@@ -54,8 +54,8 @@ public:
 	 */
     double calculateDistance (Node &n2);
     /**
-	 * Adds a street do the node
-	 * @param street    street to be added
+	 * Adds a street ID do the node
+	 * @param int    street id to be added
 	 */
     void addStreet(int streetID);
 };

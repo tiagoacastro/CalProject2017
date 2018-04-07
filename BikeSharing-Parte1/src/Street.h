@@ -55,11 +55,15 @@ public:
      * @return Returns true if both streets have same id
      */
 	bool operator==(const Street &s2) const;
-
+	/**
+	 * @brief Adds de node passed as parameter to the Street object
+	 * @param n Node to add
+	 */
 	void addNode(Node n);
-
-	vector<Node> getNodes() {
-		return this->nodes;
-	}
+	/**
+	 * @brief Getter which returns the vector of Nodes in a Street object
+	 * @return vector <Node>
+	 */
+	vector<Node> getNodes();
 
 };

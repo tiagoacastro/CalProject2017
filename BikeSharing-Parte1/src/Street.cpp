@@ -38,3 +38,7 @@ bool Street::operator ==(const Street &s2) const
 void Street::addNode(Node n) {
     this->nodes.push_back(n);
 }
+
+vector<Node> Street::getNodes() {
+    return this->nodes;
+}
