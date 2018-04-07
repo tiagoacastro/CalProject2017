@@ -72,17 +72,16 @@ int main()
 {
     Parser p;
     vector <SharingSpot> sharingSpots;
+    //vector <Node> nodes = p.readNodes("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Nodes.txt", sharingSpots);
+    //vector <Street> streets = p.readStreets("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Streets.txt");
+    //p.readRelations("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Relations.txt", streets,nodes);
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
-    p.readRelations("", streets,nodes);
+    p.readRelations("Relations.txt",streets,nodes);
     //User user = askUser();
 
-//    for (auto elem:streets)
-//    {
-//    	cout << elem.getInicialNodeID() << endl;
-//    	cout << elem.getName() << endl;
-//    	cout << elem.getFinalNodeID() << endl << endl;
-//    }
+    //for(int i=0; i < streets.at(0).getNodes().size();i++)
+      //  cout << streets.at(0).getNodes().at(i).getId() << endl;
 
 
 

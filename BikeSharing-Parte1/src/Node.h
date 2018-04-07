@@ -2,6 +2,8 @@
 #include <cmath>
 #include <vector>
 
+using namespace std;
+
 class Node {
 
 protected:

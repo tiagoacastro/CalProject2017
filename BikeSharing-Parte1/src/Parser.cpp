@@ -94,7 +94,7 @@ int findStreet(vector<Street> streets, int id){
     return -1;
 }
 
-int findNode(vector<Node> nodes, int id){
+int findNode(vector<Node> nodes, unsigned long long int id){
 
     for(int i = 0; i < nodes.size(); i++) {
         if (nodes.at(i).getId() == id)
@@ -134,7 +134,7 @@ void Parser::createRelation(string &line, vector <Street> &streets, vector <Node
         nodes.at(j2).addStreet(streets.at(i).getId());
     }
 
-    streets.at(i).addNode(nodes.at(j2).getId());
+    streets.at(i).addNode(nodes.at(j2));
 }
 
 vector <Node> Parser::readNodes(string file, vector <SharingSpot> &spots) {
