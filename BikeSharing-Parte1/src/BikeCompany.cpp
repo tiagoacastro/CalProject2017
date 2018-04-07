@@ -9,46 +9,47 @@ BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &street
 void BikeCompany::createGraph()
 {
 
-	vector <Node> vNodes = this->nodes;
 	vector <Street> vStreets = this->streets;
 
-	vector <Street>::iterator it = vStreets.begin();
-	vector <Street>::iterator itend = vStreets.end();
-
-	while (it != itend)
-	{
-		typename vector <Node>::iterator node1 = find (vNodes.begin(), vNodes.end(), Node( (*it).getInicialNodeID() ) );
-		typename vector <Node>::iterator node2 = find (vNodes.begin(), vNodes.end(), Node( (*it).getFinalNodeID() ) );
-
-		this->graph.addVertex( (*node1));
-		this->graph.addVertex( (*node2));
-
-		double edgeWeight = (*node1).calculateDistance( (*node2)); //TODO
-
-		this->graph.addEdge( (*node1), (*node2), edgeWeight);
-
-		if ((*it).isTwoWays())
-		{
-			this->graph.addEdge( (*node2), (*node1), edgeWeight);
-		}
-
-		it++;
-
-	}
-
+	for (unsigned int i = 0; i < vStreets.size(); i++)
+		addFromStreetToGraph (vStreets [i]);
 }
+
+void BikeCompany::addFromStreetToGraph (Street street)
+{
+
+	for (unsigned int i = 0; i < street.getNodes().size() - 1; i++)
+	{
+			typename vector <Node>::iterator node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
+			typename vector <Node>::iterator node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
+
+
+			this->graph.addVertex( (*node1));
+			this->graph.addVertex( (*node2));
+
+			double edgeWeight = (*node1).calculateDistance(*node2);
+
+			this->graph.addEdge( (*node1), (*node2), edgeWeight);
+
+			if (street.isTwoWays())
+			{
+				this->graph.addEdge((*node2), (*node1), edgeWeight);
+			}
+	}
+}
+
 
 void BikeCompany::printGraph()
 {
-		GraphViewer *gv = new GraphViewer(600, 600, true);
-//		typename vector <Vertex <T> *> vertexs = graph.getVertexSet();
+		GraphViewer *gv = new GraphViewer(600, 600, false);
+		//typename vector <Vertex <T> *> vertexs = graph.getVertexSet();
 
 		gv->createWindow(600, 600);
 
 		for (unsigned int i = 0; i < graph.getNumVertex();i++)
 		{
 			Node node = nodes[i];
-			gv->addNode(i, node.getLatitude(), node.getLongitude());
+			gv->addNode(i, 600 * node.getLatitude(), -600 * node.getLongitude());
 		}
 
 		gv->rearrange();
@@ -56,8 +57,10 @@ void BikeCompany::printGraph()
 		getchar();
 }
 
-void BikeCompany::getClosestSharingSpot (const Node &currentPosition)
+void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 {
+	cout << "getNearestSharingSpot";
+
 	vector <SharingSpot> vSpots = this->sharingSpots;
 	graph.dijkstraShortestPath(currentPosition);
 
@@ -82,13 +85,17 @@ void BikeCompany::getClosestSharingSpot (const Node &currentPosition)
 
 }
 
-void BikeCompany::drawPath (const Node &currentPosition, const Node &closestSharingSpot)
+void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestSharingSpot)
 {
 	double weight = 0;
 
-	vector <Node> path = graph.getPath (currentPosition, closestSharingSpot, weight);
+	cout << "drawPath";
+
+	vector <Node> path = graph.getPath (currentPosition, nearestSharingSpot, weight);
 
 	GraphViewer *gv = new GraphViewer(600, 600, true);
+
+	gv->createWindow(600, 600);
 
 	for (unsigned int i = 0; i < path.size(); i++)
 	{
@@ -98,6 +105,8 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &closestShar
 		if (i > 0)
 			gv->addEdge(i-1, i-1, i, EdgeType::UNDIRECTED);
 	}
+
+	gv->rearrange();
 
 	getchar();
 }

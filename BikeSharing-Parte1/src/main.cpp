@@ -1,6 +1,7 @@
 #include "Parser.h"
 #include "BikeCompany.h"
 #include "Utilities.h"
+#include "graph.h"
 using namespace std;
 
 User askUser(){
@@ -78,15 +79,16 @@ int main()
     vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
     vector <Street> streets = p.readStreets("Streets.txt");
     p.readRelations("Relations.txt",streets,nodes);
-    //User user = askUser();
+    User user;// = askUser();
 
-    //for(int i=0; i < streets.at(0).getNodes().size();i++)
-      //  cout << streets.at(0).getNodes().at(i).getId() << endl;
+    BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
+
+    company.printGraph();
+
+    //company.getNearestSharingSpot(nodes[0]);
 
 
-
-//    BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
-//    company.printGraph();
+    //    company.printGraph();
 //    Graph <Node> g = company.getGraph();
 //    g.dijkstraShortestPath(Node (258723347));
 //    vector <Node> v = g.getPath(Node (258723347), Node (1605526218));

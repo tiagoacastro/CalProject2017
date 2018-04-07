@@ -33,13 +33,30 @@ public:
 	 */
 	void createGraph();
 	/**
+	 * Fills graph with information from street
+	 *
+	 * @param street object from class street from which information is being read and put in graph
+	 */
+	void addFromStreetToGraph (Street street);
+	/**
 	 * Prints graph using GraphViewer
 	 */
 	void printGraph();
 
-	//void getClosestSharingSpot (const Node &currentPosition);
+	/**
+	 * Finds the nearest sharing spot and calls function to draw path to it.
+	 *
+	 * @param currentPosition user's current position
+	 */
+	void getNearestSharingSpot (const Node &currentPosition);
 
-	//void drawPath (const Node &currentPosition, const Node &closestSharingSpot);
+	/**
+	 * Draws path from the user's current position to the nearest sharing spot.
+	 *
+	 * @param currentPosition user's current position
+	 * @param nearestSharingSpot nearest sharing sport considering user's position.
+	 */
+	void drawPath (const Node &currentPosition, const Node &nearestSharingSpot);
 	/**
     * Getter which returns the graph
     * @return graph

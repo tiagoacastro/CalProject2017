@@ -44,6 +44,8 @@ public:
 	{
 		return dist;
 	}
+	T getInfo() {return info;}
+	vector <Edge<T>> getAdj() {return adj;}
 	friend class Graph<T>;
 	friend class MutablePriorityQueue<Vertex<T>>;
 };
