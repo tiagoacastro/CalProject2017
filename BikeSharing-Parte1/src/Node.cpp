@@ -1,8 +1,6 @@
 
 #include "Node.h"
 
-#define EARTH_RADIUS 6371e3; //meters
-
 Node::Node(unsigned long long int id) : id(id)
 {}
 

@@ -4,6 +4,8 @@
 
 using namespace std;
 
+#define EARTH_RADIUS 6371e3; //meters
+
 class Node {
 
 protected:
