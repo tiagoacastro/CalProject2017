@@ -5,7 +5,7 @@
 class Node {
 
 protected:
-    unsigned long id;
+    unsigned long long id;
     double longitude;
     double latitude;
     vector<Street> streets;
@@ -28,7 +28,7 @@ public:
 	 * Getter which returns the node id
 	 * @return id
 	 */
-    unsigned int getId() const;
+    unsigned long long getId() const;
     /**
 	 * Getter which returns the node Longitude
 	 * @return longitude
@@ -45,14 +45,16 @@ public:
      * @return Returns true if both nodes have same id
      */
 	bool operator==(const Node &n2) const;
-
 	/**
 	 * Calculates the distance between two nodes.
 	 * @param n2			Second node.
 	 * @return Distance between both nodes.
 	 */
     double calculateDistance (Node &n2);
-
-    void addStreet(Street street, Node node);
+    /**
+	 * Adds a street do the node
+	 * @param street    street to be added
+	 */
+    void addStreet(Street street);
 };
 

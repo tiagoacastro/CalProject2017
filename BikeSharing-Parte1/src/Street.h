@@ -23,20 +23,11 @@ public:
 	 * @param name  	street name
 	 * @param twoWays	flag that checks if the street is both ways
 	 */
-	Street(unsigned long long int id, string name, bool twoWays);
+	Street(unsigned long long int id, string &name, bool twoWays);
 	/**
 	 * Getter which returns the street id
 	 * @return id
 	 */
-
-	void setInicialNodeID(int n);
-
-	void setFinalNodeID(int n);
-
-	int getInicialNodeID();
-
-	int getFinalNodeID();
-
     unsigned long long int getId() const;
 	/**
 	 * Getter which returns the street name
