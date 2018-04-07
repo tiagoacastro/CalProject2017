@@ -42,7 +42,12 @@ class Parser {
 		 * @return vector <Street>
 		 */
 		vector <Street> readStreets(string file);
-
+		/**
+		 * @brief Reads the relations between streets and Nodes and uses that information to complete the streets and nodes objects already created
+		 * @param file string
+		 * @param streets vector <Street>
+		 * @param nodes vector <Node>
+		 */
 
 		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes );
 
@@ -58,8 +63,13 @@ class Parser {
 		 * @return Street
 		 */
 		Street createStreet(string &line);
-
-
+		/**
+		 * @brief Analyzes a line from the Relations file and transforms that line into information to be put in Streets and Nodes
+		 * @param line string
+		 * @param streets vector <Street>
+		 * @param nodes vector <Node>
+		 * @param streetsID vector <int>
+		 */
 		void createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <int> &streetsID);
 
    		/**
