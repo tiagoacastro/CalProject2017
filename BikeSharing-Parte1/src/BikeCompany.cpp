@@ -73,7 +73,7 @@ void BikeCompany::printGraph()
 
 		int id = 0;
 
-        for (const auto &street : streets)
+        for (auto &street : streets)
 		{
 			for (unsigned int j = 0; j < street.getNodes().size() - 1; j++)
 			{
