@@ -8,10 +8,7 @@ BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &street
 
 void BikeCompany::createGraph()
 {
-
-	vector <Street> vStreets = this->streets;
-
-	for (const auto &street : vStreets)
+	for (const auto &street : streets)
 		addFromStreetToGraph (street);
 }
 
@@ -22,7 +19,6 @@ void BikeCompany::addFromStreetToGraph (Street street)
 	{
 			auto node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
 			auto node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
-
 
 			this->graph.addVertex( (*node1));
 			this->graph.addVertex( (*node2));
@@ -52,10 +48,8 @@ void BikeCompany::printGraph()
 		double minLat=1000000;
 
 
-		for (unsigned int i = 0; i < nodes.size();i++)
+		for (const auto &node : nodes)
 		{
-			Node node = nodes[i];
-
 			if (node.getLongitude() > maxLong)
 				maxLong = node.getLongitude();
 
@@ -69,20 +63,18 @@ void BikeCompany::printGraph()
 				minLat = node.getLatitude();
 		}
 
-		for (unsigned int i = 0; i < nodes.size(); i++)
+        for (const auto &node : nodes)
 		{
-			Node node = nodes[i];
-			int x = 6000 * (node.getLongitude() - minLong) / (maxLong - minLong) ;
-			int y = 6000 * (node.getLatitude() - minLat) / (maxLat - minLat) ;
+			auto x = (int)(6000 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
+			auto y = (int)(6000 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
 			gv->addNode(node.getId(), x,600 - y);
 			gv->setVertexLabel(node.getId(), " ");
 		}
 
 		int id = 0;
 
-		for (unsigned int i = 0; i < streets.size(); i++)
+        for (const auto &street : streets)
 		{
-			Street street = streets [i];
 			for (unsigned int j = 0; j < street.getNodes().size() - 1; j++)
 			{
 				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::UNDIRECTED);
