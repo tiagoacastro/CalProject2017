@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <climits>
 #include <iostream>
+#include <algorithm>
 #include "MutablePriorityQueue.h"
 using namespace std;
 
