@@ -69,3 +69,7 @@ bool Node::isHeightCalculated() const {
 void Node::setHeightCalculated(bool heightCalculated) {
 	Node::heightCalculated = heightCalculated;
 }
+
+const vector<int> &Node::getStreets() const {
+	return streets;
+}

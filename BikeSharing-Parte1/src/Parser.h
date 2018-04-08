@@ -48,7 +48,6 @@ class Parser {
 		 * @param streets vector <Street>
 		 * @param nodes vector <Node>
 		 */
-
 		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes );
 
 		/**

@@ -142,20 +142,46 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 	getchar();
 }
 
-void calculate(Street &s, int i, double h){
+Street &BikeCompany::findStreet(unsigned int id){
+
+    int left = 0, right = streets.size()-1;
+
+    while(left <=right){
+
+        int middle = (left + right)/2;
+        if (streets.at(middle).getId() < id) {
+            left = middle + 1;
+        }else if(id < streets.at(middle).getId()) {
+            right = middle -1;
+        } else return streets.at(middle);
+    }
+}
+
+void BikeCompany::calculate(Street &s, int i, double h){
     if(i > 0)
         if(!s.getNodes().at(i-1).isHeightCalculated()){
-            s.setNodeHeight(i-1, h - s.getElevation())
+            s.setNodeHeight(i-1, h - s.getElevation()*s.getNodes().at(i-1).calculateDistance(s.getNodes().at(i)));
+            s.setNodeHeightCalculated(i-1);
+            for(auto id : s.getNodes().at(i-1).getStreets())
+                calculate(findStreet(id), findStreet(id).findNode(s.getNodes().at(i-1).getId()), s.getNodes().at(i-1).getHeight());
         }
     if(i < s.getNodes().size()-1){
-
+        if(!s.getNodes().at(i+1).isHeightCalculated()){
+            s.setNodeHeight(i+1, h + s.getElevation()*s.getNodes().at(i+1).calculateDistance(s.getNodes().at(i)));
+            s.setNodeHeightCalculated(i+1);
+            for(auto id : s.getNodes().at(i+1).getStreets())
+                calculate(findStreet(id), findStreet(id).findNode(s.getNodes().at(i+1).getId()), s.getNodes().at(i+1).getHeight());
+        }
     }
 }
 
 void BikeCompany::calculateHeights(){
     nodes.at(0).setHeight(0);
     nodes.at(0).setHeightCalculated(true);
+    int i;
 
-    for(const auto &s : streets)
-        calculate(s, s.findNode(nodes.at(0).getId()), 0);
+    for(auto id : nodes.at(0).getStreets()){
+        i = nodes.at(0).getId();
+        calculate(findStreet(id), findStreet(i).findNode(id), 0);
+    }
 }

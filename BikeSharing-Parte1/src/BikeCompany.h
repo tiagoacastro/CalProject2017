@@ -82,6 +82,19 @@ public:
     * @return user information
     */
     User getUser() {return this->user;}
+	/**
+	 * Finds the street with the specified if
+	 * @param id	street id
+	 * @return	street
+	 */
+	Street &findStreet(unsigned int id);
+	/**
+	 * Auxiliary method to calculateHeights
+	 * @param s 	street
+	 * @param i 	node index
+	 * @param h 	height
+	 */
+	void calculate(Street &s, int i, double h);
     /**
     * Calculates heights of the nodes
     */

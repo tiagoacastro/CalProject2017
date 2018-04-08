@@ -91,7 +91,12 @@ int main()
 
     BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
 
-    company.printGraph();
+    //company.calculateHeights();
+
+    //for(const auto &node : company.getNodes())
+     //   cout << node.getHeight();
+
+    //company.printGraph();
     //company.getNearestSharingSpot(nodes[0]);
 
 

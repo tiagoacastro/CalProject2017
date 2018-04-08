@@ -22,15 +22,11 @@ bool Street::isTwoWays() const {
     return twoWays;
 }
 
-double Street::getSlope() const {
-    return slope;
-}
-
-int Street::getElevation() {
+double Street::getElevation() {
     return this->elevation;
 }
 
-void Street::setElevation(int elevation) {
+void Street::setElevation(double elevation) {
     this->elevation = elevation;
 }
 
@@ -51,11 +47,11 @@ bool Street::operator ==(const Street &s2) const
 	return id == s2.getId();
 }
 
-void Street::addNode(Node n) {
+void Street::addNode(Node &n) {
     this->nodes.push_back(n);
 }
 
-vector<Node> Street::getNodes() {
+vector<Node> &Street::getNodes() {
     return this->nodes;
 }
 
@@ -63,10 +59,13 @@ int Street::findNode(unsigned int id){
     for(int i = 0; i < nodes.size(); ++i)
         if(nodes.at(i).getId() == id)
             return i;
-    return -1;
 }
 
 void Street::setNodeHeight(int i, double height){
     nodes.at(i).setHeight(height);
+}
+
+void Street::setNodeHeightCalculated(int i){
+    nodes.at(i).setHeightCalculated(true);
 }
 

@@ -14,7 +14,6 @@ private:
     double elevation;
     string name;
     bool twoWays;
-    double slope;
 	vector<Node> nodes;
 
 public:
@@ -53,11 +52,6 @@ public:
 	 */
     bool isTwoWays() const;
 	/**
-	 * Getter which returns the street slope
-	 * @return slope
-	 */
-    double getSlope() const;
-	/**
 	 * Setter which sets the twoWays flag
 	 * @param twoWays  		value to wich the twoWays flag will be changed
 	 */
@@ -82,12 +76,12 @@ public:
 	 * @brief Adds de node passed as parameter to the Street object
 	 * @param n Node to add
 	 */
-	void addNode(Node n);
+	void addNode(Node &n);
 	/**
 	 * @brief Getter which returns the vector of Nodes in a Street object
 	 * @return vector <Node>
 	 */
-	vector<Node> getNodes();
+	vector<Node> &getNodes();
 	/**
 	 * finds the index of the node with the specified id
 	 * @param id   	node id
@@ -99,4 +93,9 @@ public:
 	 * @param height 	height
 	 */
 	void setNodeHeight(int i, double height);
+	/**
+	 * sets the node height as calculated
+	 * @param i 	node index
+	 */
+	void setNodeHeightCalculated(int i);
 };

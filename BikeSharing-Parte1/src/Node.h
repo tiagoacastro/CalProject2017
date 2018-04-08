@@ -92,5 +92,10 @@ public:
      * @param heightCalculated    true or false
      */
     void setHeightCalculated(bool heightCalculated);
+    /**
+     * Getter for streets id
+     * @return      street id vector
+     */
+    const vector<int> &getStreets() const;
 };
 
