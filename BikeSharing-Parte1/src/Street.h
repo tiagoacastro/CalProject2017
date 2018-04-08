@@ -17,19 +17,19 @@ private:
 	vector<Node> nodes;
 
 public:
+	static unsigned int count;
 	/**
     * Street constructor with id
-	* @param id 		    street id
     * @param osmId 		    street osm id
     */
-    explicit Street (unsigned int id , unsigned long long int osmId);
+    explicit Street ( unsigned long long int osmId);
 	/**
 	 * Street constructor where the slope is randomly calculated
 	 * @param id 		street id
 	 * @param name  	street name
 	 * @param twoWays	flag that checks if the street is both ways
 	 */
-	Street(unsigned int id, unsigned long long int osmId, string &name, bool twoWays);
+	Street(unsigned long long int osmId, string &name, bool twoWays);
 	/**
 	 * Getter which returns the street id
 	 * @return id

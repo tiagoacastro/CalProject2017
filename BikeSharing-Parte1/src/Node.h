@@ -16,24 +16,23 @@ protected:
     vector<int> streets;
 
 public:
+    static unsigned int count;
     /**
     * Node default constructor
     */
     Node() = default;
     /**
     * Node constructor with id
-	* @param id 		    node id
     * @param osmId 		    node osm id
     */
-    explicit Node(unsigned int id , unsigned long long int osmId);
+    explicit Node(unsigned long long int osmId);
     /**
 	 * Node constructor
-	 * @param id 		    node id
      * @param osmId 		    node osm id
 	 * @param latitude  	node latitude
 	 * @param longitude 	node longitude
 	 */
-    Node(unsigned int id, unsigned long long int osmId, double latitude, double longitude);
+    Node(unsigned long long int osmId, double latitude, double longitude);
     /**
 	 * Getter which returns the node id
 	 * @return id

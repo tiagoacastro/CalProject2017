@@ -92,9 +92,9 @@ int findStreet(vector<Street> streets, unsigned long long id){
     while(left <=right){
 
         int middle = (left + right)/2;
-        if (streets.at(middle).getId() < id) {
+        if (streets.at(middle).getOsmId() < id) {
             left = middle + 1;
-        }else if(id < streets.at(middle).getId()) {
+        }else if(id < streets.at(middle).getOsmId()) {
             right = middle -1;
         } else return middle;
     }
@@ -109,9 +109,9 @@ int findNode(vector<Node> nodes, unsigned long long id){
     while(left <=right){
 
         int middle = (left + right)/2;
-        if (nodes.at(middle).getId() < id) {
+        if (nodes.at(middle).getOsmId() < id) {
             left = middle + 1;
-        }else if(id < nodes.at(middle).getId()) {
+        }else if(id < nodes.at(middle).getOsmId()) {
             right = middle -1;
         } else return middle;
     }
@@ -140,13 +140,13 @@ void Parser::createRelation(string &line, vector <Street> &streets, vector <Node
 
     if (!findStreetID(streetsID,roadID))  {
         streets.at(i).addNode(nodes.at(j1));
-        streetsID.push_back(streets.at(i).getId());
+        streetsID.push_back(streets.at(i).getOsmId());
     }
 
-    nodes.at(j1).addStreet(streets.at(i).getId());
+    nodes.at(j1).addStreet(streets.at(i).getOsmId());
 
     if (streets.at(i).isTwoWays()){
-        nodes.at(j2).addStreet(streets.at(i).getId());
+        nodes.at(j2).addStreet(streets.at(i).getOsmId());
     }
 
     streets.at(i).addNode(nodes.at(j2));
