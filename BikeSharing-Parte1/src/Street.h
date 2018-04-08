@@ -11,6 +11,7 @@ class Street
 private:
 	unsigned int id;
 	unsigned long long int osmId;
+    int elevation;
     string name;
     bool twoWays;
     double slope;
@@ -25,11 +26,12 @@ public:
     explicit Street ( unsigned long long int osmId);
 	/**
 	 * Street constructor where the slope is randomly calculated
+	 * @param elevation int elevation
 	 * @param id 		street id
 	 * @param name  	street name
 	 * @param twoWays	flag that checks if the street is both ways
 	 */
-	Street(unsigned long long int osmId, string &name, bool twoWays);
+	Street(unsigned long long int osmId, string &name, bool twoWays, int elevation);
 	/**
 	 * Getter which returns the street id
 	 * @return id
@@ -60,6 +62,16 @@ public:
 	 * @param twoWays  		value to wich the twoWays flag will be changed
 	 */
 	void setTwoWays(bool twoWays);
+    /**
+     * Getter which returns the street elevation
+     * @return elevation int
+     */
+    int getElevation();
+    /**
+     * Setter which sets the street elevation
+     * @param elevation int elevation to be set on the Street object
+     */
+    void setElevation(int elevation);
     /**
      * Overload for the '==' operator for the Street class
      * @param s2			Street to compare

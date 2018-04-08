@@ -80,12 +80,15 @@ int main()
     //vector <Street> streets = p.readStreets("Streets.txt");
    // p.readRelations("Relations.txt",streets,nodes);
     //User user;// = askUser();
-    
+
+    //for(int i = 0; i< streets.size();i++)
+      //  cout << streets.at(i).getElevation() << endl;
+
    // cout << nodes[0].getLongitude() << "   " << nodes[0].getLatitude() << endl;
 
-   // BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
+  // BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
 
-   // company.printGraph();
+    //company.printGraph();
     //company.getNearestSharingSpot(nodes[0]);
 
 

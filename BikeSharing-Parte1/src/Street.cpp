@@ -26,11 +26,20 @@ double Street::getSlope() const {
     return slope;
 }
 
-Street::Street(unsigned long long int osmId, string &name, bool twoWays) {
+int Street::getElevation() {
+    return this->elevation;
+}
+
+void Street::setElevation(int elevation) {
+    this->elevation = elevation;
+}
+
+Street::Street(unsigned long long int osmId, string &name, bool twoWays, int elevation) {
     this->osmId = osmId;
     this->id = count++;
     this->name = name;
     this->twoWays = twoWays;
+    this->elevation = elevation;
 }
 
 void Street::setTwoWays(bool twoWays) {
