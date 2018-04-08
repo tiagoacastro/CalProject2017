@@ -81,10 +81,11 @@ int main()
     p.readRelations("Relations.txt",streets,nodes);
     User user;// = askUser();
 
+    cout << nodes[0].getLongitude() << "   " << nodes[0].getLatitude() << endl;
+
     BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
 
     company.printGraph();
-
     //company.getNearestSharingSpot(nodes[0]);
 
 

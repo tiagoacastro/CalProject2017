@@ -38,18 +38,57 @@ void BikeCompany::addFromStreetToGraph (Street street)
 	}
 }
 
+# define M_PI           3.14159265358979323846  /* pi */
 
 void BikeCompany::printGraph()
 {
-		GraphViewer *gv = new GraphViewer(600, 600, false);
-		//typename vector <Vertex <T> *> vertexs = graph.getVertexSet();
+		GraphViewer *gv = new GraphViewer(800, 800, false);
 
 		gv->createWindow(600, 600);
 
-		for (unsigned int i = 0; i < graph.getNumVertex();i++)
+		double maxLong=-1000000;
+		double maxLat=-100000;
+		double minLong=1000000;
+		double minLat=1000000;
+
+
+		for (unsigned int i = 0; i < nodes.size();i++)
 		{
 			Node node = nodes[i];
-			gv->addNode(i, 600 * node.getLatitude(), -600 * node.getLongitude());
+
+			if (node.getLongitude() > maxLong)
+				maxLong = node.getLongitude();
+
+			if (node.getLongitude() < minLong)
+				minLong = node.getLongitude();
+
+			if (node.getLatitude() > maxLat)
+				maxLat = node.getLatitude();
+
+			if (node.getLatitude() < minLat)
+				minLat = node.getLatitude();
+		}
+
+		for (unsigned int i = 0; i < nodes.size(); i++)
+		{
+			Node node = nodes[i];
+			int x = 6000 * (node.getLongitude() - minLong) / (maxLong - minLong) ;
+			int y = 6000 * (node.getLatitude() - minLat) / (maxLat - minLat) ;
+			gv->addNode(node.getId(), x,600 - y);
+			gv->setVertexLabel(node.getId(), " ");
+		}
+
+		int id = 0;
+
+		for (unsigned int i = 0; i < streets.size(); i++)
+		{
+			Street street = streets [i];
+			for (unsigned int j = 0; j < street.getNodes().size() - 1; j++)
+			{
+				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::UNDIRECTED);
+				gv->setEdgeLabel(id, street.getName());
+				id++;
+			}
 		}
 
 		gv->rearrange();
