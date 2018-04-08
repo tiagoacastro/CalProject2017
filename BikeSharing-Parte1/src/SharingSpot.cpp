@@ -1,7 +1,12 @@
 #include "SharingSpot.h"
 
+#include <iostream>
+
 SharingSpot::SharingSpot(Node n){
-    Node(n.getId(),n.getLatitude(),n.getLongitude());
+    id = n.getId();
+    latitude = n.getLatitude();
+    longitude = n.getLongitude();
+    freeSpot = true;
 }
 
 bool SharingSpot::isFreeSpot() const {

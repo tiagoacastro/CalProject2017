@@ -1,5 +1,10 @@
 #include "BikeCompany.h"
 
+double maxLong=-1000000;
+double maxLat=-100000;
+double minLong=1000000;
+double minLat=1000000;
+
 BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user) :
         nodes(nodes), streets(streets), sharingSpots(sharingSpots), user(user)
 {
@@ -34,19 +39,11 @@ void BikeCompany::addFromStreetToGraph (Street street)
 	}
 }
 
-# define M_PI           3.14159265358979323846  /* pi */
-
 void BikeCompany::printGraph()
 {
 		auto *gv = new GraphViewer(800, 800, false);
 
-		gv->createWindow(600, 600);
-
-		double maxLong=-1000000;
-		double maxLat=-100000;
-		double minLong=1000000;
-		double minLat=1000000;
-
+		gv->createWindow(800, 800);
 
 		for (const auto &node : nodes)
 		{
@@ -65,10 +62,9 @@ void BikeCompany::printGraph()
 
         for (const auto &node : nodes)
 		{
-			auto x = (int)(6000 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
-			auto y = (int)(6000 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
-			gv->addNode(node.getId(), x,600 - y);
-			gv->setVertexLabel(node.getId(), " ");
+			auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
+			auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
+			gv->addNode(node.getId(), x, 800 - y);
 		}
 
 		int id = 0;
@@ -90,15 +86,14 @@ void BikeCompany::printGraph()
 
 void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 {
-	cout << "getNearestSharingSpot";
-
 	vector <SharingSpot> vSpots = this->sharingSpots;
 	graph.dijkstraShortestPath(currentPosition);
+
 
 	unsigned int posClosestSpot = 0; //position in vector of closest Sharing Spot
 	double closestSpotWeight = INF; //distance from currentPosition to closest Sharing Spot
 
-	for (unsigned int i = 0; i < vSpots.size(); i++)
+	for (unsigned int i = 0; i < 2; i++)
 	{
 		SharingSpot elem = vSpots[i];
 
@@ -111,7 +106,6 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 			closestSpotWeight = weight;
 		}
 	}
-
 	drawPath (currentPosition, vSpots[posClosestSpot]);
 
 }
@@ -120,21 +114,44 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 {
 	double weight = 0;
 
-	cout << "drawPath";
-
 	vector <Node> path = graph.getPath (currentPosition, nearestSharingSpot, weight);
 
-	auto *gv = new GraphViewer(600, 600, true);
+	for (const auto &node : nodes)
+	{
+		if (node.getLongitude() > maxLong)
+			maxLong = node.getLongitude();
 
-	gv->createWindow(600, 600);
+		if (node.getLongitude() < minLong)
+			minLong = node.getLongitude();
+
+		if (node.getLatitude() > maxLat)
+			maxLat = node.getLatitude();
+
+		if (node.getLatitude() < minLat)
+			minLat = node.getLatitude();
+	}
+
+	auto *gv = new GraphViewer(800, 800, false);
+
+	gv->createWindow(800, 800);
+
+	unsigned int previousNodeId = 0;
 
 	for (unsigned int i = 0; i < path.size(); i++)
 	{
 		Node node = path[i];
-		gv->addNode(i, node.getLongitude(), node.getLatitude());
+
+		auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
+		auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
+		gv->addNode(node.getId(), x, 800 - y);
 
 		if (i > 0)
-			gv->addEdge(i-1, i-1, i, EdgeType::UNDIRECTED);
+		{
+			gv->addEdge(i, previousNodeId, node.getId(), EdgeType::UNDIRECTED);
+		}
+
+		previousNodeId = node.getId();
+
 	}
 
 	gv->rearrange();

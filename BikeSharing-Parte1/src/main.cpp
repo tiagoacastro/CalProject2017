@@ -76,28 +76,16 @@ int main()
     //vector <Node> nodes = p.readNodes("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Nodes.txt", sharingSpots);
     //vector <Street> streets = p.readStreets("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Streets.txt");
     //p.readRelations("C:\\Users\\jonas\\Desktop\\CAL-PROJ\\BikeSharing-Parte1\\Relations.txt", streets,nodes);
-    vector <Node> nodes = p.readNodes("C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\Nodes.txt", sharingSpots);
-    vector <Street> streets = p.readStreets("C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\Streets.txt");
-    p.readRelations("C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\Relations.txt", streets,nodes);
-    //vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
-    //vector <Street> streets = p.readStreets("Streets.txt");
-   // p.readRelations("Relations.txt",streets,nodes);
+    vector <Node> nodes = p.readNodes("Nodes.txt", sharingSpots);
+    vector <Street> streets = p.readStreets("Streets.txt");
+    p.readRelations("Relations.txt",streets,nodes);
     User user;// = askUser();
-
-    //for(int i = 0; i< streets.size();i++)
-      //  cout << streets.at(i).getElevation() << endl;
-
-   // cout << nodes[0].getLongitude() << "   " << nodes[0].getLatitude() << endl;
 
     BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
 
-    //company.calculateHeights();
 
-    //for(const auto &node : company.getNodes())
-     //   cout << node.getHeight();
-
-    //company.printGraph();
-    //company.getNearestSharingSpot(nodes[0]);
+  //  company.printGraph();
+    company.getNearestSharingSpot(nodes[68]);
 
 
     //    company.printGraph();
