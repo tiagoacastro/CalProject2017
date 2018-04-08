@@ -82,4 +82,8 @@ public:
     * @return user information
     */
     User getUser() {return this->user;}
+    /**
+    * Calculates heights of the nodes
+    */
+    void calculateHeights();
 };

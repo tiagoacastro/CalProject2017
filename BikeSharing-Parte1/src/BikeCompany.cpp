@@ -141,3 +141,21 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	getchar();
 }
+
+void calculate(Street &s, int i, double h){
+    if(i > 0)
+        if(!s.getNodes().at(i-1).isHeightCalculated()){
+            s.setNodeHeight(i-1, h - s.getElevation())
+        }
+    if(i < s.getNodes().size()-1){
+
+    }
+}
+
+void BikeCompany::calculateHeights(){
+    nodes.at(0).setHeight(0);
+    nodes.at(0).setHeightCalculated(true);
+
+    for(const auto &s : streets)
+        calculate(s, s.findNode(nodes.at(0).getId()), 0);
+}

@@ -58,3 +58,15 @@ void Street::addNode(Node n) {
 vector<Node> Street::getNodes() {
     return this->nodes;
 }
+
+int Street::findNode(unsigned int id){
+    for(int i = 0; i < nodes.size(); ++i)
+        if(nodes.at(i).getId() == id)
+            return i;
+    return -1;
+}
+
+void Street::setNodeHeight(int i, double height){
+    nodes.at(i).setHeight(height);
+}
+

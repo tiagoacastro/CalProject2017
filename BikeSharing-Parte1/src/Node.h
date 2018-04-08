@@ -14,13 +14,15 @@ protected:
     double longitude;
     double latitude;
     vector<int> streets;
+    double height;
+    bool heightCalculated;
 
 public:
     static unsigned int count;
     /**
     * Node default constructor
     */
-    Node() = default;
+    Node(){heightCalculated = false;}
     /**
     * Node constructor with id
     * @param osmId 		    node osm id
@@ -70,5 +72,25 @@ public:
 	 * @param int    street id to be added
 	 */
     void addStreet(int streetID);
+    /**
+     * Getter for height
+     * @return height
+     */
+    double getHeight() const;
+    /**
+     * Setter for height
+     * @param height    height of the node
+     */
+    void setHeight(double height);
+    /**
+     * Getter to check if height was defined
+     * @return yes or no
+     */
+    bool isHeightCalculated() const;
+    /**
+     * Setter to set if height was defined
+     * @param heightCalculated    true or false
+     */
+    void setHeightCalculated(bool heightCalculated);
 };
 

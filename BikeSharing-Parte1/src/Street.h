@@ -88,5 +88,15 @@ public:
 	 * @return vector <Node>
 	 */
 	vector<Node> getNodes();
-
+	/**
+	 * finds the index of the node with the specified id
+	 * @param id   	node id
+	 */
+	int findNode(unsigned int id);
+	/**
+	 * Sets the height of a node
+	 * @param i 		node index
+	 * @param height 	height
+	 */
+	void setNodeHeight(int i, double height);
 };
