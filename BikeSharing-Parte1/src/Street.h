@@ -11,7 +11,7 @@ class Street
 private:
 	unsigned int id;
 	unsigned long long int osmId;
-    int elevation;
+    double elevation;
     string name;
     bool twoWays;
     double slope;
@@ -64,14 +64,14 @@ public:
 	void setTwoWays(bool twoWays);
     /**
      * Getter which returns the street elevation
-     * @return elevation int
+     * @return elevation double
      */
-    int getElevation();
+    double getElevation();
     /**
      * Setter which sets the street elevation
-     * @param elevation int elevation to be set on the Street object
+     * @param elevation double elevation to be set on the Street object
      */
-    void setElevation(int elevation);
+    void setElevation(double elevation);
     /**
      * Overload for the '==' operator for the Street class
      * @param s2			Street to compare

@@ -70,8 +70,8 @@ Street Parser::createStreet(string &line) {
         cout << "Please insert the Street data in the correct format.\n";
     }
 
-    int elevation = rand()%51 ;
-    elevation = elevation - 25;
+    double elevation = rand()%10 ;
+    elevation = (elevation - 10)/100;
 
     Street s(id,name,true,elevation);
     if (bothways == "False")
