@@ -11,8 +11,8 @@ void BikeCompany::createGraph()
 
 	vector <Street> vStreets = this->streets;
 
-	for (unsigned int i = 0; i < vStreets.size(); i++)
-		addFromStreetToGraph (vStreets [i]);
+	for (const auto &street : vStreets)
+		addFromStreetToGraph (street);
 }
 
 void BikeCompany::addFromStreetToGraph (Street street)
@@ -20,8 +20,8 @@ void BikeCompany::addFromStreetToGraph (Street street)
 
 	for (unsigned int i = 0; i < street.getNodes().size() - 1; i++)
 	{
-			typename vector <Node>::iterator node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
-			typename vector <Node>::iterator node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
+			auto node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
+			auto node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
 
 
 			this->graph.addVertex( (*node1));
@@ -42,7 +42,7 @@ void BikeCompany::addFromStreetToGraph (Street street)
 
 void BikeCompany::printGraph()
 {
-		GraphViewer *gv = new GraphViewer(800, 800, false);
+		auto *gv = new GraphViewer(800, 800, false);
 
 		gv->createWindow(600, 600);
 
@@ -103,7 +103,7 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 	vector <SharingSpot> vSpots = this->sharingSpots;
 	graph.dijkstraShortestPath(currentPosition);
 
-	unsigned int posClosestSpot; //position in vector of closest Sharing Spot
+	unsigned int posClosestSpot = 0; //position in vector of closest Sharing Spot
 	double closestSpotWeight = INF; //distance from currentPosition to closest Sharing Spot
 
 	for (unsigned int i = 0; i < vSpots.size(); i++)
@@ -132,7 +132,7 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	vector <Node> path = graph.getPath (currentPosition, nearestSharingSpot, weight);
 
-	GraphViewer *gv = new GraphViewer(600, 600, true);
+	auto *gv = new GraphViewer(600, 600, true);
 
 	gv->createWindow(600, 600);
 

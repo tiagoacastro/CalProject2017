@@ -1,18 +1,24 @@
 
 #include "Node.h"
 
-Node::Node(unsigned long long int id) : id(id)
+Node::Node(unsigned int id , unsigned long long int osmId) : id(id), osmId(osmId)
 {}
 
-Node::Node(unsigned long long int id, double latitude, double longitude){
+Node::Node(unsigned int id, unsigned long long int osmId, double latitude, double longitude){
+	this->osmId = osmId;
     this->id = id;
     this->latitude = latitude;
     this->longitude = longitude;
 }
 
-unsigned long long Node::getId() const {
+unsigned int Node::getId() const {
     return id;
 }
+
+unsigned long long int Node::getOsmId() const {
+	return osmId;
+}
+
 
 double Node::getLongitude() const {
     return longitude;

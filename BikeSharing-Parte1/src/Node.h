@@ -9,7 +9,8 @@ using namespace std;
 class Node {
 
 protected:
-    unsigned long long id;
+    unsigned int id;
+    unsigned long long int osmId;
     double longitude;
     double latitude;
     vector<int> streets;
@@ -19,20 +20,30 @@ public:
     * Node default constructor
     */
     Node() = default;
-
-    Node(unsigned long long int id);
+    /**
+    * Node constructor with id
+	* @param id 		    node id
+    * @param osmId 		    node osm id
+    */
+    explicit Node(unsigned int id , unsigned long long int osmId);
     /**
 	 * Node constructor
 	 * @param id 		    node id
+     * @param osmId 		    node osm id
 	 * @param latitude  	node latitude
 	 * @param longitude 	node longitude
 	 */
-    Node(unsigned long long int id, double latitude, double longitude);
+    Node(unsigned int id, unsigned long long int osmId, double latitude, double longitude);
     /**
 	 * Getter which returns the node id
 	 * @return id
 	 */
-    unsigned long long getId() const;
+    unsigned int getId() const;
+    /**
+	 * Getter which returns the node Open Street Maps id
+	 * @return osm id
+	 */
+    unsigned long long int getOsmId() const;
     /**
 	 * Getter which returns the node Longitude
 	 * @return longitude

@@ -9,26 +9,37 @@ class Street
 {
 
 private:
-    unsigned long long int id;
+	unsigned int id;
+	unsigned long long int osmId;
     string name;
     bool twoWays;
     double slope;
 	vector<Node> nodes;
 
 public:
-    explicit Street (unsigned long long int id);
+	/**
+    * Street constructor with id
+	* @param id 		    street id
+    * @param osmId 		    street osm id
+    */
+    explicit Street (unsigned int id , unsigned long long int osmId);
 	/**
 	 * Street constructor where the slope is randomly calculated
 	 * @param id 		street id
 	 * @param name  	street name
 	 * @param twoWays	flag that checks if the street is both ways
 	 */
-	Street(unsigned long long int id, string &name, bool twoWays);
+	Street(unsigned int id, unsigned long long int osmId, string &name, bool twoWays);
 	/**
 	 * Getter which returns the street id
 	 * @return id
 	 */
-    unsigned long long int getId() const;
+    unsigned int getId() const;
+	/**
+	 * Getter which returns the street Open Street Maps id
+	 * @return id
+	 */
+	unsigned long long int getOsmId() const;
 	/**
 	 * Getter which returns the street name
 	 * @return name

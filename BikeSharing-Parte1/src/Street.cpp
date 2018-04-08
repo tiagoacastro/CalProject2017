@@ -1,11 +1,15 @@
 #include "Street.h"
 
-Street::Street (unsigned long long int id): id (id)
+Street::Street (unsigned int id , unsigned long long int osmId): id (id), osmId(osmId)
 {
 }
 
-unsigned long long int Street::getId() const {
+unsigned int Street::getId() const {
     return id;
+}
+
+unsigned long long int Street::getOsmId() const {
+    return osmId;
 }
 
 const string &Street::getName() const {
@@ -20,7 +24,8 @@ double Street::getSlope() const {
     return slope;
 }
 
-Street::Street(unsigned long long int id, string &name, bool twoWays) {
+Street::Street(unsigned int id, unsigned long long int osmId, string &name, bool twoWays) {
+    this->osmId = osmId;
     this->id = id;
     this->name = name;
     this->twoWays = twoWays;
