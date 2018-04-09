@@ -142,21 +142,15 @@ void Parser::createRelation(string &line, vector <Street> &streets, vector <Node
     int j2 = findNode(nodes, node2ID);
 
     if (!findStreetID(streetsID,roadID))  {
-        nodes.at(j1).addStreet(streets.at(i).getId());
+        nodes.at(j1).addStreet(streets.at(i).getOsmId());
         streets.at(i).addNode(nodes.at(j1));
         streetsID.push_back(streets.at(i).getOsmId());
-        for(auto &id : nodes.at(j1).getStreets())
-            if (id != streets.at(i).getId())
-                streets.at(id-1).addStreetToNode(streets.at(id-1).findNode(node1ID), id);
     }
 
-    nodes.at(j2).addStreet(streets.at(i).getId());
+    nodes.at(j2).addStreet(streets.at(i).getOsmId());
 
     streets.at(i).addNode(nodes.at(j2));
 
-    for(auto &id : nodes.at(j2).getStreets())
-        if (id != streets.at(i).getId())
-            streets.at(id-1).addStreetToNode(streets.at(id-1).findNode(node2ID), id);
 }
 
 vector <Node> Parser::readNodes(string file, vector <SharingSpot> &spots) {
