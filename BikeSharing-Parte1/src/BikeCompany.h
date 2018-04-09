@@ -41,6 +41,8 @@ public:
 	/**
 	 * Prints graph using GraphViewer
 	 */
+
+	void setMaxandMin();
 	void printGraph();
 
 	/**

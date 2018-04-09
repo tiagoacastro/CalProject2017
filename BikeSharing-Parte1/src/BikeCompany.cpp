@@ -1,9 +1,9 @@
 #include "BikeCompany.h"
 
-double maxLong=-1000000;
-double maxLat=-100000;
-double minLong=1000000;
-double minLat=1000000;
+double maxLong = -INF;
+double maxLat = - INF;
+double minLong = INF;
+double minLat = INF;
 
 BikeCompany::BikeCompany(const vector<Node> &nodes, const vector<Street> &streets, const vector<SharingSpot> &sharingSpots, const User &user) :
         nodes(nodes), streets(streets), sharingSpots(sharingSpots), user(user)
@@ -39,26 +39,33 @@ void BikeCompany::addFromStreetToGraph (Street street)
 	}
 }
 
+void BikeCompany::setMaxandMin ()
+{
+	for (const auto &node : nodes)
+	{
+		if (node.getLongitude() > maxLong)
+			maxLong = node.getLongitude();
+
+		if (node.getLongitude() < minLong)
+			minLong = node.getLongitude();
+
+		if (node.getLatitude() > maxLat)
+			maxLat = node.getLatitude();
+
+		if (node.getLatitude() < minLat)
+			minLat = node.getLatitude();
+	}
+}
+
 void BikeCompany::printGraph()
 {
 		auto *gv = new GraphViewer(800, 800, false);
 
 		gv->createWindow(800, 800);
 
-		for (const auto &node : nodes)
-		{
-			if (node.getLongitude() > maxLong)
-				maxLong = node.getLongitude();
+		setMaxandMin();
 
-			if (node.getLongitude() < minLong)
-				minLong = node.getLongitude();
-
-			if (node.getLatitude() > maxLat)
-				maxLat = node.getLatitude();
-
-			if (node.getLatitude() < minLat)
-				minLat = node.getLatitude();
-		}
+		gv->defineVertexIcon("fdfdf.png");
 
         for (const auto &node : nodes)
 		{
@@ -68,6 +75,11 @@ void BikeCompany::printGraph()
 		}
 
 		int id = 0;
+
+		for (const auto &spot : sharingSpots)
+		{
+			gv->setVertexIcon(spot.getId(), "bicycle.png");
+		}
 
         for (auto &street : streets)
 		{
@@ -116,20 +128,7 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	vector <Node> path = graph.getPath (currentPosition, nearestSharingSpot, weight);
 
-	for (const auto &node : nodes)
-	{
-		if (node.getLongitude() > maxLong)
-			maxLong = node.getLongitude();
-
-		if (node.getLongitude() < minLong)
-			minLong = node.getLongitude();
-
-		if (node.getLatitude() > maxLat)
-			maxLat = node.getLatitude();
-
-		if (node.getLatitude() < minLat)
-			minLat = node.getLatitude();
-	}
+	setMaxandMin();
 
 	auto *gv = new GraphViewer(800, 800, false);
 
@@ -174,7 +173,7 @@ Street &BikeCompany::findStreet(unsigned long long int osmId){
 		}
 	}
 
-	Node &BikeCompany::findNode(unsigned long long id){
+Node &BikeCompany::findNode(unsigned long long id){
 
 	int left = 0, right = nodes.size()-1;
 
