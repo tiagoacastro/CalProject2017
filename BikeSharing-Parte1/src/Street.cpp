@@ -4,6 +4,7 @@ unsigned int Street::count = 1;
 
 Street::Street (unsigned long long int osmId):osmId(osmId)
 {
+    this-> id = count++;
 }
 
 unsigned int Street::getId() const {
@@ -55,17 +56,13 @@ vector<Node> &Street::getNodes() {
     return this->nodes;
 }
 
-int Street::findNode(unsigned int id){
-    for(int i = 0; i < nodes.size(); ++i)
-        if(nodes.at(i).getId() == id)
+int Street::findNode(unsigned long long int osmId){
+    for(int i = 0; i < nodes.size(); i++)
+        if(nodes.at(i).getOsmId() == osmId)
             return i;
 }
 
-void Street::setNodeHeight(int i, double height){
-    nodes.at(i).setHeight(height);
-}
-
-void Street::setNodeHeightCalculated(int i){
-    nodes.at(i).setHeightCalculated(true);
+void Street::addStreetToNode(int i, int id){
+    nodes.at(i).addStreet(id);
 }
 

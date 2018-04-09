@@ -61,22 +61,22 @@ public:
     * Getter which returns the graph
     * @return graph
     */
-    Graph<Node> getGraph() {return this->graph;}
+    Graph<Node>& getGraph() {return this->graph;}
 	/**
     * Getter which returns a vector with all the nodes
     * @return vector with all the nodes
     */
-	vector<Node> getNodes() {return this->nodes;}
+	vector<Node>& getNodes() {return this->nodes;}
 	/**
     * Getter which returns a vector with all the streets
     * @return vector with all the streets
     */
-	vector<Street> getStreets() {return this->streets;}
+	vector<Street>& getStreets() {return this->streets;}
 	/**
     * Getter which returns a vector with all the sharing spots
     * @return vector with all the sharing spots
     */
-	vector<SharingSpot> getSharingSpots() {return this->sharingSpots;}
+	vector<SharingSpot>& getSharingSpots() {return this->sharingSpots;}
 	/**
     * Getter which returns the user information
     * @return user information
@@ -87,16 +87,11 @@ public:
 	 * @param id	street id
 	 * @return	street
 	 */
-	Street &findStreet(unsigned int id);
+	Street &findStreet(unsigned long long int id);
 	/**
-	 * Auxiliary method to calculateHeights
-	 * @param s 	street
-	 * @param i 	node index
-	 * @param h 	height
-	 */
-	void calculate(Street &s, int i, double h);
-    /**
-    * Calculates heights of the nodes
-    */
-    void calculateHeights();
+   * Finds the node with the specified id
+   * @param id  node id
+   * @return  node
+   */
+	Node &findNode(unsigned long long id);
 };

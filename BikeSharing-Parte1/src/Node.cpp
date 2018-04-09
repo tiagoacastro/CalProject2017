@@ -3,15 +3,13 @@
 
 unsigned int Node::count = 1;
 
-Node::Node(unsigned long long int osmId) : osmId(osmId)
-{heightCalculated = false;}
+Node::Node(unsigned long long int osmId) : osmId(osmId){}
 
 Node::Node(unsigned long long int osmId, double latitude, double longitude){
 	this->osmId = osmId;
     this->id = count++;
     this->latitude = latitude;
     this->longitude = longitude;
-	heightCalculated = false;
 }
 
 unsigned int Node::getId() const {
@@ -52,22 +50,6 @@ double Node::calculateDistance (Node &n2)
 
 void Node::addStreet(int streetID) {
 	this->streets.push_back(streetID);
-}
-
-double Node::getHeight() const {
-    return height;
-}
-
-void Node::setHeight(double height) {
-    Node::height = height;
-}
-
-bool Node::isHeightCalculated() const {
-	return heightCalculated;
-}
-
-void Node::setHeightCalculated(bool heightCalculated) {
-	Node::heightCalculated = heightCalculated;
 }
 
 const vector<int> &Node::getStreets() const {

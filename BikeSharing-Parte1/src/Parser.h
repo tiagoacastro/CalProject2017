@@ -69,7 +69,7 @@ class Parser {
 		 * @param nodes vector <Node>
 		 * @param streetsID vector <int>
 		 */
-		void createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <int> &streetsID);
+		void createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <unsigned long long int> &streetsID);
 
    		/**
         * @brief separates string based on the separator

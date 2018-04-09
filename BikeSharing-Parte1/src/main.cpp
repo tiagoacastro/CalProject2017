@@ -84,8 +84,8 @@ int main()
     BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
 
 
-  //  company.printGraph();
-    company.getNearestSharingSpot(nodes[68]);
+    //  company.printGraph();
+    //company.getNearestSharingSpot(nodes[68]);
 
 
     //    company.printGraph();

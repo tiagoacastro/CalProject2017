@@ -86,16 +86,11 @@ public:
 	 * finds the index of the node with the specified id
 	 * @param id   	node id
 	 */
-	int findNode(unsigned int id);
+	int findNode(unsigned long long int id);
 	/**
-	 * Sets the height of a node
-	 * @param i 		node index
-	 * @param height 	height
-	 */
-	void setNodeHeight(int i, double height);
-	/**
-	 * sets the node height as calculated
-	 * @param i 	node index
-	 */
-	void setNodeHeightCalculated(int i);
+     * add street to a node
+     * @param i     node index
+     * @param id    street id
+     */
+	void addStreetToNode(int i, int id);
 };

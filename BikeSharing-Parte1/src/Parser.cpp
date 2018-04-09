@@ -79,7 +79,7 @@ Street Parser::createStreet(string &line) {
     return s;
 }
 
-bool findStreetID(vector<int> streets, int streetID){
+bool findStreetID(vector<unsigned long long int> streets, unsigned long long int streetID){
 
     for(int i = 0; i < streets.size(); i++) {
         if (streets.at(i) == streetID)
@@ -121,7 +121,7 @@ int findNode(vector<Node> nodes, unsigned long long id){
     return -1;
 }
 
-void Parser::createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <int> &streetsID) {
+void Parser::createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <unsigned long long int> &streetsID) {
 
     unsigned long long int roadID, node1ID, node2ID;
 
@@ -142,17 +142,21 @@ void Parser::createRelation(string &line, vector <Street> &streets, vector <Node
     int j2 = findNode(nodes, node2ID);
 
     if (!findStreetID(streetsID,roadID))  {
+        nodes.at(j1).addStreet(streets.at(i).getId());
         streets.at(i).addNode(nodes.at(j1));
         streetsID.push_back(streets.at(i).getOsmId());
+        for(auto &id : nodes.at(j1).getStreets())
+            if (id != streets.at(i).getId())
+                streets.at(id-1).addStreetToNode(streets.at(id-1).findNode(node1ID), id);
     }
 
-    nodes.at(j1).addStreet(streets.at(i).getOsmId());
-
-    if (streets.at(i).isTwoWays()){
-        nodes.at(j2).addStreet(streets.at(i).getOsmId());
-    }
+    nodes.at(j2).addStreet(streets.at(i).getId());
 
     streets.at(i).addNode(nodes.at(j2));
+
+    for(auto &id : nodes.at(j2).getStreets())
+        if (id != streets.at(i).getId())
+            streets.at(id-1).addStreetToNode(streets.at(id-1).findNode(node2ID), id);
 }
 
 vector <Node> Parser::readNodes(string file, vector <SharingSpot> &spots) {
@@ -197,7 +201,7 @@ vector <Street> Parser::readStreets(string file) {
 void Parser::readRelations(string file,vector <Street> &streets, vector <Node> &nodes ) {
 
     vector<string> lines = readLines(file);
-    vector <int> ids;
+    vector <unsigned long long int> ids;
 
     for (auto &line : lines) {
 
