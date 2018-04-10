@@ -80,7 +80,7 @@ GraphViewer * BikeCompany::printGraph()
 		{
 			if (spot.isFreeSpot())
 			//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
-				gv->setVertexIcon(spot.getId(), "bicycle1.png");
+				gv->setVertexIcon(spot.getId(), "bicycle.png");
 			else
 				gv->setVertexIcon(spot.getId(), "redbicycle.png");
 		}
