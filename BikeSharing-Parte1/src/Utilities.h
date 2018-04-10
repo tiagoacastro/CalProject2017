@@ -33,6 +33,14 @@ namespace Utilities {
      * @param s     string to check
      */
     bool isEmail(const string& s);
+    /**
+     * clears the console
+     */
+    void clearScreen();
+    /**
+    * Pauses the console waiting for input to continue
+    */
+    void pause();
 }
 /*! @} End of Doxygen Utilities group*/
 

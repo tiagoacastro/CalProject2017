@@ -91,9 +91,15 @@ public:
 	 */
 	Street &findStreet(unsigned long long int id);
 	/**
+   * Finds the node with the specified open street map id
+   * @param id  node id
+   * @return  node
+   */
+	Node &findNode(unsigned long long int id);
+	/**
    * Finds the node with the specified id
    * @param id  node id
    * @return  node
    */
-	Node &findNode(unsigned long long id);
+	Node &findNodeById(unsigned int id);
 };

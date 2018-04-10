@@ -29,4 +29,21 @@ namespace Utilities {
         // try to match the string with the regular expression
         return regex_match(s, pattern);
     }
+
+    void clearScreen() {
+        cout << string(100, '\n');
+    }
+
+    void pause() {
+        if (cin.rdbuf()->in_avail() > 0) {
+            Utilities::clearCinBuffer();
+        }
+
+        cout << "Press enter to continue....";
+        cin.get();
+
+        if (cin.rdbuf()->in_avail() > 0) {
+            Utilities::clearCinBuffer();
+        }
+    }
 }

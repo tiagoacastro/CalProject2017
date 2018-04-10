@@ -65,6 +65,7 @@ void BikeCompany::printGraph()
 
 		setMaxandMin();
 
+
 		gv->defineVertexIcon("fdfdf.png");
 
         for (const auto &node : nodes)
@@ -78,7 +79,8 @@ void BikeCompany::printGraph()
 
 		for (const auto &spot : sharingSpots)
 		{
-			gv->setVertexIcon(spot.getId(), "bicycle.png");
+			gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
+			//gv->setVertexIcon(spot.getId(), "bicycle.png");
 		}
 
         for (auto &street : streets)
@@ -173,7 +175,7 @@ Street &BikeCompany::findStreet(unsigned long long int osmId){
 		}
 	}
 
-Node &BikeCompany::findNode(unsigned long long id){
+Node &BikeCompany::findNode(unsigned long long int id){
 
 	int left = 0, right = nodes.size()-1;
 
@@ -183,6 +185,21 @@ Node &BikeCompany::findNode(unsigned long long id){
 		if (nodes.at(middle).getOsmId() < id) {
 			left = middle + 1;
 		}else if(id < nodes.at(middle).getOsmId()) {
+			right = middle -1;
+		} else return nodes.at(middle);
+	}
+}
+
+Node &BikeCompany::findNodeById(unsigned int id){
+
+	int left = 0, right = nodes.size()-1;
+
+	while(left <=right){
+
+		int middle = (left + right)/2;
+		if (nodes.at(middle).getId() < id) {
+			left = middle + 1;
+		}else if(id < nodes.at(middle).getId()) {
 			right = middle -1;
 		} else return nodes.at(middle);
 	}
