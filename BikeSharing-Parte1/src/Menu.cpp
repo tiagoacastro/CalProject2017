@@ -176,5 +176,29 @@ void shortestPath(BikeCompany &company){
 }
 
 void cheapestPath(BikeCompany &company){
-
+    /*
+    string choice;
+    Utilities::clearScreen();
+    while(true){
+        cout << "What is the node where you are located?" << endl;
+        getline(cin, choice);
+        if (cin.fail()) {
+            Utilities::clearScreen();
+            cout << "Node not valid" << endl;
+            Utilities::clearCinBuffer();
+        } else {
+            Utilities::trimString(choice);
+            if (Utilities::isNumber(choice)){
+                if (stoi(choice) < company.getNodes().size() && stoi(choice) > 0)
+                    break;
+            }else{
+                Utilities::clearScreen();
+                cout << "Node not valid" << endl;
+            }
+        }
+    }
+    Utilities::clearScreen();
+    cout << "press enter to continue" << endl;
+    company.getCheapestSharingSpot(company.findNodeById(stoi(choice)));
+     */
 }

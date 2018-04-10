@@ -7,7 +7,6 @@ using namespace std;
 #define EARTH_RADIUS 6371e3; //meters
 
 class Node {
-
 protected:
     unsigned int id;
     unsigned long long int osmId;
@@ -75,5 +74,15 @@ public:
      * @return      street id vector
      */
     const vector<int> &getStreets() const;
+    /**
+     * Setter for longitude
+     * @param longitude     longitude
+     */
+    void setLongitude(double longitude);
+    /**
+     * Setter for latitude
+     * @param latitude  latitude
+     */
+    void setLatitude(double latitude);
 };
 

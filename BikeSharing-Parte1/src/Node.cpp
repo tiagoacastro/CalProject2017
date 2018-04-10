@@ -55,3 +55,11 @@ void Node::addStreet(int streetID) {
 const vector<int> &Node::getStreets() const {
 	return streets;
 }
+
+void Node::setLongitude(double longitude) {
+	Node::longitude = longitude;
+}
+
+void Node::setLatitude(double latitude) {
+	Node::latitude = latitude;
+}

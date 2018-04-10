@@ -34,7 +34,6 @@ public:
 	void createGraph();
 	/**
 	 * Fills graph with information from street
-	 *
 	 * @param street object from class street from which information is being read and put in graph
 	 */
 	void addFromStreetToGraph (Street street);
@@ -47,14 +46,12 @@ public:
 
 	/**
 	 * Finds the nearest sharing spot and calls function to draw path to it.
-	 *
 	 * @param currentPosition user's current position
 	 */
 	void getNearestSharingSpot (const Node &currentPosition);
 
 	/**
 	 * Draws path from the user's current position to the nearest sharing spot.
-	 *
 	 * @param currentPosition user's current position
 	 * @param nearestSharingSpot nearest sharing sport considering user's position.
 	 */
@@ -102,4 +99,14 @@ public:
    * @return  node
    */
 	Node &findNodeById(unsigned int id);
+    /**
+     * Returns a node that identifies the center of the graph
+     * @return center node
+     */
+    Node getCenter();
+    /**
+	 * Finds the cheapest sharing spot and calls function to draw path to it.
+	 * @param currentPosition user's current position
+     */
+    void getCheapestSharingSpot (const Node &currentPosition);
 };

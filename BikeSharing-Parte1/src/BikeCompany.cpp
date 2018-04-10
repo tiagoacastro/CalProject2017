@@ -192,16 +192,31 @@ Node &BikeCompany::findNode(unsigned long long int id){
 
 Node &BikeCompany::findNodeById(unsigned int id){
 
-	int left = 0, right = nodes.size()-1;
+    int left = 0, right = nodes.size()-1;
 
-	while(left <=right){
+    while(left <=right){
 
-		int middle = (left + right)/2;
-		if (nodes.at(middle).getId() < id) {
-			left = middle + 1;
-		}else if(id < nodes.at(middle).getId()) {
-			right = middle -1;
-		} else return nodes.at(middle);
-	}
+        int middle = (left + right)/2;
+        if (nodes.at(middle).getId() < id) {
+            left = middle + 1;
+        }else if(id < nodes.at(middle).getId()) {
+            right = middle -1;
+        } else return nodes.at(middle);
+    }
+}
+
+Node BikeCompany::getCenter(){
+    setMaxandMin();
+
+    Node n;
+
+    n.setLatitude((maxLat+minLat)/2);
+    n.setLongitude((maxLong+minLong)/2);
+
+    return n;
+}
+
+void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
+
 }
 
