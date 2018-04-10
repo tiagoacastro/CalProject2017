@@ -37,12 +37,13 @@ public:
 	 * @param street object from class street from which information is being read and put in graph
 	 */
 	void addFromStreetToGraph (Street street);
+	void setMaxandMin();
+
 	/**
 	 * Prints graph using GraphViewer
 	 */
 
-	void setMaxandMin();
-	void printGraph();
+	GraphViewer* printGraph();
 
 	/**
 	 * Finds the nearest sharing spot and calls function to draw path to it.
@@ -81,6 +82,9 @@ public:
     * @return user information
     */
     User getUser() {return this->user;}
+
+    Street &findStreetByNodes (const Node &origin, const Node &dest);
+
 	/**
 	 * Finds the street with the specified if
 	 * @param id	street id

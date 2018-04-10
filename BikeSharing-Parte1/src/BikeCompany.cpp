@@ -57,7 +57,7 @@ void BikeCompany::setMaxandMin ()
 	}
 }
 
-void BikeCompany::printGraph()
+GraphViewer * BikeCompany::printGraph()
 {
 		auto *gv = new GraphViewer(800, 800, false);
 
@@ -65,13 +65,12 @@ void BikeCompany::printGraph()
 
 		setMaxandMin();
 
-
 		gv->defineVertexIcon("fdfdf.png");
 
         for (const auto &node : nodes)
 		{
-			auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
-			auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
+			auto x = (int) (5000 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
+			auto y = (int) (5000 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
 			gv->addNode(node.getId(), x, 800 - y);
 		}
 
@@ -79,8 +78,11 @@ void BikeCompany::printGraph()
 
 		for (const auto &spot : sharingSpots)
 		{
-			gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
-			//gv->setVertexIcon(spot.getId(), "bicycle.png");
+			if (spot.isFreeSpot())
+			//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
+				gv->setVertexIcon(spot.getId(), "bicycle1.png");
+			else
+				gv->setVertexIcon(spot.getId(), "redbicycle.png");
 		}
 
         for (auto &street : streets)
@@ -95,7 +97,7 @@ void BikeCompany::printGraph()
 
 		gv->rearrange();
 
-		getchar();
+		return gv;
 }
 
 void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
@@ -110,6 +112,9 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 	for (unsigned int i = 0; i < 2; i++)
 	{
 		SharingSpot elem = vSpots[i];
+
+		if (!elem.isFreeSpot())
+			continue;
 
 		double weight = 0;
 		graph.getPath(currentPosition, elem, weight); //weight = total distance from currentPosition to elem
@@ -132,11 +137,13 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	setMaxandMin();
 
-	auto *gv = new GraphViewer(800, 800, false);
+	auto *gv = 	printGraph();
 
-	gv->createWindow(800, 800);
+
+//	gv->createWindow(800, 800);
 
 	unsigned int previousNodeId = 0;
+	int streetId = 999;
 
 	for (unsigned int i = 0; i < path.size(); i++)
 	{
@@ -148,17 +155,27 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 		if (i > 0)
 		{
-			gv->addEdge(i, previousNodeId, node.getId(), EdgeType::UNDIRECTED);
+			gv->addEdge(streetId, previousNodeId, node.getId(), EdgeType::UNDIRECTED);
+			gv->setEdgeColor(streetId, "RED");
 		}
 
 		previousNodeId = node.getId();
-
+		streetId++;
 	}
 
 	gv->rearrange();
 
 	getchar();
 }
+
+//Street &BikeCompany::findStreetByNodes (const Node &origin, const Node &dest)
+//{
+//	for (auto elem : origin.getStreets())
+//	{
+//		Street s = findStreet (elem);
+//		if (s.getNodes()[])
+//	}
+//}
 
 Street &BikeCompany::findStreet(unsigned long long int osmId){
 

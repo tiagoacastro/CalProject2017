@@ -98,12 +98,13 @@ void startMenu(BikeCompany &company){
         if(ok)
             switch(stoi(choice)){
                 case 1:
-                    choice1(company);
+                    calculatePath(company);
                     break;
                 case 2:
                     Utilities::clearScreen();
                     cout << "press enter to continue";
                     company.printGraph();
+            		getchar();
                     break;
                 case 3:
                     exit(0);
@@ -113,7 +114,7 @@ void startMenu(BikeCompany &company){
     }
 }
 
-void choice1(BikeCompany &company){
+void calculatePath(BikeCompany &company){
     string choice;
     bool ok, stop = false;
     while(true) {

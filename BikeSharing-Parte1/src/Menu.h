@@ -19,7 +19,7 @@ void startMenu(BikeCompany &company);
  * menu for the path options
  * @param company   company class used to call functions
  */
-void choice1(BikeCompany &company);
+void calculatePath (BikeCompany &company);
 /**
  * Output shortest path
  * @param company   company class used to call functions
