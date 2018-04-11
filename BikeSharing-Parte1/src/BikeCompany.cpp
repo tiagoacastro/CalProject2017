@@ -109,7 +109,7 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 	unsigned int posClosestSpot = 0; //position in vector of closest Sharing Spot
 	double closestSpotWeight = INF; //distance from currentPosition to closest Sharing Spot
 
-	for (unsigned int i = 0; i < 2; i++)
+	for (unsigned int i = 0; i < vSpots.size(); i++)
 	{
 		SharingSpot elem = vSpots[i];
 
