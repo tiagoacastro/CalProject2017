@@ -65,7 +65,7 @@ template <class T>
 class Graph {
 	vector<Vertex<T> *> vertexSet;    // vertex set
 
-	void dfsVisit(Vertex<T> *v,  vector<T> & res) const;
+	void dfsVisit(Vertex<T> *v,  vector<vector <T>> & res, int i) const;
 	Vertex<T> *findVertex(const T &in) const;
 	Edge <T>  findEdge (const Vertex <T> * origin, const Vertex <T> * dest) const;
 	bool dfsIsDAG(Vertex<T> *v) const;
@@ -76,7 +76,7 @@ public:
 	bool removeVertex(const T &in);
 	bool addEdge(const T &sourc, const T &dest, double w);
 	bool removeEdge(const T &sourc, const T &dest);
-	vector<T> dfs() const;
+	vector<vector<T>> dfs() const;
 	vector<T> bfs(const T &source) const;
 	vector<T> topsort() const;
 	int maxNewChildren(const T &source, T &inf) const;
@@ -231,13 +231,18 @@ bool Graph<T>::removeVertex(const T &in) {
  * Follows the algorithm described in theoretical classes.
  */
 template <class T>
-vector<T> Graph<T>::dfs() const {
-	vector<T> res;
+vector<vector<T>> Graph<T>::dfs() const {
+	vector<vector <T>> res;
+
+    int i = 0;
 	for (auto v : vertexSet)
 		v->visited = false;
-	for (auto v : vertexSet)
-	    if (! v->visited)
-	    	dfsVisit(v, res);
+	for (auto v : vertexSet) {
+        if (!v->visited) {
+            dfsVisit(v, res, i);
+            i++;
+        }
+    }
 	return res;
 }
 
@@ -246,13 +251,13 @@ vector<T> Graph<T>::dfs() const {
  * Updates a parameter with the list of visited node contents.
  */
 template <class T>
-void Graph<T>::dfsVisit(Vertex<T> *v, vector<T> & res) const {
+void Graph<T>::dfsVisit(Vertex<T> *v, vector<vector <T>> & res, int i) const {
 	v->visited = true;
-	res.push_back(v->info);
+	res.at(i).push_back(v->info);
 	for (auto & e : v->adj) {
 		auto w = e.dest;
 	    if ( ! w->visited)
-	    	dfsVisit(w, res);
+	    	dfsVisit(w, res, i);
 	}
 }
 

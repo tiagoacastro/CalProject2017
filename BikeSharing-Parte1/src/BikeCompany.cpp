@@ -220,3 +220,17 @@ void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
 
 }
 
+void BikeCompany::checkConnectivity() {
+
+    vector<vector <Node>> res = this->graph.dfs();
+    bool connected = true;
+
+    for(int i = 0; i < res.size(); i++) {
+
+        if (res.at(i).size() != this->graph.getNumVertex()) {
+            connected = false;
+			break;
+        }
+    }
+
+}

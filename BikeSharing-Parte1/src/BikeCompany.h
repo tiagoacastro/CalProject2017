@@ -109,4 +109,6 @@ public:
 	 * @param currentPosition user's current position
      */
     void getCheapestSharingSpot (const Node &currentPosition);
+
+    void checkConnectivity();
 };
