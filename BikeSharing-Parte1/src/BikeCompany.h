@@ -6,6 +6,7 @@
 #include "Street.h"
 #include "SharingSpot.h"
 #include "User.h"
+#include "Utilities.h"
 #include "graphviewer.h"
 #include <algorithm>
 using namespace std;

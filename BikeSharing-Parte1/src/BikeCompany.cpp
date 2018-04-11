@@ -106,24 +106,39 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 	graph.dijkstraShortestPath(currentPosition);
 
 
-	unsigned int posClosestSpot = 0; //position in vector of closest Sharing Spot
+	int posClosestSpot = -1; //position in vector of closest Sharing Spot
 	double closestSpotWeight = INF; //distance from currentPosition to closest Sharing Spot
+	double weight = 0;
 
 	for (unsigned int i = 0; i < vSpots.size(); i++)
 	{
 		SharingSpot elem = vSpots[i];
 
+		if (elem.getId() == currentPosition.getId() && elem.isFreeSpot())
+		{
+			cout << "You are already in a SharingSpot" << endl;
+			Utilities::pause();
+			return;
+		}
+
 		if (!elem.isFreeSpot())
 			continue;
 
-		double weight = 0;
+		weight = 0;
 		graph.getPath(currentPosition, elem, weight); //weight = total distance from currentPosition to elem
 
-		if (weight < closestSpotWeight) // if weight is less than current minimal distance, then variables are updated
+		if (weight != 0 && weight < closestSpotWeight) // if weight is less than current minimal distance, then variables are updated
 		{
 			posClosestSpot = i;
 			closestSpotWeight = weight;
 		}
+	}
+
+	if (posClosestSpot == -1)
+	{
+		cout << "It wasn't possible to find a sharing spot." << endl;
+		Utilities::pause();
+		return;
 	}
 	drawPath (currentPosition, vSpots[posClosestSpot]);
 
@@ -146,9 +161,9 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 	{
 		Node node = path[i];
 
-		auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
-		auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
-		gv->addNode(node.getId(), x, 800 - y);
+//		auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
+//		auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
+//		gv->addNode(node.getId(), x, 800 - y);
 
 		if (i > 0)
 		{

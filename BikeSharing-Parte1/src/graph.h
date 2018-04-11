@@ -108,8 +108,11 @@ int Graph<T>::getNumVertex() const {
 template <class T>
 Vertex<T> * Graph<T>::findVertex(const T &in) const {
 	for (auto v : vertexSet)
+	{
 		if (v->info == in)
 			return v;
+	}
+
 	return NULL;
 }
 
@@ -479,14 +482,21 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
 template<class T>
 vector<T> Graph<T>::getPath(const T &origin, const T &dest, double &totalWeight) const {
 	vector<T> res;
+
 	auto v = findVertex(dest);
 	if (v == nullptr || v->dist == INF)
+	{
 		return res;
+	}
+
 	for (; v != nullptr; v = v->path)
 	{
 		res.push_back(v->info);
-		Edge <T> e = findEdge(findVertex(origin), findVertex(dest));
-		totalWeight += e.weight;
+		if (v->path != nullptr)
+		{
+			Edge <T> e = findEdge(findVertex(v->path->info), findVertex(v->info));
+			totalWeight += e.weight;
+		}
 	}
 	reverse(res.begin(), res.end());
 	return res;

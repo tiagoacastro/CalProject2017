@@ -31,7 +31,7 @@ double Node::getLatitude() const {
 
 bool Node::operator ==(const Node &n2) const
 {
-	return this->id == n2.getId();
+	return id == n2.getId();
 }
 
 double Node::calculateDistance (Node &n2)
