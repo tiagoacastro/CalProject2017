@@ -139,9 +139,6 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	auto *gv = 	printGraph();
 
-
-//	gv->createWindow(800, 800);
-
 	unsigned int previousNodeId = 0;
 	int streetId = 999;
 
@@ -167,15 +164,6 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 	getchar();
 }
-
-//Street &BikeCompany::findStreetByNodes (const Node &origin, const Node &dest)
-//{
-//	for (auto elem : origin.getStreets())
-//	{
-//		Street s = findStreet (elem);
-//		if (s.getNodes()[])
-//	}
-//}
 
 Street &BikeCompany::findStreet(unsigned long long int osmId){
 

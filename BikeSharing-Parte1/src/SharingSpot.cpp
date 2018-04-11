@@ -11,8 +11,9 @@ SharingSpot::SharingSpot(Node n){
     int i = rand()%5;
 
     if (i == 0)
-        freeSpot = true;
-    else freeSpot = false;
+        freeSpot = false;
+
+    else freeSpot = true;
 
 }
 
