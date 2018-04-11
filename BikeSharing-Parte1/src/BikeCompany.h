@@ -20,6 +20,23 @@ private:
 	vector<SharingSpot> sharingSpots;
     User user;
 
+	/**
+	 * Calculated minimum and maximum latitude and longitude and puts teh values on global variables.
+	 */
+	void setMaxandMin();
+
+	/**
+	 * Fills graph with information from street
+	 * @param street object from class street from which information is being read and put in graph
+	 */
+	void addFromStreetToGraph (Street street);
+
+	/**
+	 * Draws path from the user's current position to the nearest sharing spot.
+	 * @param currentPosition user's current position
+	 * @param nearestSharingSpot nearest sharing sport considering user's position.
+	 */
+	void drawPath (const Node &currentPosition, const Node &nearestSharingSpot);
 public:
 	/**
     * BikeCompany constructor
@@ -34,16 +51,8 @@ public:
 	 */
 	void createGraph();
 	/**
-	 * Fills graph with information from street
-	 * @param street object from class street from which information is being read and put in graph
-	 */
-	void addFromStreetToGraph (Street street);
-	void setMaxandMin();
-
-	/**
 	 * Prints graph using GraphViewer
 	 */
-
 	GraphViewer* printGraph();
 
 	/**
@@ -51,13 +60,6 @@ public:
 	 * @param currentPosition user's current position
 	 */
 	void getNearestSharingSpot (const Node &currentPosition);
-
-	/**
-	 * Draws path from the user's current position to the nearest sharing spot.
-	 * @param currentPosition user's current position
-	 * @param nearestSharingSpot nearest sharing sport considering user's position.
-	 */
-	void drawPath (const Node &currentPosition, const Node &nearestSharingSpot);
 	/**
     * Getter which returns the graph
     * @return graph
@@ -84,6 +86,12 @@ public:
     */
     User getUser() {return this->user;}
 
+    /**
+     * Finds a street that starts in origin and ends in dest
+     *
+     * @param origin initial node
+     * @param dest final node
+     */
     Street &findStreetByNodes (const Node &origin, const Node &dest);
 
 	/**
@@ -114,6 +122,8 @@ public:
 	 * @param currentPosition user's current position
      */
     void getCheapestSharingSpot (const Node &currentPosition);
-
+    /**
+     * Check graph's connectivity
+     */
     void checkConnectivity();
 };

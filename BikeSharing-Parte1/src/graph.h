@@ -41,12 +41,7 @@ public:
 	{
 		return this->dist < vertex.getDist();
 	}
-	double getDist()
-	{
-		return dist;
-	}
-	T getInfo() {return info;}
-	vector <Edge<T>> getAdj() {return adj;}
+	double getDist(){return dist;}
 	friend class Graph<T>;
 	friend class MutablePriorityQueue<Vertex<T>>;
 };

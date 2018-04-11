@@ -156,13 +156,11 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 	unsigned int previousNodeId = 0;
 	int streetId = 999;
 
+	gv->setVertexIcon(currentPosition.getId(), "youarehere.png");
+
 	for (unsigned int i = 0; i < path.size(); i++)
 	{
 		Node node = path[i];
-
-//		auto x = (int) (3500 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
-//		auto y = (int) (3500 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
-//		gv->addNode(node.getId(), x, 800 - y);
 
 		if (i > 0)
 		{
