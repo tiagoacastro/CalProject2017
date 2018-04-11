@@ -35,7 +35,7 @@ class Parser {
 		 * @param file string
 		 * @return vector <Node>
 		 */
-		vector <Node> readNodes(string file, vector <SharingSpot> &spots);
+		vector <Node> readNodes(string file);
 		/**
 		 * @brief Returns a vector with all the streets after being created from the data read from the file with the name passed as parameter
 		 * @param file string
@@ -48,7 +48,7 @@ class Parser {
 		 * @param streets vector <Street>
 		 * @param nodes vector <Node>
 		 */
-		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes );
+		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes, vector <SharingSpot> &spots );
 
 		/**
 		 * Auxiliary function that creates and returns a Node based on the data in the line
@@ -100,4 +100,6 @@ class Parser {
         * @return true if input is valid and false otherwise
         */
         bool validString(string &s);
+
+		void createSharingSpot(Node n, vector <SharingSpot> &spots);
 };

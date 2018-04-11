@@ -4,9 +4,10 @@
 
 SharingSpot::SharingSpot(Node n){
     id = n.getId();
+    osmId = n.getOsmId();
     latitude = n.getLatitude();
     longitude = n.getLongitude();
-
+    streets = n.getStreets();
     int i = rand()%5;
 
     if (i == 0)
