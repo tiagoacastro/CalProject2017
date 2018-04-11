@@ -85,6 +85,7 @@ public:
 	/**
 	 * finds the index of the node with the specified id
 	 * @param id   	node id
+	 * @return returns node index
 	 */
 	int findNode(unsigned long long int id);
 	/**

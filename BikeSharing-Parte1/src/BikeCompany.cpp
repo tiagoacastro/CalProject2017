@@ -79,9 +79,10 @@ GraphViewer * BikeCompany::printGraph()
 		for (const auto &spot : sharingSpots)
 		{
 			if (spot.isFreeSpot())
-			//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
+				//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
 				gv->setVertexIcon(spot.getId(), "bicycle.png");
 			else
+				//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\redbicycle.png");
 				gv->setVertexIcon(spot.getId(), "redbicycle.png");
 		}
 
@@ -117,7 +118,6 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 		if (elem.getId() == currentPosition.getId() && elem.isFreeSpot())
 		{
 			cout << "You are already in a SharingSpot" << endl;
-			Utilities::pause();
 			return;
 		}
 
@@ -137,7 +137,6 @@ void BikeCompany::getNearestSharingSpot (const Node &currentPosition)
 	if (posClosestSpot == -1)
 	{
 		cout << "It wasn't possible to find a sharing spot." << endl;
-		Utilities::pause();
 		return;
 	}
 	drawPath (currentPosition, vSpots[posClosestSpot]);
@@ -237,6 +236,80 @@ Node BikeCompany::getCenter(){
 }
 
 void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
+    Node n = getCenter();
+    long double distanceSum = 0;
+    for(auto &node : nodes){
+        distanceSum += n.calculateDistance(node);
+    }
+    double mediumDistance = distanceSum/nodes.size();
+
+    vector<Node> path;
+
+    vector <SharingSpot> vSpots = this->sharingSpots;
+    graph.dijkstraShortestPath(currentPosition);
+
+    int posClosestSpot = -1; //position in vector of closest Sharing Spot
+    double closestSpotWeight = INF; //distance from currentPosition to closest Sharing Spot
+    double weight = 0;
+
+    double elevationSum, elevationMedium;
+
+    for (unsigned int i = 0; i < vSpots.size(); i++)
+    {
+        elevationSum = 0; elevationMedium = 0;
+
+        SharingSpot elem = vSpots[i];
+
+        if (elem.getId() == currentPosition.getId() && elem.isFreeSpot())
+        {
+            cout << "You are already in a SharingSpot" << endl;
+            return;
+        }
+
+        if (!elem.isFreeSpot())
+            continue;
+
+        weight = 0;
+        path = graph.getPath(currentPosition, elem, weight); //weight = total distance from currentPosition to elem
+
+		if(path.size() >= 2)
+        for(int i=0; i<path.size()-1; i++){
+            for(const auto &id : path.at(i).getStreets())
+                for(const auto &id2 : path.at(i+1).getStreets())
+                    if(id == id2){
+                        Street s = findStreet(id);
+                        if(s.findNode(path.at(i).getOsmId()) < s.findNode(path.at(i+1).getOsmId())){
+                            elevationSum += s.getElevation();
+                        } else {
+                            elevationSum -= s.getElevation();
+                        }
+                    }
+        }
+
+        elevationMedium = elevationSum/path.size();
+
+        if(elevationMedium > 0.2){
+            weight*=0.7;
+        }
+
+        if(elem.calculateDistance(n) > mediumDistance){
+            weight*=0.7;
+        }
+
+        if (weight != 0 && weight < closestSpotWeight) // if weight is less than current minimal distance, then variables are updated
+        {
+            posClosestSpot = i;
+
+            closestSpotWeight = weight;
+        }
+    }
+
+    if (posClosestSpot == -1)
+    {
+        cout << "It wasn't possible to find a sharing spot." << endl;
+        return;
+    }
+    drawPath (currentPosition, vSpots[posClosestSpot]);
 
 }
 

@@ -177,7 +177,6 @@ void shortestPath(BikeCompany &company){
 }
 
 void cheapestPath(BikeCompany &company){
-    /*
     string choice;
     Utilities::clearScreen();
     while(true){
@@ -201,5 +200,4 @@ void cheapestPath(BikeCompany &company){
     Utilities::clearScreen();
     cout << "press enter to continue" << endl;
     company.getCheapestSharingSpot(company.findNodeById(stoi(choice)));
-     */
 }
