@@ -80,10 +80,10 @@ GraphViewer * BikeCompany::printGraph()
 		{
 			if (spot.isFreeSpot())
 				//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\bicycle.png");
-				gv->setVertexIcon(spot.getId(), "bicycle.png");
+				gv->setVertexIcon(spot.getId(), "images/bicycle.png");
 			else
 				//gv->setVertexIcon(spot.getId(), "C:\\Users\\tiago\\Desktop\\Faculdade\\CAL\\CalProject2017\\BikeSharing-Parte1\\redbicycle.png");
-				gv->setVertexIcon(spot.getId(), "redbicycle.png");
+				gv->setVertexIcon(spot.getId(), "images/redbicycle.png");
 		}
 
         for (auto &street : streets)
@@ -156,7 +156,7 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 	unsigned int previousNodeId = 0;
 	int streetId = 999;
 
-	gv->setVertexIcon(currentPosition.getId(), "youarehere.png");
+	gv->setVertexIcon(currentPosition.getId(), "images/youarehere.png");
 
 	for (unsigned int i = 0; i < path.size(); i++)
 	{
