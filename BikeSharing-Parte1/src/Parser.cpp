@@ -74,8 +74,11 @@ Street Parser::createStreet(string &line) {
     elevation = (elevation - 10)/100;
 
     Street s(id,name,true,elevation);
+
     if (bothways == "False")
+    {
         s.setTwoWays(false);
+    }
     return s;
 }
 

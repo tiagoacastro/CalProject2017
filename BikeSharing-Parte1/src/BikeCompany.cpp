@@ -71,7 +71,9 @@ GraphViewer * BikeCompany::printGraph()
 		{
 			auto x = (int) (5000 * (node.getLongitude() - minLong) / (maxLong - minLong)) ;
 			auto y = (int) (5000 * (node.getLatitude() - minLat) / (maxLat - minLat)) ;
-			gv->addNode(node.getId(), x, 800 - y);
+			gv->addNode(node.getId(), 0.3*x, 0.3*(800 - y));
+//			gv->addNode(node.getId(), 50*node.getLongitude(), 50*node.getLatitude());
+
 		}
 
 		int id = 0;
@@ -92,6 +94,7 @@ GraphViewer * BikeCompany::printGraph()
 			{
 				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::UNDIRECTED);
 				gv->setEdgeLabel(id, street.getName());
+				gv->setEdgeDashed(id,false);
 				id++;
 			}
 		}

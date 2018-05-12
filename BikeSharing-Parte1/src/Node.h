@@ -1,6 +1,7 @@
 #pragma once
 #include <cmath>
 #include <vector>
+#include <ostream>
 
 using namespace std;
 
@@ -79,6 +80,8 @@ public:
      * @param longitude     longitude
      */
     void setLongitude(double longitude);
+    friend ostream& operator<<(ostream& os, const Node& n1);
+
     /**
      * Setter for latitude
      * @param latitude  latitude

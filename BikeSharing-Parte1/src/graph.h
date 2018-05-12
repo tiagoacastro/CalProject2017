@@ -41,6 +41,9 @@ public:
 	{
 		return this->dist < vertex.getDist();
 	}
+	vector <Edge <T>> getAdj(){return adj;}
+	Vertex<T> * getPath() {return path;}
+	T getInfo () {return info;}
 	double getDist(){return dist;}
 	friend class Graph<T>;
 	friend class MutablePriorityQueue<Vertex<T>>;
@@ -52,6 +55,7 @@ class Edge {
 	double weight;         // edge weight
 public:
 	Edge(Vertex<T> *d, double w);
+	Vertex<T> * getDest() {return dest;}
 	friend class Graph<T>;
 	friend class Vertex<T>;
 };
@@ -61,10 +65,11 @@ class Graph {
 	vector<Vertex<T> *> vertexSet;    // vertex set
 
 	void dfsVisit(Vertex<T> *v,  vector<vector <T>> & res, int i) const;
-	Vertex<T> *findVertex(const T &in) const;
 	Edge <T>  findEdge (const Vertex <T> * origin, const Vertex <T> * dest) const;
 	bool dfsIsDAG(Vertex<T> *v) const;
 public:
+	Vertex<T> *findVertex(const T &in) const;
+
 	int getNumVertex() const;
 	vector <Vertex<T> *> getVertexSet() {return this->vertexSet;};
 	bool addVertex(const T &in);
@@ -462,9 +467,11 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
 	q.insert(s);
 	while (!q.empty()) {
 		auto v = q.extractMin();
-		for (auto e : v->adj) {
+		for (Edge <T> e : v->adj) {
 			auto oldDist = e.dest->dist;
+
 			if (relax(v, e.dest, e.weight)) {
+
 				if (oldDist == INF)
 					q.insert(e.dest);
 				else
@@ -472,6 +479,7 @@ void Graph<T>::dijkstraShortestPath(const T &origin) {
 			}
 		}
 	}
+
 }
 
 template<class T>

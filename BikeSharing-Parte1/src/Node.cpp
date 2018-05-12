@@ -36,16 +36,18 @@ bool Node::operator ==(const Node &n2) const
 
 double Node::calculateDistance (Node &n2)
 {
-	double deltaLat = n2.getLatitude() - this->latitude;
-	double deltaLong = n2.getLongitude() - this->longitude;
+//	double deltaLat = n2.getLatitude() - this->latitude;
+//	double deltaLong = n2.getLongitude() - this->longitude;
+//
+//	double a = sin (deltaLat/2) * sin (deltaLat/2) +
+//			   cos (this->latitude) * cos(n2.getLatitude()) +
+//			   sin (deltaLong/2) * sin (deltaLong/2);
+//
+//	double c = 2 * atan2( sqrt(a), sqrt (1-a));
+//
+//	return c * EARTH_RADIUS;
 
-	double a = sin (deltaLat/2) * sin (deltaLat/2) +
-			   cos (this->latitude) * cos(n2.getLatitude()) +
-			   sin (deltaLong/2) * sin (deltaLong/2);
-
-	double c = 2 * atan2( sqrt(a), sqrt (1-a));
-
-	return c * EARTH_RADIUS;
+	return sqrt  ( (n2.getLongitude() - getLongitude()) * (n2.getLongitude() - getLongitude()) + (n2.getLatitude() - getLatitude()) * (n2.getLatitude() - getLatitude()));
 }
 
 void Node::addStreet(int streetID) {
@@ -63,3 +65,8 @@ void Node::setLongitude(double longitude) {
 void Node::setLatitude(double latitude) {
 	Node::latitude = latitude;
 }
+
+ostream& operator<<(ostream& os, const Node& n1)
+ {
+ 	os << n1.osmId << endl;
+ }
