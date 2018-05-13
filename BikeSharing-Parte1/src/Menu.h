@@ -34,3 +34,5 @@ void cheapestPath(BikeCompany &company);
 void checkExistenceSharingSpot (BikeCompany &company);
 
 void exactSearch (BikeCompany &company);
+
+void approximateSearch (BikeCompany &company);

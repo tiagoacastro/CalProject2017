@@ -145,4 +145,8 @@ public:
      * @return 2 if node is a sharing spot with free spots, 1 if node is a sharing spot no free spots, otherwise returns 0.
      */
     int checkIfNodeIsSS (const Node &n1);
+
+    vector <int> approximateSearchStreet (string streetName);
+
+    int editDistance (string pattern, string text);
 };

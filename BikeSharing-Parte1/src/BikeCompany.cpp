@@ -396,7 +396,6 @@ void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
 
 }
 
-
 int BikeCompany::checkIfNodeIsSS(const Node &n1)
 {
 	for (auto elem: sharingSpots)
@@ -411,4 +410,76 @@ int BikeCompany::checkIfNodeIsSS(const Node &n1)
 	}
 
 	return 0;
+}
+
+vector <int> BikeCompany::approximateSearchStreet (string streetName)
+{
+	int id [3];
+	int dist [3] = {INF};
+	vector <int> res;
+
+	for (auto elem: streets)
+	{
+		int distance = editDistance (streetName, elem.getName());
+
+		if (distance < dist [0])
+		{
+			id[2] = id[1];
+			dist[2] = dist[1];
+			id[1] = id[0];
+			dist[1] = dist[0];
+			id[0] = elem.getId();
+			dist[0] = distance;
+
+		}
+
+		else if (distance < dist[1])
+		{
+			id[2] = id[1];
+			dist[2] = dist[1];
+			id[1] = elem.getId();
+			dist[1] = distance;
+		}
+
+		else if (distance < dist[2])
+		{
+			id[2] = elem.getId();
+			dist[2] = distance;
+		}
+	}
+
+	cout << "Did you mean: " << endl << endl;
+
+	for (int i = 2 ; i >= 0; i--)
+	{
+		cout << "Id: " << id[i] << ", name: " << findStreet (id[i]).getName() << endl;
+		res.push_back(id[i]);
+	}
+
+	return res;
+}
+
+int BikeCompany::editDistance(string pattern, string text)
+{
+	int n=text.length();
+	vector<int> d(n+1);
+	int old,neww;
+	for (int j=0; j<=n; j++)
+		d[j]=j;
+	int m=pattern.length();
+	for (int i=1; i<=m; i++) {
+		old = d[0];
+		d[0]=i;
+		for (int j=1; j<=n; j++) {
+			if (pattern[i-1]==text[j-1]) neww = old;
+			else {
+				neww = min(old,d[j]);
+				neww = min(neww,d[j-1]);
+				neww = neww +1;
+			}
+			old = d[j];
+			d[j] = neww;
+		}
+	}
+	return d[n];
 }

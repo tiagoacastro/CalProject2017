@@ -245,7 +245,7 @@ void checkExistenceSharingSpot (BikeCompany &company)
                     exactSearch(company);
                     break;
                 case 2:
-                    cheapestPath(company);
+                    approximateSearch(company);
                     break;
                 case 3:
                     stop = true;
@@ -283,11 +283,14 @@ void exactSearch (BikeCompany &company)
 
     id1 = company.exactSearchStreet (street1);
 
+    Utilities::clearScreen();
+
     if (id1 == -1)
     {
     	cout << street1 << " does not exist." << endl << endl;
     	return;
     }
+
 
     while (true)
     {
@@ -307,6 +310,8 @@ void exactSearch (BikeCompany &company)
 
     id2 = company.exactSearchStreet (street2);
 
+    Utilities::clearScreen();
+
     if (id2 == -1)
     {
     	cout << street2 << " does not exist." << endl << endl;
@@ -316,8 +321,144 @@ void exactSearch (BikeCompany &company)
     if (id1 == id2)
     {
     	cout << "Can not enter the same street." << endl << endl;
+    	return;
     }
 
     company.checkExistenceSharingSpot(id1, id2);
 
+}
+
+void approximateSearch (BikeCompany &company)
+{
+	string street1, street2, choice;
+	int id1, id2;
+
+    Utilities::clearScreen();
+
+    while (true)
+    {
+		cout << "First street:" << endl;
+		getline(cin, street1);
+
+		if (cin.fail()) {
+			Utilities::clearScreen();
+			cout << "Street not valid" << endl;
+			Utilities::clearCinBuffer();
+		}
+		else {
+			Utilities::trimString (street1);
+			break;
+		}
+    }
+
+    id1 = company.exactSearchStreet (street1);
+
+    Utilities::clearScreen();
+
+    if (id1 == -1)
+    {
+    	vector <int> res = company.approximateSearchStreet(street1);
+
+		do
+		{
+			cout << endl << "Insert id of desired street: " << endl;
+			getline (cin, choice);
+			if (cin.fail())
+			{
+				Utilities::clearCinBuffer();
+				continue;
+			}
+
+			Utilities::trimString(choice);
+
+			bool Found = false;
+
+			for (auto elem: res)
+			{
+				if (stoi (choice) == elem)
+				{
+					Found = true;
+					break;
+				}
+			}
+
+			if (Found)
+				break;
+
+			cout << endl << "Invalid id " << endl;
+
+		} while (1);
+    }
+
+    id1 = stoi(choice);
+
+    Utilities::clearScreen();
+
+    while (true)
+    {
+       cout << endl << "Second street:" << endl;
+       getline(cin, street2);
+
+       if (cin.fail()) {
+           Utilities::clearScreen();
+           cout << "Street not valid" << endl;
+           Utilities::clearCinBuffer();
+       }
+       else {
+		Utilities::trimString (street2);
+		break;
+       }
+    }
+
+    id2 = company.exactSearchStreet (street2);
+
+    Utilities::clearScreen();
+
+    if (id2 == -1)
+    {
+    	vector <int> res = company.approximateSearchStreet(street1);
+
+		do
+		{
+			cout << endl << "Insert id of desired street: " << endl;
+			getline (cin, choice);
+			if (cin.fail())
+			{
+				Utilities::clearCinBuffer();
+				continue;
+			}
+
+			Utilities::trimString(choice);
+
+			bool Found = false;
+
+			for (auto elem: res)
+			{
+				if (stoi (choice) == elem)
+				{
+					Found = true;
+					break;
+				}
+			}
+
+			if (Found)
+				break;
+
+			cout << endl << "Invalid id " << endl;
+
+		} while (1);
+    }
+
+    id2 = stoi (choice);
+
+    Utilities::clearScreen();
+
+
+    if (id1 == id2)
+    {
+    	cout << "Can not enter the same street." << endl << endl;
+    	return;
+    }
+
+    company.checkExistenceSharingSpot(id1, id2);
 }
