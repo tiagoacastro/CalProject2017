@@ -30,3 +30,5 @@ void shortestPath(BikeCompany &company);
  * @param company   company class used to call functions
  */
 void cheapestPath(BikeCompany &company);
+
+void checkExistenceSharingSpot (BikeCompany &company);

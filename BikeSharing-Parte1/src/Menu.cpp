@@ -85,14 +85,15 @@ void startMenu(BikeCompany &company){
         ok = false;
         cout << "1-\tCalculate Path" << endl
              << "2-\tView Graph" << endl
-             << "3-\tExit" << endl
+			 << "3-\tCheck Existence of Sharing Spot" << endl
+             << "4-\tExit" << endl
              << endl << "Input:" << endl;
         getline(cin, choice);
         if (cin.fail()) {
             Utilities::clearCinBuffer();
         } else {
             Utilities::trimString(choice);
-            if(choice == "1" || choice == "2" || choice == "3")
+            if(choice == "1" || choice == "2" || choice == "3" || choice == "4")
                 ok = true;
         }
         if(ok)
@@ -107,6 +108,9 @@ void startMenu(BikeCompany &company){
             		getchar();
                     break;
                 case 3:
+                	checkExistenceSharingSpot(company);
+                	break;
+                case 4:
                     exit(0);
                 default:
                     break;
@@ -200,4 +204,68 @@ void cheapestPath(BikeCompany &company){
     Utilities::clearScreen();
     cout << "press enter to continue" << endl;
     company.getCheapestSharingSpot(company.findNodeById(stoi(choice)));
+}
+
+void checkExistenceSharingSpot (BikeCompany &company)
+{
+	string street1, street2;
+	int id1, id2;
+
+    Utilities::clearScreen();
+
+    while (true)
+    {
+		cout << "First street:" << endl;
+		getline(cin, street1);
+
+		if (cin.fail()) {
+			Utilities::clearScreen();
+			cout << "Street not valid" << endl;
+			Utilities::clearCinBuffer();
+		}
+		else {
+			Utilities::trimString (street1);
+			break;
+		}
+    }
+
+    id1 = company.exactSearchStreet (street1);
+
+    if (id1 == -1)
+    {
+    	cout << street1 << " does not exist." << endl;
+    	return;
+    }
+
+    while (true)
+    {
+       cout << "Second street:" << endl;
+       getline(cin, street2);
+
+       if (cin.fail()) {
+           Utilities::clearScreen();
+           cout << "Street not valid" << endl;
+           Utilities::clearCinBuffer();
+       }
+       else {
+		Utilities::trimString (street2);
+		break;
+       }
+    }
+
+    id2 = company.exactSearchStreet (street2);
+
+    if (id2 == -1)
+    {
+    	cout << street2 << " does not exist." << endl;
+    	return;
+    }
+
+    if (id1 == id2)
+    {
+    	cout << "Can not enter the same street." << endl;
+    }
+
+    company.checkExistenceSharingSpot(id1, id2);
+
 }

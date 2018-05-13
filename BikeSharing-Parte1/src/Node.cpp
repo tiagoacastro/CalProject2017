@@ -1,4 +1,3 @@
-
 #include "Node.h"
 
 unsigned int Node::count = 1;

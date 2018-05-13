@@ -126,4 +126,22 @@ public:
      * Check graph's connectivity
      */
     void checkConnectivity();
+    /**
+     * Searches in vector 'streets' if there a an exact match with streetName.
+     * @param streetName name of street.
+     * @return -1 if the street is not found, otherwise returns the street's id.
+     */
+    int exactSearchStreet (string streetName);
+    /**
+     * Checks if there is a sharing spot in the intersection between the streets given as parameters.
+     * @param streetId1 id of street 1.
+     * @param streetId2 id of street 2.
+     */
+    void checkExistenceSharingSpot (int streetId1, int streetId2);
+    /**
+     * Checks if a node is also a sharing spot.
+     * @param n1 node to be checked.
+     * @return true if node is a sharing spot, otherwise return false.
+     */
+    bool checkIfNodeIsSS (const Node &n1);
 };

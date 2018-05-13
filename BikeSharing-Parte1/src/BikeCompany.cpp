@@ -15,6 +15,7 @@ void BikeCompany::createGraph()
 {
 	for (const auto &street : streets)
 		addFromStreetToGraph (street);
+
 }
 
 void BikeCompany::addFromStreetToGraph (Street street)
@@ -24,6 +25,12 @@ void BikeCompany::addFromStreetToGraph (Street street)
 	{
 			auto node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
 			auto node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
+
+			if ((*node1).getId() == 54)
+			{
+				for (auto elem : (*node1).getStreets())
+					cout << elem << endl;
+			}
 
 			this->graph.addVertex( (*node1));
 			this->graph.addVertex( (*node2));
@@ -35,6 +42,12 @@ void BikeCompany::addFromStreetToGraph (Street street)
 			if (street.isTwoWays())
 			{
 				this->graph.addEdge((*node2), (*node1), edgeWeight);
+			}
+
+			if ((*node1).getId() == 54)
+			{
+				for (auto elem : (*node1).getStreets())
+					cout << elem << endl;
 			}
 	}
 }
@@ -327,4 +340,56 @@ void BikeCompany::checkConnectivity() {
         }
     }
 
+}
+
+int BikeCompany::exactSearchStreet (string streetName)
+{
+	for (auto elem: streets)
+	{
+		if (elem.getName() == streetName)
+		{
+			return elem.getId();
+		}
+	}
+
+	return -1;
+}
+
+void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
+{
+	Street s1 = findStreet (streetId1);
+
+	for (auto elem:s1.getNodes())
+	{
+		Node n = findNode (elem.getId());
+
+		for (auto elem2: n.getStreets())
+		{
+			if (streetId2 == elem2)
+			{
+				if (checkIfNodeIsSS(n))
+					cout << "Streets' intersection is a sharing spot." << endl;
+				else
+					cout << "Streets' intersection is not a sharing spot" << endl;
+
+				return;
+			}
+		}
+
+		cout << endl << endl;
+	}
+
+	cout << "Streets do not intersect" << endl;
+
+}
+
+bool BikeCompany::checkIfNodeIsSS(const Node &n1)
+{
+	for (auto elem: sharingSpots)
+	{
+		if (elem.getId() == n1.getId())
+			return true;
+	}
+
+	return false;
 }
