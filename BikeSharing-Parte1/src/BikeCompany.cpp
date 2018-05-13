@@ -26,12 +26,6 @@ void BikeCompany::addFromStreetToGraph (Street street)
 			auto node1 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i] ) );
 			auto node2 = find (nodes.begin(), nodes.end(), Node(street.getNodes()[i+1] ) );
 
-			if ((*node1).getId() == 54)
-			{
-				for (auto elem : (*node1).getStreets())
-					cout << elem << endl;
-			}
-
 			this->graph.addVertex( (*node1));
 			this->graph.addVertex( (*node2));
 
@@ -44,11 +38,6 @@ void BikeCompany::addFromStreetToGraph (Street street)
 				this->graph.addEdge((*node2), (*node1), edgeWeight);
 			}
 
-			if ((*node1).getId() == 54)
-			{
-				for (auto elem : (*node1).getStreets())
-					cout << elem << endl;
-			}
 	}
 }
 
@@ -107,7 +96,6 @@ GraphViewer * BikeCompany::printGraph()
 			{
 				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::UNDIRECTED);
 				gv->setEdgeLabel(id, street.getName());
-				gv->setEdgeDashed(id,false);
 				id++;
 			}
 		}
@@ -185,6 +173,7 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 		}
 
 		previousNodeId = node.getId();
+
 		streetId++;
 	}
 
@@ -238,6 +227,24 @@ Node &BikeCompany::findNodeById(unsigned int id){
     }
 }
 
+int BikeCompany::findStreetByNodes (int nodeId1, int nodeId2)
+{
+	Node n1 = findNode (nodeId1);
+
+	for (auto elem: n1.getStreets())
+	{
+		Street s1 = findStreet (elem);
+
+		for (auto elem2: s1.getNodes())
+		{
+			if (elem2.getId() == nodeId2)
+				return s1.getId();
+		}
+	}
+
+	return -1;
+}
+
 Node BikeCompany::getCenter(){
     setMaxandMin();
 
@@ -248,6 +255,7 @@ Node BikeCompany::getCenter(){
 
     return n;
 }
+
 
 void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
     Node n = getCenter();
@@ -327,6 +335,7 @@ void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
 
 }
 
+
 void BikeCompany::checkConnectivity() {
 
     vector<vector <Node>> res = this->graph.dfs();
@@ -342,6 +351,7 @@ void BikeCompany::checkConnectivity() {
 
 }
 
+
 int BikeCompany::exactSearchStreet (string streetName)
 {
 	for (auto elem: streets)
@@ -355,6 +365,7 @@ int BikeCompany::exactSearchStreet (string streetName)
 	return -1;
 }
 
+
 void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
 {
 	Street s1 = findStreet (streetId1);
@@ -367,10 +378,12 @@ void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
 		{
 			if (streetId2 == elem2)
 			{
-				if (checkIfNodeIsSS(n))
-					cout << "Streets' intersection is a sharing spot." << endl;
+				if (checkIfNodeIsSS(n) == 2)
+					cout << "Streets' intersection is a sharing spot with free spots." << endl << endl;
+				else if (checkIfNodeIsSS(n) == 1)
+					cout << "Streets' intersection is a sharing spot with no free spots." << endl << endl;
 				else
-					cout << "Streets' intersection is not a sharing spot" << endl;
+					cout << "Streets' intersection is not a sharing spot" << endl << endl;
 
 				return;
 			}
@@ -379,17 +392,23 @@ void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
 		cout << endl << endl;
 	}
 
-	cout << "Streets do not intersect" << endl;
+	cout << "Streets do not intersect" << endl << endl;
 
 }
 
-bool BikeCompany::checkIfNodeIsSS(const Node &n1)
+
+int BikeCompany::checkIfNodeIsSS(const Node &n1)
 {
 	for (auto elem: sharingSpots)
 	{
 		if (elem.getId() == n1.getId())
-			return true;
+		{
+			if (elem.isFreeSpot())
+				return 2;
+			else
+				return 1;
+		}
 	}
 
-	return false;
+	return 0;
 }

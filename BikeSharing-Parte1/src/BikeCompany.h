@@ -87,12 +87,13 @@ public:
     User getUser() {return this->user;}
 
     /**
-     * Finds a street that starts in origin and ends in dest
+     * Finds a street that starts in nodeId1 and ends in nodeId2
      *
-     * @param origin initial node
-     * @param dest final node
+     * @param nodeId1 initial node
+     * @param nodeId2 final node
+     * @return id of the street, or -1 if no street is found
      */
-    Street &findStreetByNodes (const Node &origin, const Node &dest);
+    int findStreetByNodes (int nodeId1, int nodeId2);
 
 	/**
 	 * Finds the street with the specified if
@@ -141,7 +142,7 @@ public:
     /**
      * Checks if a node is also a sharing spot.
      * @param n1 node to be checked.
-     * @return true if node is a sharing spot, otherwise return false.
+     * @return 2 if node is a sharing spot with free spots, 1 if node is a sharing spot no free spots, otherwise returns 0.
      */
-    bool checkIfNodeIsSS (const Node &n1);
+    int checkIfNodeIsSS (const Node &n1);
 };

@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "BikeCompany.h"
 
 User askUser() {
     Utilities::clearScreen();
@@ -81,7 +82,7 @@ void startMenu(BikeCompany &company){
     string choice;
     bool ok;
     while(true) {
-        Utilities::clearScreen();
+//        Utilities::clearScreen();
         ok = false;
         cout << "1-\tCalculate Path" << endl
              << "2-\tView Graph" << endl
@@ -99,15 +100,18 @@ void startMenu(BikeCompany &company){
         if(ok)
             switch(stoi(choice)){
                 case 1:
+                    Utilities::clearScreen();
                     calculatePath(company);
                     break;
                 case 2:
                     Utilities::clearScreen();
                     cout << "press enter to continue";
+                    Utilities::clearScreen();
                     company.printGraph();
             		getchar();
                     break;
                 case 3:
+                    Utilities::clearScreen();
                 	checkExistenceSharingSpot(company);
                 	break;
                 case 4:
@@ -122,7 +126,6 @@ void calculatePath(BikeCompany &company){
     string choice;
     bool ok, stop = false;
     while(true) {
-        Utilities::clearScreen();
         ok = false;
         cout << "1-\tShortest Path" << endl
              << "2-\tCheapest Path" << endl
@@ -152,6 +155,8 @@ void calculatePath(BikeCompany &company){
         if(stop)
             break;
     }
+    Utilities::clearScreen();
+
 }
 
 void shortestPath(BikeCompany &company){
@@ -167,8 +172,13 @@ void shortestPath(BikeCompany &company){
         } else {
             Utilities::trimString(choice);
             if (Utilities::isNumber(choice)){
-                if (stoi(choice) < company.getNodes().size() && stoi(choice) > 0)
+                if (stoi(choice) <= company.getNodes().size() && stoi(choice) > 0)
                     break;
+                else
+                {
+                    Utilities::clearScreen();
+                    cout << "Node not valid" << endl;
+                }
             }else{
                 Utilities::clearScreen();
                 cout << "Node not valid" << endl;
@@ -193,8 +203,13 @@ void cheapestPath(BikeCompany &company){
         } else {
             Utilities::trimString(choice);
             if (Utilities::isNumber(choice)){
-                if (stoi(choice) < company.getNodes().size() && stoi(choice) > 0)
+                if (stoi(choice) <= company.getNodes().size() && stoi(choice) > 0)
                     break;
+                else
+                {
+                    Utilities::clearScreen();
+                    cout << "Node not valid" << endl;
+                }
             }else{
                 Utilities::clearScreen();
                 cout << "Node not valid" << endl;
@@ -207,6 +222,43 @@ void cheapestPath(BikeCompany &company){
 }
 
 void checkExistenceSharingSpot (BikeCompany &company)
+{
+    string choice;
+    bool ok, stop = false;
+    while(true) {
+        ok = false;
+        cout << "1-\tExact Search" << endl
+             << "2-\tApproximate Search (not working yet)" << endl
+             << "3-\tReturn" << endl
+             << endl << "Input:" << endl;
+        getline(cin, choice);
+        if (cin.fail()) {
+            Utilities::clearCinBuffer();
+        } else {
+            Utilities::trimString(choice);
+            if(choice == "1" || choice == "2" || choice == "3")
+                ok = true;
+        }
+        if(ok)
+            switch(stoi(choice)){
+                case 1:
+                    exactSearch(company);
+                    break;
+                case 2:
+                    cheapestPath(company);
+                    break;
+                case 3:
+                    stop = true;
+                default:
+                    break;
+            }
+        if(stop)
+            break;
+    }
+    Utilities::clearScreen();
+}
+
+void exactSearch (BikeCompany &company)
 {
 	string street1, street2;
 	int id1, id2;
@@ -233,7 +285,7 @@ void checkExistenceSharingSpot (BikeCompany &company)
 
     if (id1 == -1)
     {
-    	cout << street1 << " does not exist." << endl;
+    	cout << street1 << " does not exist." << endl << endl;
     	return;
     }
 
@@ -257,13 +309,13 @@ void checkExistenceSharingSpot (BikeCompany &company)
 
     if (id2 == -1)
     {
-    	cout << street2 << " does not exist." << endl;
+    	cout << street2 << " does not exist." << endl << endl;
     	return;
     }
 
     if (id1 == id2)
     {
-    	cout << "Can not enter the same street." << endl;
+    	cout << "Can not enter the same street." << endl << endl;
     }
 
     company.checkExistenceSharingSpot(id1, id2);
