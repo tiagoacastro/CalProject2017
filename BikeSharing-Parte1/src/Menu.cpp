@@ -228,7 +228,7 @@ void checkExistenceSharingSpot (BikeCompany &company)
     while(true) {
         ok = false;
         cout << "1-\tExact Search" << endl
-             << "2-\tApproximate Search (not working yet)" << endl
+             << "2-\tApproximate Search" << endl
              << "3-\tReturn" << endl
              << endl << "Input:" << endl;
         getline(cin, choice);
@@ -416,7 +416,7 @@ void approximateSearch (BikeCompany &company)
 
     if (id2 == -1)
     {
-    	vector <int> res = company.approximateSearchStreet(street1);
+    	vector <int> res = company.approximateSearchStreet(street2);
 
 		do
 		{

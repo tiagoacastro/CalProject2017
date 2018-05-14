@@ -256,7 +256,6 @@ Node BikeCompany::getCenter(){
     return n;
 }
 
-
 void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
     Node n = getCenter();
     long double distanceSum = 0;
@@ -335,7 +334,6 @@ void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
 
 }
 
-
 void BikeCompany::checkConnectivity() {
 
     vector<vector <Node>> res = this->graph.dfs();
@@ -351,7 +349,6 @@ void BikeCompany::checkConnectivity() {
 
 }
 
-
 int BikeCompany::exactSearchStreet (string streetName)
 {
 	for (auto elem: streets)
@@ -364,7 +361,6 @@ int BikeCompany::exactSearchStreet (string streetName)
 
 	return -1;
 }
-
 
 void BikeCompany::checkExistenceSharingSpot (int streetId1, int streetId2)
 {
@@ -450,7 +446,7 @@ vector <int> BikeCompany::approximateSearchStreet (string streetName)
 
 	cout << "Did you mean: " << endl << endl;
 
-	for (int i = 2 ; i >= 0; i--)
+	for (int i = 0 ; i < 3; i++)
 	{
 		cout << "Id: " << id[i] << ", name: " << findStreet (id[i]).getName() << endl;
 		res.push_back(id[i]);
@@ -464,22 +460,30 @@ int BikeCompany::editDistance(string pattern, string text)
 	int n=text.length();
 	vector<int> d(n+1);
 	int old,neww;
+
 	for (int j=0; j<=n; j++)
 		d[j]=j;
+
 	int m=pattern.length();
+
 	for (int i=1; i<=m; i++) {
 		old = d[0];
 		d[0]=i;
+
 		for (int j=1; j<=n; j++) {
-			if (pattern[i-1]==text[j-1]) neww = old;
+			if (pattern[i-1]==text[j-1])
+				neww = old;
+
 			else {
 				neww = min(old,d[j]);
 				neww = min(neww,d[j-1]);
 				neww = neww +1;
 			}
+
 			old = d[j];
 			d[j] = neww;
 		}
 	}
+
 	return d[n];
 }

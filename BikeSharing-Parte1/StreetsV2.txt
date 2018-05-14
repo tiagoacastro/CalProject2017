@@ -1,21 +1,21 @@
 1;Rua Nova da Praia;True
-2;Rua 20;True
-3;Rua 66;False
-4;Rua 1;False
-5;Rua 1A;False
-6;Rua 3;False
-7;Rua 16;False
-8;Rua 8;False
-9;Rua 18;False
-10;Rua 22;False
-11;Rua 5;False
-12;Rua 7;False
-13;Rua 68;True
-14;Rua 62;False
-15;Rua 9;False
-16;Rua 64;False
-17;Rua 60;False
-18;Rua 11;False
-19;Avenida 24;True
-20;Rua 15;False
-21;Rua 14;False
+2;Avenida da Liberdade;True
+3;Rua Plana;False
+4;Travessa do Lírio;False
+5;Travessa do Mocho;False
+6;Rua da Tabuaça;False
+7;Rua Manuel Laranjeira;False
+8;Avenida 8;False
+9;Rua da Igreja;False
+10;Rua Velha da Academia;False
+11;Rua Jerónimo Reis;False
+12;Rua dos Limites;False
+13;Travessa Real;True
+14;Rua do Concelho;False
+15;Rua Cardal;False
+16;Rua Nossa Senhora do Mar;False
+17;Ruela Cardal;False
+18;Rua do Atlantico;False
+19;Avenida Nacional;True
+20;Rua Juncal;False
+21;Rua José Marcelo Silva;False
