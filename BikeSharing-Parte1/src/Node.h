@@ -5,12 +5,9 @@
 
 using namespace std;
 
-#define EARTH_RADIUS 6371e3; //meters
-
 class Node {
 protected:
     unsigned int id;
-    unsigned long long int osmId;
     double longitude;
     double latitude;
     vector<int> streets;
@@ -22,17 +19,12 @@ public:
     */
     Node() = default;
     /**
-    * Node constructor with id
-    * @param osmId 		    node osm id
-    */
-    explicit Node(unsigned long long int osmId);
-    /**
 	 * Node constructor
      * @param osmId 		    node osm id
 	 * @param latitude  	node latitude
 	 * @param longitude 	node longitude
 	 */
-    Node(unsigned long long int osmId, double latitude, double longitude);
+    Node(double latitude, double longitude);
     /**
 	 * Getter which returns the node id
 	 * @return id
@@ -80,8 +72,6 @@ public:
      * @param longitude     longitude
      */
     void setLongitude(double longitude);
-    friend ostream& operator<<(ostream& os, const Node& n1);
-
     /**
      * Setter for latitude
      * @param latitude  latitude

@@ -37,6 +37,19 @@ private:
 	 * @param nearestSharingSpot nearest sharing sport considering user's position.
 	 */
 	void drawPath (const Node &currentPosition, const Node &nearestSharingSpot);
+    /**
+     * Checks if a node is also a sharing spot.
+     * @param n1 node to be checked.
+     * @return 2 if node is a sharing spot with free spots, 1 if node is a sharing spot no free spots, otherwise returns 0.
+     */
+    int checkIfNodeIsSS (const Node &n1);
+	/**
+	 * Calculates distance (similarity) between two string
+	 * @param pattern 1st string.
+	 * @param text 2nd string.
+	 * @return distance between strings
+	 */
+	int editDistance (string pattern, string text);
 public:
 	/**
     * BikeCompany constructor
@@ -128,7 +141,7 @@ public:
      */
     void checkConnectivity();
     /**
-     * Searches in vector 'streets' if there a an exact match with streetName.
+     * Searches in vector 'streets' if there is an exact match with streetName.
      * @param streetName name of street.
      * @return -1 if the street is not found, otherwise returns the street's id.
      */
@@ -140,13 +153,9 @@ public:
      */
     void checkExistenceSharingSpot (int streetId1, int streetId2);
     /**
-     * Checks if a node is also a sharing spot.
-     * @param n1 node to be checked.
-     * @return 2 if node is a sharing spot with free spots, 1 if node is a sharing spot no free spots, otherwise returns 0.
+     * Searches in vector 'streets' and prints the 3 street names more similar with streetName.
+     * @param streetName name of the street.
+     * @return vector with the id of the streets displayed.
      */
-    int checkIfNodeIsSS (const Node &n1);
-
     vector <int> approximateSearchStreet (string streetName);
-
-    int editDistance (string pattern, string text);
 };

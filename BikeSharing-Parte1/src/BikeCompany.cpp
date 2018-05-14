@@ -90,6 +90,8 @@ GraphViewer * BikeCompany::printGraph()
 				gv->setVertexIcon(spot.getId(), "images/redbicycle.png");
 		}
 
+		gv->defineEdgeCurved(false);
+
         for (auto &street : streets)
 		{
 			for (unsigned int j = 0; j < street.getNodes().size() - 1; j++)
@@ -204,9 +206,9 @@ Node &BikeCompany::findNode(unsigned long long int id){
 	while(left <=right){
 
 		int middle = (left + right)/2;
-		if (nodes.at(middle).getOsmId() < id) {
+		if (nodes.at(middle).getId() < id) {
 			left = middle + 1;
-		}else if(id < nodes.at(middle).getOsmId()) {
+		}else if(id < nodes.at(middle).getId()) {
 			right = middle -1;
 		} else return nodes.at(middle);
 	}
@@ -299,7 +301,7 @@ void BikeCompany::getCheapestSharingSpot (const Node &currentPosition){
                 for(const auto &id2 : path.at(i+1).getStreets())
                     if(id == id2){
                         Street s = findStreet(id);
-                        if(s.findNode(path.at(i).getOsmId()) < s.findNode(path.at(i+1).getOsmId())){
+                        if(s.findNode(path.at(i).getId()) < s.findNode(path.at(i+1).getId())){
                             elevationSum += s.getElevation();
                         } else {
                             elevationSum -= s.getElevation();

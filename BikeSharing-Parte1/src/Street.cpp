@@ -58,7 +58,7 @@ vector<Node> &Street::getNodes() {
 
 int Street::findNode(unsigned long long int osmId){
     for(int i = 0; i < nodes.size(); i++)
-        if(nodes.at(i).getOsmId() == osmId)
+        if(nodes.at(i).getId() == osmId)
             return i;
 }
 

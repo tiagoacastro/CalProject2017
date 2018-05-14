@@ -28,13 +28,8 @@ vector <string> Parser::readLines(string file) {
 Node Parser::createNode(string &line) {
     unsigned long long int id;
     double latitude, longitude;
-    double latRadians, longRadians;
 
     try { next(id, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the Node data in the correct format.\n";
-    }
-
-    try { next(latitude, line, ";"); } catch (InvalidFormat) {
         cout << "Please insert the Node data in the correct format.\n";
     }
 
@@ -42,13 +37,9 @@ Node Parser::createNode(string &line) {
         cout << "Please insert the Node data in the correct format.\n";
     }
 
-    try { next(longRadians, line, ";"); } catch (InvalidFormat) {
-        cout << "Please insert the Node data in the correct format.\n";
-    }
+    latitude = stod(line);
 
-    latRadians = stod(line);
-
-    Node n(id,latRadians,longRadians);
+    Node n(latitude,longitude);
 
     return n;
 }
@@ -107,7 +98,6 @@ int findStreet(vector<Street> streets, unsigned long long id){
     return -1;
 }
 
-
 int findNode(vector<Node> nodes, unsigned long long id){
 
     int left = 0, right = nodes.size()-1;
@@ -115,9 +105,9 @@ int findNode(vector<Node> nodes, unsigned long long id){
     while(left <=right){
 
         int middle = (left + right)/2;
-        if (nodes.at(middle).getOsmId() < id) {
+        if (nodes.at(middle).getId() < id) {
             left = middle + 1;
-        }else if(id < nodes.at(middle).getOsmId()) {
+        }else if(id < nodes.at(middle).getId()) {
             right = middle -1;
         } else return middle;
     }
