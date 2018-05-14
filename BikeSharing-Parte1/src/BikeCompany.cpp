@@ -92,12 +92,19 @@ GraphViewer * BikeCompany::printGraph()
 
 		gv->defineEdgeCurved(false);
 
-        for (auto &street : streets)
+		for (auto &street : streets)
 		{
 			for (unsigned int j = 0; j < street.getNodes().size() - 1; j++)
 			{
-				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::UNDIRECTED);
+				gv->addEdge(id, street.getNodes()[j].getId(), street.getNodes()[j+1].getId(), EdgeType::DIRECTED);
 				gv->setEdgeLabel(id, street.getName());
+
+				if (street.isTwoWays())
+				{
+					id++;
+					gv->addEdge(id, street.getNodes()[j+1].getId(), street.getNodes()[j].getId(), EdgeType::DIRECTED);
+				}
+
 				id++;
 			}
 		}
@@ -170,7 +177,7 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 
 		if (i > 0)
 		{
-			gv->addEdge(streetId, previousNodeId, node.getId(), EdgeType::UNDIRECTED);
+			gv->addEdge(streetId, previousNodeId, node.getId(), EdgeType::DIRECTED);
 			gv->setEdgeColor(streetId, "RED");
 		}
 
