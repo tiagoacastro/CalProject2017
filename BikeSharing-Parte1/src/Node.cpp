@@ -46,4 +46,3 @@ void Node::setLongitude(double longitude) {
 void Node::setLatitude(double latitude) {
 	Node::latitude = latitude;
 }
-

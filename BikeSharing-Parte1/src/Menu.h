@@ -30,9 +30,18 @@ void shortestPath(BikeCompany &company);
  * @param company   company class used to call functions
  */
 void cheapestPath(BikeCompany &company);
-
+/**
+ * menu for the sharing spot existence options
+ * @param company   company class used to call functions
+ */
 void checkExistenceSharingSpot (BikeCompany &company);
-
+/**
+ * interface to obtain inputs and deliver outputs for the exact search of the sharing spot between 2 streets
+ * @param company   company class used to call functions
+ */
 void exactSearch (BikeCompany &company);
-
+/**
+ * interface to obtain inputs and deliver outputs for the approximate search of the sharing spot between 2 streets
+ * @param company   company class used to call functions
+ */
 void approximateSearch (BikeCompany &company);

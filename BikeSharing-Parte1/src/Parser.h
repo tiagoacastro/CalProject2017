@@ -1,10 +1,3 @@
-/*
- * Parser.h
- *
- *  Created on: 24/03/2018
- *      Author: ricar
- */
-
 #pragma once
 
 #include <vector>
@@ -19,12 +12,12 @@
 #include "exceptions.h"
 
 using namespace std;
-
+/**
+ * Parser class containing the functions to parse the information from the files
+ */
 class Parser {
-
 	private:
 		vector <string> readLines(string file); //Reads lines from file and stores it in a vector.
-
 	public:
 		/**
 		 * @brief default constructor of a Parser object
@@ -49,7 +42,6 @@ class Parser {
 		 * @param nodes vector <Node>
 		 */
 		void readRelations(string file,vector <Street> &streets, vector <Node> &nodes, vector <SharingSpot> &spots );
-
 		/**
 		 * Auxiliary function that creates and returns a Node based on the data in the line
 		 * @param line
@@ -70,7 +62,6 @@ class Parser {
 		 * @param streetsID vector <int>
 		 */
 		void createRelation(string &line, vector <Street> &streets, vector <Node> &nodes, vector <unsigned long long int> &streetsID);
-
    		/**
         * @brief separates string based on the separator
         * @param elem unsigned long long int &elem
@@ -85,7 +76,6 @@ class Parser {
         * @param separator string separator
         */
         void next(double &elem, string &piece, string separator);
-
         /**
         * @brief separates string based on the separator
         * @param piece
@@ -93,13 +83,16 @@ class Parser {
         * @param separator
         */
         void next(string &piece, string &line, string separator);
-
         /**
         * @brief checks if input is valid
         * @param s string &s
         * @return true if input is valid and false otherwise
         */
         bool validString(string &s);
-
+		/**
+		 * @brief creates a sharing spot
+		 * @param n 		node that will be a sharing spot
+		 * @param spots 	sharing spot vector to add the sharing spot
+		 */
 		void createSharingSpot(Node n, vector <SharingSpot> &spots);
 };
