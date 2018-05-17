@@ -363,6 +363,7 @@ void approximateSearch (BikeCompany &company)
 		{
 			cout << endl << "Insert id of desired street: " << endl;
 			getline (cin, choice);
+
 			if (cin.fail() || !Utilities::isNumber(choice))
 			{
                 cout << endl << "Invalid input" << endl;
@@ -388,9 +389,11 @@ void approximateSearch (BikeCompany &company)
 			cout << endl << "Invalid id " << endl;
 
 		} while (1);
+
+	    id1 = stoi(choice);
+
     }
 
-    id1 = stoi(choice);
 
     Utilities::clearScreen();
 
@@ -447,12 +450,12 @@ void approximateSearch (BikeCompany &company)
 			cout << endl << "Invalid id " << endl;
 
 		} while (1);
+
+	    id2 = stoi (choice);
+
     }
 
-    id2 = stoi (choice);
-
     Utilities::clearScreen();
-
 
     if (id1 == id2)
     {

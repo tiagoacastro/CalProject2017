@@ -14,9 +14,9 @@ int main()
     vector <Node> nodes = p.readNodes(nodesFile);
     vector <Street> streets = p.readStreets(streetsFile);
     p.readRelations(relationsFile,streets,nodes, sharingSpots);
-    User user;// = askUser();
+    User user = askUser();
 
-    BikeCompany company(nodes, streets, sharingSpots, user); //Not working cause every street has idNodeInicial = 4 which doesn't exist.
+    BikeCompany company(nodes, streets, sharingSpots, user);
 
     startMenu(company);
 
