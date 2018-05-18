@@ -1,18 +1,15 @@
 #include "Street.h"
+#include "Node.h"
 
 unsigned int Street::count = 1;
 
-Street::Street (unsigned long long int osmId):osmId(osmId)
+Street::Street ()
 {
     this-> id = count++;
 }
 
 unsigned int Street::getId() const {
     return id;
-}
-
-unsigned long long int Street::getOsmId() const {
-    return osmId;
 }
 
 const string &Street::getName() const {
@@ -31,8 +28,7 @@ void Street::setElevation(double elevation) {
     this->elevation = elevation;
 }
 
-Street::Street(unsigned long long int osmId, string &name, bool twoWays, int elevation) {
-    this->osmId = osmId;
+Street::Street(string &name, bool twoWays, int elevation) {
     this->id = count++;
     this->name = name;
     this->twoWays = twoWays;

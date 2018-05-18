@@ -64,7 +64,7 @@ Street Parser::createStreet(string &line) {
     double elevation = rand()%20 ;
     elevation = (elevation - 10)/100;
 
-    Street s(id,name,true,elevation);
+    Street s(name,true,elevation);
 
     if (bothways == "False")
     {
@@ -89,9 +89,9 @@ int findStreet(vector<Street> streets, unsigned long long id){
     while(left <=right){
 
         int middle = (left + right)/2;
-        if (streets.at(middle).getOsmId() < id) {
+        if (streets.at(middle).getId() < id) {
             left = middle + 1;
-        }else if(id < streets.at(middle).getOsmId()) {
+        }else if(id < streets.at(middle).getId()) {
             right = middle -1;
         } else return middle;
     }
@@ -135,12 +135,12 @@ void Parser::createRelation(string &line, vector <Street> &streets, vector <Node
     int j2 = findNode(nodes, node2ID);
 
     if (!findStreetID(streetsID,roadID))  {
-        nodes.at(j1).addStreet(streets.at(i).getOsmId());
+        nodes.at(j1).addStreet(streets.at(i).getId());
         streets.at(i).addNode(nodes.at(j1));
-        streetsID.push_back(streets.at(i).getOsmId());
+        streetsID.push_back(streets.at(i).getId());
     }
 
-    nodes.at(j2).addStreet(streets.at(i).getOsmId());
+    nodes.at(j2).addStreet(streets.at(i).getId());
 
     streets.at(i).addNode(nodes.at(j2));
 

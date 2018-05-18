@@ -11,7 +11,6 @@ class Street
 {
 	private:
 		unsigned int id;
-		unsigned long long int osmId;
 		double elevation;
 		string name;
 		bool twoWays;
@@ -20,27 +19,20 @@ class Street
 		static unsigned int count;
 		/**
 		* Street constructor with id
-		* @param osmId 		    street osm id
 		*/
-		explicit Street ( unsigned long long int osmId);
+		explicit Street ();
 		/**
 		 * Street constructor where the slope is randomly calculated
 		 * @param elevation int elevation
-		 * @param id 		street id
 		 * @param name  	street name
 		 * @param twoWays	flag that checks if the street is both ways
 		 */
-		Street(unsigned long long int osmId, string &name, bool twoWays, int elevation);
+		Street(string &name, bool twoWays, int elevation);
 		/**
 		 * Getter which returns the street id
 		 * @return id
 		 */
 		unsigned int getId() const;
-		/**
-		 * Getter which returns the street Open Street Maps id
-		 * @return id
-		 */
-		unsigned long long int getOsmId() const;
 		/**
 		 * Getter which returns the street name
 		 * @return name

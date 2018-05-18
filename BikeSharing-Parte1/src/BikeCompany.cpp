@@ -191,16 +191,16 @@ void BikeCompany::drawPath (const Node &currentPosition, const Node &nearestShar
 	getchar();
 }
 
-Street &BikeCompany::findStreet(unsigned long long int osmId){
+Street &BikeCompany::findStreet(unsigned long long int streetId){
 
 	int left = 0, right = streets.size()-1;
 
 	while(left <=right){
 
 		int middle = (left + right)/2;
-		if (streets.at(middle).getOsmId() < osmId) {
+		if (streets.at(middle).getId() < streetId) {
 			left = middle + 1;
-		}else if(osmId < streets.at(middle).getOsmId()) {
+		}else if(streetId < streets.at(middle).getId()) {
 			right = middle -1;
 		} else return streets.at(middle);
 		}
