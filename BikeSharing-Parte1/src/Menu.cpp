@@ -394,7 +394,6 @@ void approximateSearch (BikeCompany &company)
 
     }
 
-
     Utilities::clearScreen();
 
     while (true)

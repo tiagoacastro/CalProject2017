@@ -18,6 +18,7 @@ int main()
 
     BikeCompany company(nodes, streets, sharingSpots, user);
 
+    Utilities::clearScreen();
     startMenu(company);
 
     return 0;

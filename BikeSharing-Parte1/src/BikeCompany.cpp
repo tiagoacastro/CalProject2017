@@ -466,33 +466,37 @@ vector <int> BikeCompany::approximateSearchStreet (string streetName)
 
 int BikeCompany::editDistance(string pattern, string text)
 {
-	int n=text.length();
-	vector<int> d(n+1);
-	int old,neww;
+	int textLength = text.length();
+	int patternLength = pattern.length();
+	vector<int> d(textLength+1);
+	int oldValue, newValue;
 
-	for (int j=0; j<=n; j++)
+	//inicialização
+	for (int j=0; j<=textLength; j++)
 		d[j]=j;
 
-	int m=pattern.length();
 
-	for (int i=1; i<=m; i++) {
-		old = d[0];
+	//recorrência
+	for (int i=1; i<=patternLength; i++) {
+
+		oldValue = d[0];
 		d[0]=i;
 
-		for (int j=1; j<=n; j++) {
+		for (int j=1; j<=textLength; j++) {
 			if (pattern[i-1]==text[j-1])
-				neww = old;
+				newValue = oldValue;
 
 			else {
-				neww = min(old,d[j]);
-				neww = min(neww,d[j-1]);
-				neww = neww +1;
+				newValue = min(oldValue,d[j]);
+				newValue = min(newValue,d[j-1]);
+				newValue = newValue +1;
 			}
 
-			old = d[j];
-			d[j] = neww;
+			oldValue = d[j];
+			d[j] = newValue;
 		}
 	}
 
-	return d[n];
+	//finalização
+	return d[textLength];
 }
