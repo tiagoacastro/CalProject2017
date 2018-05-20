@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bike Sharing: SharingSpot Class Reference</title>
+<title>CAL Project - Bike Sharing: SharingSpot Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bike Sharing
+   <div id="projectname">CAL Project - Bike Sharing
    </div>
-   <div id="projectbrief">CAL T3 G5</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +68,8 @@ $(function() {
 <div class="title">SharingSpot Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_sharing_spot_8h_source.html">SharingSpot.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SharingSpot:</div>
 <div class="dyncontent">
@@ -88,14 +89,10 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_node"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_node.html">Node</a></td></tr>
 <tr class="memitem:a082d5efb0be81faaeb35dc02b2a4fc76 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a082d5efb0be81faaeb35dc02b2a4fc76">Node</a> ()=default</td></tr>
 <tr class="separator:a082d5efb0be81faaeb35dc02b2a4fc76 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a044458e0a684cf5432e3abf4ee2c9802 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a044458e0a684cf5432e3abf4ee2c9802">Node</a> (unsigned long long int osmId)</td></tr>
-<tr class="separator:a044458e0a684cf5432e3abf4ee2c9802 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecb670c80c137fc0927407afc1e7ac89 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#aecb670c80c137fc0927407afc1e7ac89">Node</a> (unsigned long long int osmId, double latitude, double longitude)</td></tr>
-<tr class="separator:aecb670c80c137fc0927407afc1e7ac89 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4abc294f8eadd6fbf4714150838c709 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#af4abc294f8eadd6fbf4714150838c709">Node</a> (double latitude, double longitude)</td></tr>
+<tr class="separator:af4abc294f8eadd6fbf4714150838c709 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9b4c1c72ce14b69f5e99deb4440f489 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#af9b4c1c72ce14b69f5e99deb4440f489">getId</a> () const</td></tr>
 <tr class="separator:af9b4c1c72ce14b69f5e99deb4440f489 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a014990e066c6209d63a8fb86e2eb549f inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a014990e066c6209d63a8fb86e2eb549f">getOsmId</a> () const</td></tr>
-<tr class="separator:a014990e066c6209d63a8fb86e2eb549f inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a79ebbcca46dae4638ffbe4d732399 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#ad4a79ebbcca46dae4638ffbe4d732399">getLongitude</a> () const</td></tr>
 <tr class="separator:ad4a79ebbcca46dae4638ffbe4d732399 inherit pub_methods_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a76240688eddc8a2942618074e28c92 inherit pub_methods_class_node"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_node.html#a6a76240688eddc8a2942618074e28c92">getLatitude</a> () const</td></tr>
@@ -123,9 +120,6 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
 <tr class="memitem:adb90577d9d796c4ccbccf41ce2efc6c9 inherit pro_attribs_class_node"><td class="memItemLeft" align="right" valign="top"><a id="adb90577d9d796c4ccbccf41ce2efc6c9"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 <tr class="separator:adb90577d9d796c4ccbccf41ce2efc6c9 inherit pro_attribs_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf6f32321759a0f0fbd306e4fa90d49 inherit pro_attribs_class_node"><td class="memItemLeft" align="right" valign="top"><a id="acbf6f32321759a0f0fbd306e4fa90d49"></a>
-unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><b>osmId</b></td></tr>
-<tr class="separator:acbf6f32321759a0f0fbd306e4fa90d49 inherit pro_attribs_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1772ed9e687d1e230f21c8fdf955ee9 inherit pro_attribs_class_node"><td class="memItemLeft" align="right" valign="top"><a id="af1772ed9e687d1e230f21c8fdf955ee9"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>longitude</b></td></tr>
 <tr class="separator:af1772ed9e687d1e230f21c8fdf955ee9 inherit pro_attribs_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,7 +130,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>latitude</b></td></
 vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>streets</b></td></tr>
 <tr class="separator:ae028d72126fae2e69f65b230ef8b03ce inherit pro_attribs_class_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Sharing Spot class derived from the node class, has a flag to check if it is free or not </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1110d1c6955a7aa434a87bffb32e2ea3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1110d1c6955a7aa434a87bffb32e2ea3">&#9670;&nbsp;</a></span>SharingSpot()</h2>
 
@@ -189,8 +185,8 @@ vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>street
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>BikeSharing-Parte1/src/<a class="el" href="_sharing_spot_8h_source.html">SharingSpot.h</a></li>
-<li>BikeSharing-Parte1/src/SharingSpot.cpp</li>
+<li>src/<a class="el" href="_sharing_spot_8h_source.html">SharingSpot.h</a></li>
+<li>src/SharingSpot.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

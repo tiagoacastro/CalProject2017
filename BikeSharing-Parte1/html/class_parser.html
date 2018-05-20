@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bike Sharing: Parser Class Reference</title>
+<title>CAL Project - Bike Sharing: Parser Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bike Sharing
+   <div id="projectname">CAL Project - Bike Sharing
    </div>
-   <div id="projectbrief">CAL T3 G5</div>
   </td>
  </tr>
  </tbody>
@@ -69,6 +68,8 @@ $(function() {
 <div class="title">Parser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_parser_8h_source.html">Parser.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -104,11 +105,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac49eaa953c8f063c8a3119b36df32c90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#ac49eaa953c8f063c8a3119b36df32c90">validString</a> (string &amp;s)</td></tr>
 <tr class="memdesc:ac49eaa953c8f063c8a3119b36df32c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if input is valid  <a href="#ac49eaa953c8f063c8a3119b36df32c90">More...</a><br /></td></tr>
 <tr class="separator:ac49eaa953c8f063c8a3119b36df32c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b8221457783a9669e14ba266d976f6e"><td class="memItemLeft" align="right" valign="top"><a id="a9b8221457783a9669e14ba266d976f6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createSharingSpot</b> (<a class="el" href="class_node.html">Node</a> n, vector&lt; <a class="el" href="class_sharing_spot.html">SharingSpot</a> &gt; &amp;spots)</td></tr>
+<tr class="memitem:a9b8221457783a9669e14ba266d976f6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parser.html#a9b8221457783a9669e14ba266d976f6e">createSharingSpot</a> (<a class="el" href="class_node.html">Node</a> n, vector&lt; <a class="el" href="class_sharing_spot.html">SharingSpot</a> &gt; &amp;spots)</td></tr>
+<tr class="memdesc:a9b8221457783a9669e14ba266d976f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a sharing spot  <a href="#a9b8221457783a9669e14ba266d976f6e">More...</a><br /></td></tr>
 <tr class="separator:a9b8221457783a9669e14ba266d976f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_parser.html">Parser</a> class containing the functions to parse the information from the files </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a69118b5346049a40a31eabcdbdbe1d4f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69118b5346049a40a31eabcdbdbe1d4f">&#9670;&nbsp;</a></span>createNode()</h2>
 
@@ -179,6 +182,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createSharingSpot</b>
     <tr><td class="paramname">streets</td><td>vector &lt;Street&gt; </td></tr>
     <tr><td class="paramname">nodes</td><td>vector &lt;Node&gt; </td></tr>
     <tr><td class="paramname">streetsID</td><td>vector &lt;int&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9b8221457783a9669e14ba266d976f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8221457783a9669e14ba266d976f6e">&#9670;&nbsp;</a></span>createSharingSpot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::createSharingSpot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_sharing_spot.html">SharingSpot</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>spots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>creates a sharing spot </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>node that will be a sharing spot </td></tr>
+    <tr><td class="paramname">spots</td><td>sharing spot vector to add the sharing spot </td></tr>
   </table>
   </dd>
 </dl>
@@ -474,8 +514,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createSharingSpot</b>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>BikeSharing-Parte1/src/<a class="el" href="_parser_8h_source.html">Parser.h</a></li>
-<li>BikeSharing-Parte1/src/Parser.cpp</li>
+<li>src/<a class="el" href="_parser_8h_source.html">Parser.h</a></li>
+<li>src/Parser.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

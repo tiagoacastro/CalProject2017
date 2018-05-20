@@ -1,0 +1,204 @@
+\hypertarget{class_street}{}\section{Street Class Reference}
+\label{class_street}\index{Street@{Street}}
+
+
+{\ttfamily \#include $<$Street.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_street_a67c6b12ed40488038123d2798586a49a}{Street}} ()
+\item 
+\mbox{\hyperlink{class_street_a5a9d10bd309a37eebd309aefb678f2fc}{Street}} (string \&name, bool two\+Ways, int elevation)
+\item 
+unsigned int \mbox{\hyperlink{class_street_af5bd31425eba6d72a3c81505e720249b}{get\+Id}} () const
+\item 
+const string \& \mbox{\hyperlink{class_street_afcd581ec643416f80695460ca8c19c73}{get\+Name}} () const
+\item 
+bool \mbox{\hyperlink{class_street_a2948b1e4a058de686bd24af9fe5fa1e0}{is\+Two\+Ways}} () const
+\item 
+void \mbox{\hyperlink{class_street_a6539789494cff71ffab2913bbb84f7cf}{set\+Two\+Ways}} (bool two\+Ways)
+\item 
+double \mbox{\hyperlink{class_street_af96504bfc1730a64fec877bb08125460}{get\+Elevation}} ()
+\item 
+void \mbox{\hyperlink{class_street_a17e7f3ac9efd4a137e2611ae945c4c03}{set\+Elevation}} (double elevation)
+\item 
+bool \mbox{\hyperlink{class_street_af902ded011ecdcec196873016bfe310e}{operator==}} (const \mbox{\hyperlink{class_street}{Street}} \&s2) const
+\item 
+void \mbox{\hyperlink{class_street_aded0fceaaa71f5cc8223296ec7489ac7}{add\+Node}} (\mbox{\hyperlink{class_node}{Node}} \&n)
+\begin{DoxyCompactList}\small\item\em Adds de node passed as parameter to the \mbox{\hyperlink{class_street}{Street}} object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \& \mbox{\hyperlink{class_street_afedbedacf271f93b5105708e1afc6be6}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Getter which returns the vector of Nodes in a \mbox{\hyperlink{class_street}{Street}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_street_aa35e1a8c37690c9463edc97a1d0fe60e}{find\+Node}} (unsigned long long int id)
+\item 
+void \mbox{\hyperlink{class_street_ad93a7342b4be921e878f60b71f2d79f9}{add\+Street\+To\+Node}} (int i, int id)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_street_aea6a60e70d589d29492fec22554cc513}\label{class_street_aea6a60e70d589d29492fec22554cc513}} 
+static unsigned int {\bfseries count} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_street}{Street}} class containing all of the street info and a vector with all the nodes in it ordered 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_street_a67c6b12ed40488038123d2798586a49a}\label{class_street_a67c6b12ed40488038123d2798586a49a}} 
+\index{Street@{Street}!Street@{Street}}
+\index{Street@{Street}!Street@{Street}}
+\subsubsection{\texorpdfstring{Street()}{Street()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Street\+::\+Street (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\hyperlink{class_street}{Street}} constructor with id \mbox{\Hypertarget{class_street_a5a9d10bd309a37eebd309aefb678f2fc}\label{class_street_a5a9d10bd309a37eebd309aefb678f2fc}} 
+\index{Street@{Street}!Street@{Street}}
+\index{Street@{Street}!Street@{Street}}
+\subsubsection{\texorpdfstring{Street()}{Street()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Street\+::\+Street (\begin{DoxyParamCaption}\item[{string \&}]{name,  }\item[{bool}]{two\+Ways,  }\item[{int}]{elevation }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_street}{Street}} constructor where the slope is randomly calculated 
+\begin{DoxyParams}{Parameters}
+{\em elevation} & int elevation \\
+\hline
+{\em name} & street name \\
+\hline
+{\em two\+Ways} & flag that checks if the street is both ways \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_street_aded0fceaaa71f5cc8223296ec7489ac7}\label{class_street_aded0fceaaa71f5cc8223296ec7489ac7}} 
+\index{Street@{Street}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Street@{Street}}
+\subsubsection{\texorpdfstring{add\+Node()}{addNode()}}
+{\footnotesize\ttfamily void Street\+::add\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Adds de node passed as parameter to the \mbox{\hyperlink{class_street}{Street}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \mbox{\hyperlink{class_node}{Node}} to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_street_ad93a7342b4be921e878f60b71f2d79f9}\label{class_street_ad93a7342b4be921e878f60b71f2d79f9}} 
+\index{Street@{Street}!add\+Street\+To\+Node@{add\+Street\+To\+Node}}
+\index{add\+Street\+To\+Node@{add\+Street\+To\+Node}!Street@{Street}}
+\subsubsection{\texorpdfstring{add\+Street\+To\+Node()}{addStreetToNode()}}
+{\footnotesize\ttfamily void Street\+::add\+Street\+To\+Node (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+add street to a node 
+\begin{DoxyParams}{Parameters}
+{\em i} & node index \\
+\hline
+{\em id} & street id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_street_aa35e1a8c37690c9463edc97a1d0fe60e}\label{class_street_aa35e1a8c37690c9463edc97a1d0fe60e}} 
+\index{Street@{Street}!find\+Node@{find\+Node}}
+\index{find\+Node@{find\+Node}!Street@{Street}}
+\subsubsection{\texorpdfstring{find\+Node()}{findNode()}}
+{\footnotesize\ttfamily int Street\+::find\+Node (\begin{DoxyParamCaption}\item[{unsigned long long int}]{id }\end{DoxyParamCaption})}
+
+finds the index of the node with the specified id 
+\begin{DoxyParams}{Parameters}
+{\em id} & node id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns node index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_af96504bfc1730a64fec877bb08125460}\label{class_street_af96504bfc1730a64fec877bb08125460}} 
+\index{Street@{Street}!get\+Elevation@{get\+Elevation}}
+\index{get\+Elevation@{get\+Elevation}!Street@{Street}}
+\subsubsection{\texorpdfstring{get\+Elevation()}{getElevation()}}
+{\footnotesize\ttfamily double Street\+::get\+Elevation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter which returns the street elevation \begin{DoxyReturn}{Returns}
+elevation double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_af5bd31425eba6d72a3c81505e720249b}\label{class_street_af5bd31425eba6d72a3c81505e720249b}} 
+\index{Street@{Street}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Street@{Street}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily unsigned int Street\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the street id \begin{DoxyReturn}{Returns}
+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_afcd581ec643416f80695460ca8c19c73}\label{class_street_afcd581ec643416f80695460ca8c19c73}} 
+\index{Street@{Street}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Street@{Street}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const string \& Street\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the street name \begin{DoxyReturn}{Returns}
+name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_afedbedacf271f93b5105708e1afc6be6}\label{class_street_afedbedacf271f93b5105708e1afc6be6}} 
+\index{Street@{Street}!get\+Nodes@{get\+Nodes}}
+\index{get\+Nodes@{get\+Nodes}!Street@{Street}}
+\subsubsection{\texorpdfstring{get\+Nodes()}{getNodes()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \& Street\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter which returns the vector of Nodes in a \mbox{\hyperlink{class_street}{Street}} object. 
+
+\begin{DoxyReturn}{Returns}
+vector $<$\+Node$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_a2948b1e4a058de686bd24af9fe5fa1e0}\label{class_street_a2948b1e4a058de686bd24af9fe5fa1e0}} 
+\index{Street@{Street}!is\+Two\+Ways@{is\+Two\+Ways}}
+\index{is\+Two\+Ways@{is\+Two\+Ways}!Street@{Street}}
+\subsubsection{\texorpdfstring{is\+Two\+Ways()}{isTwoWays()}}
+{\footnotesize\ttfamily bool Street\+::is\+Two\+Ways (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the flag that says if the street is both ways \begin{DoxyReturn}{Returns}
+two ways flag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_af902ded011ecdcec196873016bfe310e}\label{class_street_af902ded011ecdcec196873016bfe310e}} 
+\index{Street@{Street}!operator==@{operator==}}
+\index{operator==@{operator==}!Street@{Street}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Street\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_street}{Street}} \&}]{s2 }\end{DoxyParamCaption}) const}
+
+Overload for the \textquotesingle{}==\textquotesingle{} operator for the \mbox{\hyperlink{class_street}{Street}} class 
+\begin{DoxyParams}{Parameters}
+{\em s2} & \mbox{\hyperlink{class_street}{Street}} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if both streets have same id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_street_a17e7f3ac9efd4a137e2611ae945c4c03}\label{class_street_a17e7f3ac9efd4a137e2611ae945c4c03}} 
+\index{Street@{Street}!set\+Elevation@{set\+Elevation}}
+\index{set\+Elevation@{set\+Elevation}!Street@{Street}}
+\subsubsection{\texorpdfstring{set\+Elevation()}{setElevation()}}
+{\footnotesize\ttfamily void Street\+::set\+Elevation (\begin{DoxyParamCaption}\item[{double}]{elevation }\end{DoxyParamCaption})}
+
+Setter which sets the street elevation 
+\begin{DoxyParams}{Parameters}
+{\em elevation} & double elevation to be set on the \mbox{\hyperlink{class_street}{Street}} object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_street_a6539789494cff71ffab2913bbb84f7cf}\label{class_street_a6539789494cff71ffab2913bbb84f7cf}} 
+\index{Street@{Street}!set\+Two\+Ways@{set\+Two\+Ways}}
+\index{set\+Two\+Ways@{set\+Two\+Ways}!Street@{Street}}
+\subsubsection{\texorpdfstring{set\+Two\+Ways()}{setTwoWays()}}
+{\footnotesize\ttfamily void Street\+::set\+Two\+Ways (\begin{DoxyParamCaption}\item[{bool}]{two\+Ways }\end{DoxyParamCaption})}
+
+Setter which sets the two\+Ways flag 
+\begin{DoxyParams}{Parameters}
+{\em two\+Ways} & value to wich the two\+Ways flag will be changed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Street.\+h\item 
+src/Street.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{class_graph}{}\section{Graph$<$ T $>$ Class Template Reference}
+\label{class_graph}\index{Graph$<$ T $>$@{Graph$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a0853eac15cdf0f06d63f4b8a7820ec71}\label{class_graph_a0853eac15cdf0f06d63f4b8a7820ec71}} 
+int {\bfseries get\+Num\+Vertex} () const
+\item 
+\mbox{\Hypertarget{class_graph_aa81373c1c18aa90c13bea9508f766132}\label{class_graph_aa81373c1c18aa90c13bea9508f766132}} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$ $>$ {\bfseries get\+Vertex\+Set} ()
+\item 
+\mbox{\Hypertarget{class_graph_a00be284ea2be3b3d0f0d2e493b70245b}\label{class_graph_a00be284ea2be3b3d0f0d2e493b70245b}} 
+bool {\bfseries add\+Vertex} (const T \&in)
+\item 
+\mbox{\Hypertarget{class_graph_af9c903104ad69a7782979fa9caedf163}\label{class_graph_af9c903104ad69a7782979fa9caedf163}} 
+bool {\bfseries remove\+Vertex} (const T \&in)
+\item 
+\mbox{\Hypertarget{class_graph_ac61af3aafe6277215f5a3b3cc7d58ce2}\label{class_graph_ac61af3aafe6277215f5a3b3cc7d58ce2}} 
+bool {\bfseries add\+Edge} (const T \&sourc, const T \&dest, double w)
+\item 
+\mbox{\Hypertarget{class_graph_a1106092a37366486cf55576f9ec01692}\label{class_graph_a1106092a37366486cf55576f9ec01692}} 
+bool {\bfseries remove\+Edge} (const T \&sourc, const T \&dest)
+\item 
+\mbox{\Hypertarget{class_graph_a41afa32aae97b70ecaacabe5fb1a4cf0}\label{class_graph_a41afa32aae97b70ecaacabe5fb1a4cf0}} 
+vector$<$ vector$<$ T $>$ $>$ {\bfseries dfs} () const
+\item 
+\mbox{\Hypertarget{class_graph_aa47a4130165550e208e7a063fce6983a}\label{class_graph_aa47a4130165550e208e7a063fce6983a}} 
+vector$<$ T $>$ {\bfseries bfs} (const T \&source) const
+\item 
+\mbox{\Hypertarget{class_graph_af1d4affd1f886bf598d0f4cf4a0cb7cb}\label{class_graph_af1d4affd1f886bf598d0f4cf4a0cb7cb}} 
+vector$<$ T $>$ {\bfseries topsort} () const
+\item 
+\mbox{\Hypertarget{class_graph_a3dbf946fc46257f2d799077ffba5980f}\label{class_graph_a3dbf946fc46257f2d799077ffba5980f}} 
+int {\bfseries max\+New\+Children} (const T \&source, T \&inf) const
+\item 
+\mbox{\Hypertarget{class_graph_a1ea1512afe5ab878301bc806c2eba9d2}\label{class_graph_a1ea1512afe5ab878301bc806c2eba9d2}} 
+bool {\bfseries is\+D\+AG} () const
+\item 
+\mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_graph_ab78574b192c290ede05a031d361b97f9}{init\+Single\+Source}} (const T \&origin)
+\item 
+bool \mbox{\hyperlink{class_graph_a2cb89dd50ee5fee83ccd9204b80af055}{relax}} (\mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$v, \mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$w, double weight)
+\item 
+void \mbox{\hyperlink{class_graph_ac7238d1a3677996b627f8eb1b4300c9e}{dijkstra\+Shortest\+Path}} (const T \&origin)
+\item 
+\mbox{\Hypertarget{class_graph_a5abed3d7a650413b8197e4662679008d}\label{class_graph_a5abed3d7a650413b8197e4662679008d}} 
+vector$<$ T $>$ {\bfseries get\+Path} (const T \&origin, const T \&dest, double \&total\+Weight) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_ac7238d1a3677996b627f8eb1b4300c9e}\label{class_graph_ac7238d1a3677996b627f8eb1b4300c9e}} 
+\index{Graph@{Graph}!dijkstra\+Shortest\+Path@{dijkstra\+Shortest\+Path}}
+\index{dijkstra\+Shortest\+Path@{dijkstra\+Shortest\+Path}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{dijkstra\+Shortest\+Path()}{dijkstraShortestPath()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_graph}{Graph}}$<$ T $>$\+::dijkstra\+Shortest\+Path (\begin{DoxyParamCaption}\item[{const T \&}]{origin }\end{DoxyParamCaption})}
+
+Dijkstra algorithm. \mbox{\Hypertarget{class_graph_ab78574b192c290ede05a031d361b97f9}\label{class_graph_ab78574b192c290ede05a031d361b97f9}} 
+\index{Graph@{Graph}!init\+Single\+Source@{init\+Single\+Source}}
+\index{init\+Single\+Source@{init\+Single\+Source}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{init\+Single\+Source()}{initSingleSource()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_graph}{Graph}}$<$ T $>$\+::init\+Single\+Source (\begin{DoxyParamCaption}\item[{const T \&}]{origin }\end{DoxyParamCaption})}
+
+Initializes single-\/source shortest path data (path, dist). Receives the content of the source vertex and returns a pointer to the source vertex. Used by all single-\/source shortest path algorithms. \mbox{\Hypertarget{class_graph_a2cb89dd50ee5fee83ccd9204b80af055}\label{class_graph_a2cb89dd50ee5fee83ccd9204b80af055}} 
+\index{Graph@{Graph}!relax@{relax}}
+\index{relax@{relax}!Graph@{Graph}}
+\subsubsection{\texorpdfstring{relax()}{relax()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+bool \mbox{\hyperlink{class_graph}{Graph}}$<$ T $>$\+::relax (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$}]{v,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}$<$ T $>$ $\ast$}]{w,  }\item[{double}]{weight }\end{DoxyParamCaption})}
+
+Analyzes an edge in single-\/source shortest path algorithm. Returns true if the target vertex was relaxed (dist, path). Used by all single-\/source shortest path algorithms. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/graph.\+h\end{DoxyCompactItemize}

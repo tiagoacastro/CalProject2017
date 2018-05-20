@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bike Sharing: BikeCompany Class Reference</title>
+<title>CAL Project - Bike Sharing: BikeCompany Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bike Sharing
+   <div id="projectname">CAL Project - Bike Sharing
    </div>
-   <div id="projectbrief">CAL T3 G5</div>
   </td>
  </tr>
  </tbody>
@@ -90,8 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac361f971df61155a1763c682b28f6297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f8b3503630ec5f5c12ead35cdbe995"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_user.html">User</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a19f8b3503630ec5f5c12ead35cdbe995">getUser</a> ()</td></tr>
 <tr class="separator:a19f8b3503630ec5f5c12ead35cdbe995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbf088990754de2a41c4437a53382038"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_street.html">Street</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#abbf088990754de2a41c4437a53382038">findStreetByNodes</a> (const <a class="el" href="class_node.html">Node</a> &amp;origin, const <a class="el" href="class_node.html">Node</a> &amp;dest)</td></tr>
-<tr class="separator:abbf088990754de2a41c4437a53382038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a2863261f0b9b2087c2ed012a17434"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a70a2863261f0b9b2087c2ed012a17434">findStreetByNodes</a> (int nodeId1, int nodeId2)</td></tr>
+<tr class="separator:a70a2863261f0b9b2087c2ed012a17434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17955d80bd12b199559b72be003f601a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_street.html">Street</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a17955d80bd12b199559b72be003f601a">findStreet</a> (unsigned long long int id)</td></tr>
 <tr class="separator:a17955d80bd12b199559b72be003f601a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a38462c549de8c3c58c83c5e6f6696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#ac3a38462c549de8c3c58c83c5e6f6696">findNode</a> (unsigned long long int id)</td></tr>
@@ -104,6 +103,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6cfdaa4ec2d86097301e0aa6f00fff7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5619c7888aed213bee9acf09f80fbad8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a5619c7888aed213bee9acf09f80fbad8">checkConnectivity</a> ()</td></tr>
 <tr class="separator:a5619c7888aed213bee9acf09f80fbad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c844e84c41eff544d58c6b964dcacf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a7c844e84c41eff544d58c6b964dcacf7">exactSearchStreet</a> (string streetName)</td></tr>
+<tr class="separator:a7c844e84c41eff544d58c6b964dcacf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626158626f8a845c8002731d74231a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#a626158626f8a845c8002731d74231a42">checkExistenceSharingSpot</a> (int streetId1, int streetId2)</td></tr>
+<tr class="separator:a626158626f8a845c8002731d74231a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc5f830f69bfb5f9db3f41391a1038c"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bike_company.html#acfc5f830f69bfb5f9db3f41391a1038c">approximateSearchStreet</a> (string streetName)</td></tr>
+<tr class="separator:acfc5f830f69bfb5f9db3f41391a1038c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab435a4495b3ae8602162a51ebf50a3f4"></a>
@@ -156,6 +161,31 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acfc5f830f69bfb5f9db3f41391a1038c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc5f830f69bfb5f9db3f41391a1038c">&#9670;&nbsp;</a></span>approximateSearchStreet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; BikeCompany::approximateSearchStreet </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>streetName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Searches in vector 'streets' and prints the 3 street names more similar with streetName. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">streetName</td><td>name of the street. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector with the id of the streets displayed. </dd></dl>
+
+</div>
+</div>
 <a id="a5619c7888aed213bee9acf09f80fbad8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5619c7888aed213bee9acf09f80fbad8">&#9670;&nbsp;</a></span>checkConnectivity()</h2>
 
@@ -174,6 +204,41 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a626158626f8a845c8002731d74231a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626158626f8a845c8002731d74231a42">&#9670;&nbsp;</a></span>checkExistenceSharingSpot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BikeCompany::checkExistenceSharingSpot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>streetId1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>streetId2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if there is a sharing spot in the intersection between the streets given as parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">streetId1</td><td>id of street 1. </td></tr>
+    <tr><td class="paramname">streetId2</td><td>id of street 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ace655ae1ace35afcb0acb4ae842215df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace655ae1ace35afcb0acb4ae842215df">&#9670;&nbsp;</a></span>createGraph()</h2>
 
@@ -189,6 +254,31 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Fills graph with the vertexs and the edges </p>
+
+</div>
+</div>
+<a id="a7c844e84c41eff544d58c6b964dcacf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c844e84c41eff544d58c6b964dcacf7">&#9670;&nbsp;</a></span>exactSearchStreet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BikeCompany::exactSearchStreet </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>streetName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Searches in vector 'streets' if there is an exact match with streetName. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">streetName</td><td>name of street. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>-1 if the street is not found, otherwise returns the street's id. </dd></dl>
 
 </div>
 </div>
@@ -267,23 +357,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abbf088990754de2a41c4437a53382038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbf088990754de2a41c4437a53382038">&#9670;&nbsp;</a></span>findStreetByNodes()</h2>
+<a id="a70a2863261f0b9b2087c2ed012a17434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a2863261f0b9b2087c2ed012a17434">&#9670;&nbsp;</a></span>findStreetByNodes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_street.html">Street</a>&amp; BikeCompany::findStreetByNodes </td>
+          <td class="memname">int BikeCompany::findStreetByNodes </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_node.html">Node</a> &amp;&#160;</td>
-          <td class="paramname"><em>origin</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeId1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_node.html">Node</a> &amp;&#160;</td>
-          <td class="paramname"><em>dest</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeId2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -292,14 +382,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Finds a street that starts in origin and ends in dest</p>
+<p>Finds a street that starts in nodeId1 and ends in nodeId2</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">origin</td><td>initial node </td></tr>
-    <tr><td class="paramname">dest</td><td>final node </td></tr>
+    <tr><td class="paramname">nodeId1</td><td>initial node </td></tr>
+    <tr><td class="paramname">nodeId2</td><td>final node </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>id of the street, or -1 if no street is found </dd></dl>
 
 </div>
 </div>
@@ -518,8 +609,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>BikeSharing-Parte1/src/<a class="el" href="_bike_company_8h_source.html">BikeCompany.h</a></li>
-<li>BikeSharing-Parte1/src/BikeCompany.cpp</li>
+<li>src/<a class="el" href="_bike_company_8h_source.html">BikeCompany.h</a></li>
+<li>src/BikeCompany.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

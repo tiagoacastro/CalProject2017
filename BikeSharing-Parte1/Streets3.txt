@@ -1,0 +1,204 @@
+4302771;Autoestrada do Norte;False
+99018000;Rua de Tavares Bastos;False
+99019564;Rua de Bissau;False
+99019598;Rua do Orfeão;False
+99019811;Rua da Escola do Maninho;False
+99019886;Rua António Fernando Almeida Pinto Tavares;False
+99019895;Rua António Joaquim Simão da Mota;False
+99019904;Rua Benjamim Jorge Moreira;False
+99019909;Rua Padre António da Silva Martins;False
+99019990;Rua das Pedreiras;True
+99020062;Travessa de Gomes Júnior;True
+99020076;Rua Maestro José de Castro;True
+99020085;Rua Benjamim Jorge Moreira;True
+99020093;;True
+99021492;Rua Professor Manuel Cardoso Ribeiro;True
+99021500;Rua da Catrina;True
+99021553;Rua do Capitão Firmino;True
+99021571;Rua de Álvaro Pires Ferreira;True
+99021598;Rua do Cerro;True
+99185207;Rua de Nampula;True
+99185237;Rua de António Francisco de Sousa;True
+99185244;;True
+99185259;Rua São Tomé e Príncipe;True
+99185282;Rua de António Francisco de Sousa;True
+99185290;Rua de Macau;True
+99256754;;True
+99256758;Rua dos Funcheiros;True
+99256763;Avenida Poeta Eugenio de Andrade;True
+99272501;Rua Agro;True
+99272510;Rua das Chieiras;True
+99272524;Rua de Barreiro;True
+99272556;Rua de Barreiro;True
+100639202;Rua da Cova da Loba;True
+100639345;Rua do Rodelo;True
+110560930;Rua Nova da Junqueira;True
+110560933;;True
+110560935;;True
+110560937;Travessa do Outeiro;True
+110560938;Rua do Barreiro;True
+110560940;Rua das Zambueiras;True
+110560941;Travessa dos Funcheiros;True
+110560947;Travessa Agro;True
+110560949;;True
+110560950;Alameda dos Chãos Vermelhos;True
+110560954;;True
+110560960;Vereda Engenheiro Zagallo;True
+110560965;Travessa dos Chãos Vermelhos;True
+110560966;Recanto das Chieiras;True
+110560967;Rua Maurício Lourenço de Oliveira;True
+110560975;Travessa Nova da Pena;True
+110560976;Rua Doutor Barbosa de Castro;True
+110560977;Rua das Zambueiras;True
+110560981;Rua da Cova do Silva;True
+110560982;Viela do Apeadeiro;True
+110560984;Travessa do Passadouro;True
+110560990;;True
+110560991;Rua Circular do Cerro;True
+110560993;Rua da Cavada;True
+110560994;Travessa da Cova do Silva;True
+110560995;Rua da Pena;True
+110560999;Rua Heróis do Ultramar;True
+110561000;;True
+110561006;Beco dos Funcheiros;True
+110561008;;True
+110561010;Rua da Pitada;True
+110561011;Rua Nova das Zambueiras;True
+110561012;Largo da Costa;True
+110561014;Travessa Nova dos Funcheiros;True
+110561016;;True
+110561023;Travessa dos Funcheiros;True
+110561026;Travessa da Telheira;True
+110561032;Travessa do Alto das Chaquedas;True
+110561033;Travessa Circular do Cerro;True
+110561034;Travessa das Zambueiras;True
+110561035;;True
+110561036;Rua Doutor Barbosa de Castro;True
+110561039;Travessa Nova das Zambueiras;True
+110561040;Travessa Agro;True
+110561045;Travessa das Zambueiras;True
+110561046;Rua do Passadouro;True
+110561049;Rua do Alto das Chaquedas;True
+110561052;;True
+110561055;Rua da Costa;True
+110561058;Rua dos Funcheiros;True
+110561059;Rua da Santa Eulália;True
+110561061;Caminho das Zambueiras;True
+110561063;;True
+110752657;;True
+110752661;;True
+110752663;;True
+110752676;;True
+110752679;;True
+110752685;;True
+110752692;;True
+110752697;;True
+110752699;;True
+110752717;;True
+110752723;;True
+110752738;;True
+110752751;;True
+114942273;Rua da Cavada;True
+114942274;Rua da Lavoura;True
+114942277;Rua do Talho;True
+114942279;Travessa do Vale;True
+114942284;Travessa da Lavoura;True
+114942286;Rua da Fonte de Baixo;True
+114942287;Rua da Panasqueira;True
+114942289;Rua Agro;True
+114942291;Vereda do Talho;True
+114942298;Rua do Curral;True
+114942299;Rua da Cabine;True
+114942301;Rua do Rochio;True
+114942302;;True
+114942305;;True
+118004802;Rua da Fonte de Aguim;True
+118004806;Rua da Fonte de Aguim;True
+118004811;Rua de Trás do Manínho;False
+118004843;Rua Dona Maria Pinto Tavares;False
+118004863;Rua Mestre Isolino Vaz;False
+118004912;Rua de Ateães;False
+118004918;Largo da Costa;False
+118004941;Rua Mestre Isolino Vaz;False
+118004976;Rua Aguim de Baixo;False
+118005010;Rua Escola do Maninho;False
+118005015;Rua Mestre Isolino Vaz;False
+118005020;Rua de António Francisco de Sousa;False
+118005032;Rua de Trás do Manínho;False
+118005036;Rua de Trás do Manínho;False
+118005047;Rua da Fonte de Aguim;False
+118005089;Rua do Outeiro;False
+118005100;Largo da Costa;False
+118005318;Rua do Outeiro;False
+118005403;Rua das Bocas;False
+118005464;;False
+118005482;Rua Alberto Matos;False
+118005491;Rua de António Francisco de Sousa;False
+118005494;Rua Dona Maria Pinto Tavares;False
+118005496;Rua Alberto Matos;False
+118005577;Rua Campo do Forno;False
+118005583;Rua da Senhora da Hora;False
+118005600;Rua de São João;False
+118005631;Rua Aguim;False
+118005640;Rua Mestre Isolino Vaz;False
+151549999;Rua do Sameiro;False
+151550003;Rua do Sameiro;False
+154334723;Avenida Poeta Eugenio de Andrade;True
+164817763;Rua da Escola do Maninho;True
+199997820;Rua do Apeadeiro;False
+199997823;Rua de Luanda;False
+199997825;Rua da Dona Amália Lima;True
+199997826;Avenida de Gomes Júnior;False
+199998880;Largo Aguim;False
+200036976;Travessa da Gândara;False
+200079997;Travessa das Pedreiras;False
+200134558;Rua da Escola do Maninho;False
+200134559;Rua da Escola do Maninho;False
+200141869;;False
+201983469;;False
+201983475;;False
+201983478;;False
+257999244;Avenida Gomes Júnior;False
+257999246;Avenida Gomes Júnior;False
+257999248;Avenida de Gomes Júnior;False
+258000686;Rua da Nossa Senhora de Fàtima;False
+258566160;Avenida de Gomes Júnior;True
+259255293;Rua da Gândara;True
+260892677;Rua da Dona Amália Lima;False
+262234992;;False
+262234994;;False
+262234995;;False
+262234996;;False
+298139186;Rua da Cavada;False
+301104449;Rua do Rochio;False
+301104450;Rua da Vinha;False
+346011512;;False
+408634426;Rua do Cerro;False
+457587424;;False
+460986057;Via de Cintura Interna;False
+483647631;Travessa da Cabine;True
+491777296;Rua dos Chãos Vermelhos;True
+491777301;Rua do Sobreiro;True
+491777310;Beco Cova do Silva;True
+491777311;Vereda das Chaquedas;True
+491777312;Rua do Cerro;True
+491777313;;True
+491786061;Rua das Arcas;True
+491786068;Rua Nova dos Funcheiros;True
+491786069;Rua das Zambueiras;True
+491786070;Rua do Rodelo;True
+491786071;Travessa de São Pedro;True
+491786072;Rua do Passadouro;True
+491786074;Rua de São Pedro;True
+491786075;Rua da Costa;True
+491786076;Rua da Costa;True
+491786087;Rua da Pena;True
+491786089;Travessa das Zambueiras;True
+491786090;Rua da Casa Velha;True
+491786091;Rua do Alto das Chaquedas;True
+491793324;Rua Agro;True
+492106006;Rua da Panasqueira;True
+492106008;Rua de Ateães;True
+545893968;Rua Professor Manuel Cardoso Ribeiro;False
+545893971;Rua Professor Manuel Cardoso Ribeiro;False
+545893974;Rua Professor Manuel Cardoso Ribeiro;False

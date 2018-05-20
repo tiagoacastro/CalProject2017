@@ -10,7 +10,6 @@ var searchData=
   ['getname',['getName',['../class_street.html#afcd581ec643416f80695460ca8c19c73',1,'Street']]],
   ['getnearestsharingspot',['getNearestSharingSpot',['../class_bike_company.html#ae7994d9db29de7064da710915662bd0b',1,'BikeCompany']]],
   ['getnodes',['getNodes',['../class_bike_company.html#ae41458919c4daf896b12960c2b43d51c',1,'BikeCompany::getNodes()'],['../class_street.html#afedbedacf271f93b5105708e1afc6be6',1,'Street::getNodes()']]],
-  ['getosmid',['getOsmId',['../class_node.html#a014990e066c6209d63a8fb86e2eb549f',1,'Node::getOsmId()'],['../class_street.html#a696046dd852490785993a665122f6976',1,'Street::getOsmId()']]],
   ['getpaymentinformation',['getPaymentInformation',['../class_user.html#a815ed7790a21f851257aea04bbd43881',1,'User']]],
   ['getpaymentmethod',['getPaymentMethod',['../class_user.html#a7945c31f5147c86e9577a8500ac51b8e',1,'User']]],
   ['getsharingspots',['getSharingSpots',['../class_bike_company.html#ac361f971df61155a1763c682b28f6297',1,'BikeCompany']]],

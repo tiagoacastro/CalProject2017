@@ -1,0 +1,242 @@
+\hypertarget{class_parser}{}\section{Parser Class Reference}
+\label{class_parser}\index{Parser@{Parser}}
+
+
+{\ttfamily \#include $<$Parser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_parser_a5208129b497bfdf7c8ecceeb70e4bba8}\label{class_parser_a5208129b497bfdf7c8ecceeb70e4bba8}} 
+\mbox{\hyperlink{class_parser_a5208129b497bfdf7c8ecceeb70e4bba8}{Parser}} ()=default
+\begin{DoxyCompactList}\small\item\em default constructor of a \mbox{\hyperlink{class_parser}{Parser}} object \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \mbox{\hyperlink{class_parser_a6cb129a0533a784d9889fb522b3659f2}{read\+Nodes}} (string file)
+\begin{DoxyCompactList}\small\item\em Returns a vector with all the nodes after being created from the data read from the file with the name passed as parameter. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \mbox{\hyperlink{class_parser_ac393c2185887253d615692ed871823f9}{read\+Streets}} (string file)
+\begin{DoxyCompactList}\small\item\em Returns a vector with all the streets after being created from the data read from the file with the name passed as parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_parser_a67de76f90c398140fcc14c9ec7d8f00d}{read\+Relations}} (string file, vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&streets, vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&nodes, vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&spots)
+\begin{DoxyCompactList}\small\item\em Reads the relations between streets and Nodes and uses that information to complete the streets and nodes objects already created. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \mbox{\hyperlink{class_parser_a69118b5346049a40a31eabcdbdbe1d4f}{create\+Node}} (string \&line)
+\item 
+\mbox{\hyperlink{class_street}{Street}} \mbox{\hyperlink{class_parser_a32dd986c0abb09bb1aaeb9683d3df616}{create\+Street}} (string \&line)
+\item 
+void \mbox{\hyperlink{class_parser_abc6f5fd0f2bf4a8ecca4b23c4a84d168}{create\+Relation}} (string \&line, vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&streets, vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&nodes, vector$<$ unsigned long long int $>$ \&streets\+ID)
+\begin{DoxyCompactList}\small\item\em Analyzes a line from the Relations file and transforms that line into information to be put in Streets and Nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_parser_a4cd265d02c182e14a071407408468af0}{next}} (unsigned long long int \&elem, string \&piece, string separator)
+\begin{DoxyCompactList}\small\item\em separates string based on the separator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_parser_af2f740981e70de7602e8c2bcb3db904e}{next}} (double \&elem, string \&piece, string separator)
+\begin{DoxyCompactList}\small\item\em separates string based on the separator \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_parser_a143c7f81ca7d3fb0a4013f8821126e0f}{next}} (string \&piece, string \&line, string separator)
+\begin{DoxyCompactList}\small\item\em separates string based on the separator \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_parser_ac49eaa953c8f063c8a3119b36df32c90}{valid\+String}} (string \&s)
+\begin{DoxyCompactList}\small\item\em checks if input is valid \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_parser_a9b8221457783a9669e14ba266d976f6e}{create\+Sharing\+Spot}} (\mbox{\hyperlink{class_node}{Node}} n, vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&spots)
+\begin{DoxyCompactList}\small\item\em creates a sharing spot \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_parser}{Parser}} class containing the functions to parse the information from the files 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_parser_a69118b5346049a40a31eabcdbdbe1d4f}\label{class_parser_a69118b5346049a40a31eabcdbdbe1d4f}} 
+\index{Parser@{Parser}!create\+Node@{create\+Node}}
+\index{create\+Node@{create\+Node}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{create\+Node()}{createNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} Parser\+::create\+Node (\begin{DoxyParamCaption}\item[{string \&}]{line }\end{DoxyParamCaption})}
+
+Auxiliary function that creates and returns a \mbox{\hyperlink{class_node}{Node}} based on the data in the line 
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_node}{Node}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parser_abc6f5fd0f2bf4a8ecca4b23c4a84d168}\label{class_parser_abc6f5fd0f2bf4a8ecca4b23c4a84d168}} 
+\index{Parser@{Parser}!create\+Relation@{create\+Relation}}
+\index{create\+Relation@{create\+Relation}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{create\+Relation()}{createRelation()}}
+{\footnotesize\ttfamily void Parser\+::create\+Relation (\begin{DoxyParamCaption}\item[{string \&}]{line,  }\item[{vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&}]{streets,  }\item[{vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&}]{nodes,  }\item[{vector$<$ unsigned long long int $>$ \&}]{streets\+ID }\end{DoxyParamCaption})}
+
+
+
+Analyzes a line from the Relations file and transforms that line into information to be put in Streets and Nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & string \\
+\hline
+{\em streets} & vector $<$\+Street$>$ \\
+\hline
+{\em nodes} & vector $<$\+Node$>$ \\
+\hline
+{\em streets\+ID} & vector $<$int$>$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_a9b8221457783a9669e14ba266d976f6e}\label{class_parser_a9b8221457783a9669e14ba266d976f6e}} 
+\index{Parser@{Parser}!create\+Sharing\+Spot@{create\+Sharing\+Spot}}
+\index{create\+Sharing\+Spot@{create\+Sharing\+Spot}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{create\+Sharing\+Spot()}{createSharingSpot()}}
+{\footnotesize\ttfamily void Parser\+::create\+Sharing\+Spot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}}]{n,  }\item[{vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&}]{spots }\end{DoxyParamCaption})}
+
+
+
+creates a sharing spot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node that will be a sharing spot \\
+\hline
+{\em spots} & sharing spot vector to add the sharing spot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_a32dd986c0abb09bb1aaeb9683d3df616}\label{class_parser_a32dd986c0abb09bb1aaeb9683d3df616}} 
+\index{Parser@{Parser}!create\+Street@{create\+Street}}
+\index{create\+Street@{create\+Street}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{create\+Street()}{createStreet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_street}{Street}} Parser\+::create\+Street (\begin{DoxyParamCaption}\item[{string \&}]{line }\end{DoxyParamCaption})}
+
+Auxiliary function that creates and returns a \mbox{\hyperlink{class_street}{Street}} based on the data in the line 
+\begin{DoxyParams}{Parameters}
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_street}{Street}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parser_a4cd265d02c182e14a071407408468af0}\label{class_parser_a4cd265d02c182e14a071407408468af0}} 
+\index{Parser@{Parser}!next@{next}}
+\index{next@{next}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Parser\+::next (\begin{DoxyParamCaption}\item[{unsigned long long int \&}]{elem,  }\item[{string \&}]{piece,  }\item[{string}]{separator }\end{DoxyParamCaption})}
+
+
+
+separates string based on the separator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & unsigned long long int \&elem \\
+\hline
+{\em piece} & string \&piece \\
+\hline
+{\em separator} & string separator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_af2f740981e70de7602e8c2bcb3db904e}\label{class_parser_af2f740981e70de7602e8c2bcb3db904e}} 
+\index{Parser@{Parser}!next@{next}}
+\index{next@{next}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Parser\+::next (\begin{DoxyParamCaption}\item[{double \&}]{elem,  }\item[{string \&}]{piece,  }\item[{string}]{separator }\end{DoxyParamCaption})}
+
+
+
+separates string based on the separator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & double \&elem \\
+\hline
+{\em piece} & string \&piece \\
+\hline
+{\em separator} & string separator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_a143c7f81ca7d3fb0a4013f8821126e0f}\label{class_parser_a143c7f81ca7d3fb0a4013f8821126e0f}} 
+\index{Parser@{Parser}!next@{next}}
+\index{next@{next}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Parser\+::next (\begin{DoxyParamCaption}\item[{string \&}]{piece,  }\item[{string \&}]{line,  }\item[{string}]{separator }\end{DoxyParamCaption})}
+
+
+
+separates string based on the separator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \\
+\hline
+{\em line} & \\
+\hline
+{\em separator} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_a6cb129a0533a784d9889fb522b3659f2}\label{class_parser_a6cb129a0533a784d9889fb522b3659f2}} 
+\index{Parser@{Parser}!read\+Nodes@{read\+Nodes}}
+\index{read\+Nodes@{read\+Nodes}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{read\+Nodes()}{readNodes()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ Parser\+::read\+Nodes (\begin{DoxyParamCaption}\item[{string}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns a vector with all the nodes after being created from the data read from the file with the name passed as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Node$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parser_a67de76f90c398140fcc14c9ec7d8f00d}\label{class_parser_a67de76f90c398140fcc14c9ec7d8f00d}} 
+\index{Parser@{Parser}!read\+Relations@{read\+Relations}}
+\index{read\+Relations@{read\+Relations}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{read\+Relations()}{readRelations()}}
+{\footnotesize\ttfamily void Parser\+::read\+Relations (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&}]{streets,  }\item[{vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&}]{nodes,  }\item[{vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&}]{spots }\end{DoxyParamCaption})}
+
+
+
+Reads the relations between streets and Nodes and uses that information to complete the streets and nodes objects already created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & string \\
+\hline
+{\em streets} & vector $<$\+Street$>$ \\
+\hline
+{\em nodes} & vector $<$\+Node$>$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_parser_ac393c2185887253d615692ed871823f9}\label{class_parser_ac393c2185887253d615692ed871823f9}} 
+\index{Parser@{Parser}!read\+Streets@{read\+Streets}}
+\index{read\+Streets@{read\+Streets}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{read\+Streets()}{readStreets()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ Parser\+::read\+Streets (\begin{DoxyParamCaption}\item[{string}]{file }\end{DoxyParamCaption})}
+
+
+
+Returns a vector with all the streets after being created from the data read from the file with the name passed as parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Street$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_parser_ac49eaa953c8f063c8a3119b36df32c90}\label{class_parser_ac49eaa953c8f063c8a3119b36df32c90}} 
+\index{Parser@{Parser}!valid\+String@{valid\+String}}
+\index{valid\+String@{valid\+String}!Parser@{Parser}}
+\subsubsection{\texorpdfstring{valid\+String()}{validString()}}
+{\footnotesize\ttfamily bool Parser\+::valid\+String (\begin{DoxyParamCaption}\item[{string \&}]{s }\end{DoxyParamCaption})}
+
+
+
+checks if input is valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & string \&s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if input is valid and false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Parser.\+h\item 
+src/Parser.\+cpp\end{DoxyCompactItemize}

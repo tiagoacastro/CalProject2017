@@ -1,0 +1,267 @@
+\hypertarget{class_bike_company}{}\section{Bike\+Company Class Reference}
+\label{class_bike_company}\index{Bike\+Company@{Bike\+Company}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bike_company_ab435a4495b3ae8602162a51ebf50a3f4}{Bike\+Company}} (const vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&nodes, const vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&streets, const vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&sharing\+Spots, const \mbox{\hyperlink{class_user}{User}} \&user)
+\item 
+void \mbox{\hyperlink{class_bike_company_ace655ae1ace35afcb0acb4ae842215df}{create\+Graph}} ()
+\item 
+\mbox{\hyperlink{class_graph_viewer}{Graph\+Viewer}} $\ast$ \mbox{\hyperlink{class_bike_company_a5cdaee132eda4772a117b7f36cb94de3}{print\+Graph}} ()
+\item 
+void \mbox{\hyperlink{class_bike_company_ae7994d9db29de7064da710915662bd0b}{get\+Nearest\+Sharing\+Spot}} (const \mbox{\hyperlink{class_node}{Node}} \&current\+Position)
+\item 
+\mbox{\hyperlink{class_graph}{Graph}}$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \& \mbox{\hyperlink{class_bike_company_ab60253ec9b0bb46f913609a189df4cb8}{get\+Graph}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \& \mbox{\hyperlink{class_bike_company_ae41458919c4daf896b12960c2b43d51c}{get\+Nodes}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \& \mbox{\hyperlink{class_bike_company_a545b86c3c1dbde4b8f70871b4d23be2b}{get\+Streets}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \& \mbox{\hyperlink{class_bike_company_ac361f971df61155a1763c682b28f6297}{get\+Sharing\+Spots}} ()
+\item 
+\mbox{\hyperlink{class_user}{User}} \mbox{\hyperlink{class_bike_company_a19f8b3503630ec5f5c12ead35cdbe995}{get\+User}} ()
+\item 
+int \mbox{\hyperlink{class_bike_company_a70a2863261f0b9b2087c2ed012a17434}{find\+Street\+By\+Nodes}} (int node\+Id1, int node\+Id2)
+\item 
+\mbox{\hyperlink{class_street}{Street}} \& \mbox{\hyperlink{class_bike_company_a17955d80bd12b199559b72be003f601a}{find\+Street}} (unsigned long long int id)
+\item 
+\mbox{\hyperlink{class_node}{Node}} \& \mbox{\hyperlink{class_bike_company_ac3a38462c549de8c3c58c83c5e6f6696}{find\+Node}} (unsigned long long int id)
+\item 
+\mbox{\hyperlink{class_node}{Node}} \& \mbox{\hyperlink{class_bike_company_a7adfcf36f3e55f8c3498c4b304a3d4dc}{find\+Node\+By\+Id}} (unsigned int id)
+\item 
+\mbox{\hyperlink{class_node}{Node}} \mbox{\hyperlink{class_bike_company_aa14daa601b5b33e0f4bd3c78a1ff92b8}{get\+Center}} ()
+\item 
+void \mbox{\hyperlink{class_bike_company_a6cfdaa4ec2d86097301e0aa6f00fff7e}{get\+Cheapest\+Sharing\+Spot}} (const \mbox{\hyperlink{class_node}{Node}} \&current\+Position)
+\item 
+void \mbox{\hyperlink{class_bike_company_a5619c7888aed213bee9acf09f80fbad8}{check\+Connectivity}} ()
+\item 
+int \mbox{\hyperlink{class_bike_company_a7c844e84c41eff544d58c6b964dcacf7}{exact\+Search\+Street}} (string street\+Name)
+\item 
+void \mbox{\hyperlink{class_bike_company_a626158626f8a845c8002731d74231a42}{check\+Existence\+Sharing\+Spot}} (int street\+Id1, int street\+Id2)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_bike_company_acfc5f830f69bfb5f9db3f41391a1038c}{approximate\+Search\+Street}} (string street\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bike_company_ab435a4495b3ae8602162a51ebf50a3f4}\label{class_bike_company_ab435a4495b3ae8602162a51ebf50a3f4}} 
+\index{Bike\+Company@{Bike\+Company}!Bike\+Company@{Bike\+Company}}
+\index{Bike\+Company@{Bike\+Company}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{Bike\+Company()}{BikeCompany()}}
+{\footnotesize\ttfamily Bike\+Company\+::\+Bike\+Company (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_node}{Node}} $>$ \&}]{nodes,  }\item[{const vector$<$ \mbox{\hyperlink{class_street}{Street}} $>$ \&}]{streets,  }\item[{const vector$<$ \mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}} $>$ \&}]{sharing\+Spots,  }\item[{const \mbox{\hyperlink{class_user}{User}} \&}]{user }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_bike_company}{Bike\+Company}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em nodes} & vector with all the nodes from the files (not filtered) \\
+\hline
+{\em streets} & vector with all the streets from the files (not filtered) \\
+\hline
+{\em sharing\+Spots} & vector with all the sharing spots (some of the nodes that were chosen) \\
+\hline
+{\em user} & user information \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bike_company_acfc5f830f69bfb5f9db3f41391a1038c}\label{class_bike_company_acfc5f830f69bfb5f9db3f41391a1038c}} 
+\index{Bike\+Company@{Bike\+Company}!approximate\+Search\+Street@{approximate\+Search\+Street}}
+\index{approximate\+Search\+Street@{approximate\+Search\+Street}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{approximate\+Search\+Street()}{approximateSearchStreet()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Bike\+Company\+::approximate\+Search\+Street (\begin{DoxyParamCaption}\item[{string}]{street\+Name }\end{DoxyParamCaption})}
+
+Searches in vector \textquotesingle{}streets\textquotesingle{} and prints the 3 street names more similar with street\+Name. 
+\begin{DoxyParams}{Parameters}
+{\em street\+Name} & name of the street. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with the id of the streets displayed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a5619c7888aed213bee9acf09f80fbad8}\label{class_bike_company_a5619c7888aed213bee9acf09f80fbad8}} 
+\index{Bike\+Company@{Bike\+Company}!check\+Connectivity@{check\+Connectivity}}
+\index{check\+Connectivity@{check\+Connectivity}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{check\+Connectivity()}{checkConnectivity()}}
+{\footnotesize\ttfamily void Bike\+Company\+::check\+Connectivity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check graph\textquotesingle{}s connectivity \mbox{\Hypertarget{class_bike_company_a626158626f8a845c8002731d74231a42}\label{class_bike_company_a626158626f8a845c8002731d74231a42}} 
+\index{Bike\+Company@{Bike\+Company}!check\+Existence\+Sharing\+Spot@{check\+Existence\+Sharing\+Spot}}
+\index{check\+Existence\+Sharing\+Spot@{check\+Existence\+Sharing\+Spot}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{check\+Existence\+Sharing\+Spot()}{checkExistenceSharingSpot()}}
+{\footnotesize\ttfamily void Bike\+Company\+::check\+Existence\+Sharing\+Spot (\begin{DoxyParamCaption}\item[{int}]{street\+Id1,  }\item[{int}]{street\+Id2 }\end{DoxyParamCaption})}
+
+Checks if there is a sharing spot in the intersection between the streets given as parameters. 
+\begin{DoxyParams}{Parameters}
+{\em street\+Id1} & id of street 1. \\
+\hline
+{\em street\+Id2} & id of street 2. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bike_company_ace655ae1ace35afcb0acb4ae842215df}\label{class_bike_company_ace655ae1ace35afcb0acb4ae842215df}} 
+\index{Bike\+Company@{Bike\+Company}!create\+Graph@{create\+Graph}}
+\index{create\+Graph@{create\+Graph}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{create\+Graph()}{createGraph()}}
+{\footnotesize\ttfamily void Bike\+Company\+::create\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fills graph with the vertexs and the edges \mbox{\Hypertarget{class_bike_company_a7c844e84c41eff544d58c6b964dcacf7}\label{class_bike_company_a7c844e84c41eff544d58c6b964dcacf7}} 
+\index{Bike\+Company@{Bike\+Company}!exact\+Search\+Street@{exact\+Search\+Street}}
+\index{exact\+Search\+Street@{exact\+Search\+Street}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{exact\+Search\+Street()}{exactSearchStreet()}}
+{\footnotesize\ttfamily int Bike\+Company\+::exact\+Search\+Street (\begin{DoxyParamCaption}\item[{string}]{street\+Name }\end{DoxyParamCaption})}
+
+Searches in vector \textquotesingle{}streets\textquotesingle{} if there is an exact match with street\+Name. 
+\begin{DoxyParams}{Parameters}
+{\em street\+Name} & name of street. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if the street is not found, otherwise returns the street\textquotesingle{}s id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_ac3a38462c549de8c3c58c83c5e6f6696}\label{class_bike_company_ac3a38462c549de8c3c58c83c5e6f6696}} 
+\index{Bike\+Company@{Bike\+Company}!find\+Node@{find\+Node}}
+\index{find\+Node@{find\+Node}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{find\+Node()}{findNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} \& Bike\+Company\+::find\+Node (\begin{DoxyParamCaption}\item[{unsigned long long int}]{id }\end{DoxyParamCaption})}
+
+Finds the node with the specified open street map id 
+\begin{DoxyParams}{Parameters}
+{\em id} & node id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a7adfcf36f3e55f8c3498c4b304a3d4dc}\label{class_bike_company_a7adfcf36f3e55f8c3498c4b304a3d4dc}} 
+\index{Bike\+Company@{Bike\+Company}!find\+Node\+By\+Id@{find\+Node\+By\+Id}}
+\index{find\+Node\+By\+Id@{find\+Node\+By\+Id}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{find\+Node\+By\+Id()}{findNodeById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} \& Bike\+Company\+::find\+Node\+By\+Id (\begin{DoxyParamCaption}\item[{unsigned int}]{id }\end{DoxyParamCaption})}
+
+Finds the node with the specified id 
+\begin{DoxyParams}{Parameters}
+{\em id} & node id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a17955d80bd12b199559b72be003f601a}\label{class_bike_company_a17955d80bd12b199559b72be003f601a}} 
+\index{Bike\+Company@{Bike\+Company}!find\+Street@{find\+Street}}
+\index{find\+Street@{find\+Street}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{find\+Street()}{findStreet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_street}{Street}} \& Bike\+Company\+::find\+Street (\begin{DoxyParamCaption}\item[{unsigned long long int}]{id }\end{DoxyParamCaption})}
+
+Finds the street with the specified if 
+\begin{DoxyParams}{Parameters}
+{\em id} & street id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+street 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a70a2863261f0b9b2087c2ed012a17434}\label{class_bike_company_a70a2863261f0b9b2087c2ed012a17434}} 
+\index{Bike\+Company@{Bike\+Company}!find\+Street\+By\+Nodes@{find\+Street\+By\+Nodes}}
+\index{find\+Street\+By\+Nodes@{find\+Street\+By\+Nodes}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{find\+Street\+By\+Nodes()}{findStreetByNodes()}}
+{\footnotesize\ttfamily int Bike\+Company\+::find\+Street\+By\+Nodes (\begin{DoxyParamCaption}\item[{int}]{node\+Id1,  }\item[{int}]{node\+Id2 }\end{DoxyParamCaption})}
+
+Finds a street that starts in node\+Id1 and ends in node\+Id2
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Id1} & initial node \\
+\hline
+{\em node\+Id2} & final node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+id of the street, or -\/1 if no street is found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_aa14daa601b5b33e0f4bd3c78a1ff92b8}\label{class_bike_company_aa14daa601b5b33e0f4bd3c78a1ff92b8}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Center()}{getCenter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node}{Node}} Bike\+Company\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a node that identifies the center of the graph \begin{DoxyReturn}{Returns}
+center node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a6cfdaa4ec2d86097301e0aa6f00fff7e}\label{class_bike_company_a6cfdaa4ec2d86097301e0aa6f00fff7e}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Cheapest\+Sharing\+Spot@{get\+Cheapest\+Sharing\+Spot}}
+\index{get\+Cheapest\+Sharing\+Spot@{get\+Cheapest\+Sharing\+Spot}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Cheapest\+Sharing\+Spot()}{getCheapestSharingSpot()}}
+{\footnotesize\ttfamily void Bike\+Company\+::get\+Cheapest\+Sharing\+Spot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_node}{Node}} \&}]{current\+Position }\end{DoxyParamCaption})}
+
+Finds the cheapest sharing spot and calls function to draw path to it. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & user\textquotesingle{}s current position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bike_company_ab60253ec9b0bb46f913609a189df4cb8}\label{class_bike_company_ab60253ec9b0bb46f913609a189df4cb8}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Graph()}{getGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}}$<$\mbox{\hyperlink{class_node}{Node}}$>$\& Bike\+Company\+::get\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter which returns the graph \begin{DoxyReturn}{Returns}
+graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_ae7994d9db29de7064da710915662bd0b}\label{class_bike_company_ae7994d9db29de7064da710915662bd0b}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Nearest\+Sharing\+Spot@{get\+Nearest\+Sharing\+Spot}}
+\index{get\+Nearest\+Sharing\+Spot@{get\+Nearest\+Sharing\+Spot}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Nearest\+Sharing\+Spot()}{getNearestSharingSpot()}}
+{\footnotesize\ttfamily void Bike\+Company\+::get\+Nearest\+Sharing\+Spot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_node}{Node}} \&}]{current\+Position }\end{DoxyParamCaption})}
+
+Finds the nearest sharing spot and calls function to draw path to it. 
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & user\textquotesingle{}s current position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bike_company_ae41458919c4daf896b12960c2b43d51c}\label{class_bike_company_ae41458919c4daf896b12960c2b43d51c}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Nodes@{get\+Nodes}}
+\index{get\+Nodes@{get\+Nodes}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Nodes()}{getNodes()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_node}{Node}}$>$\& Bike\+Company\+::get\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter which returns a vector with all the nodes \begin{DoxyReturn}{Returns}
+vector with all the nodes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_ac361f971df61155a1763c682b28f6297}\label{class_bike_company_ac361f971df61155a1763c682b28f6297}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Sharing\+Spots@{get\+Sharing\+Spots}}
+\index{get\+Sharing\+Spots@{get\+Sharing\+Spots}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Sharing\+Spots()}{getSharingSpots()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_sharing_spot}{Sharing\+Spot}}$>$\& Bike\+Company\+::get\+Sharing\+Spots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter which returns a vector with all the sharing spots \begin{DoxyReturn}{Returns}
+vector with all the sharing spots 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a545b86c3c1dbde4b8f70871b4d23be2b}\label{class_bike_company_a545b86c3c1dbde4b8f70871b4d23be2b}} 
+\index{Bike\+Company@{Bike\+Company}!get\+Streets@{get\+Streets}}
+\index{get\+Streets@{get\+Streets}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+Streets()}{getStreets()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_street}{Street}}$>$\& Bike\+Company\+::get\+Streets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter which returns a vector with all the streets \begin{DoxyReturn}{Returns}
+vector with all the streets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a19f8b3503630ec5f5c12ead35cdbe995}\label{class_bike_company_a19f8b3503630ec5f5c12ead35cdbe995}} 
+\index{Bike\+Company@{Bike\+Company}!get\+User@{get\+User}}
+\index{get\+User@{get\+User}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{get\+User()}{getUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user}{User}} Bike\+Company\+::get\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Getter which returns the user information \begin{DoxyReturn}{Returns}
+user information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bike_company_a5cdaee132eda4772a117b7f36cb94de3}\label{class_bike_company_a5cdaee132eda4772a117b7f36cb94de3}} 
+\index{Bike\+Company@{Bike\+Company}!print\+Graph@{print\+Graph}}
+\index{print\+Graph@{print\+Graph}!Bike\+Company@{Bike\+Company}}
+\subsubsection{\texorpdfstring{print\+Graph()}{printGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph_viewer}{Graph\+Viewer}} $\ast$ Bike\+Company\+::print\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints graph using \mbox{\hyperlink{class_graph_viewer}{Graph\+Viewer}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Bike\+Company.\+h\item 
+src/Bike\+Company.\+cpp\end{DoxyCompactItemize}

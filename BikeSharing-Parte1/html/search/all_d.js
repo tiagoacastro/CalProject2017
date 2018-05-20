@@ -16,5 +16,5 @@ var searchData=
   ['setvertexlabel',['setVertexLabel',['../class_graph_viewer.html#ac25d7d007022fda16799808ba136e909',1,'GraphViewer']]],
   ['setvertexsize',['setVertexSize',['../class_graph_viewer.html#ae930dfdfcdeb7a871eefb6028d74b9f9',1,'GraphViewer']]],
   ['sharingspot',['SharingSpot',['../class_sharing_spot.html',1,'SharingSpot'],['../class_sharing_spot.html#a1110d1c6955a7aa434a87bffb32e2ea3',1,'SharingSpot::SharingSpot()']]],
-  ['street',['Street',['../class_street.html',1,'Street'],['../class_street.html#a59896daec5696b4242376405e789aab6',1,'Street::Street(unsigned long long int osmId)'],['../class_street.html#a2b18e4f181a3ee52183b200065b6b925',1,'Street::Street(unsigned long long int osmId, string &amp;name, bool twoWays, int elevation)']]]
+  ['street',['Street',['../class_street.html',1,'Street'],['../class_street.html#a67c6b12ed40488038123d2798586a49a',1,'Street::Street()'],['../class_street.html#a5a9d10bd309a37eebd309aefb678f2fc',1,'Street::Street(string &amp;name, bool twoWays, int elevation)']]]
 ];

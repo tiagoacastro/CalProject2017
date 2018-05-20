@@ -1,0 +1,191 @@
+\hypertarget{class_node}{}\section{Node Class Reference}
+\label{class_node}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_node}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_a082d5efb0be81faaeb35dc02b2a4fc76}{Node}} ()=default
+\item 
+\mbox{\hyperlink{class_node_af4abc294f8eadd6fbf4714150838c709}{Node}} (double latitude, double longitude)
+\item 
+unsigned int \mbox{\hyperlink{class_node_af9b4c1c72ce14b69f5e99deb4440f489}{get\+Id}} () const
+\item 
+double \mbox{\hyperlink{class_node_ad4a79ebbcca46dae4638ffbe4d732399}{get\+Longitude}} () const
+\item 
+double \mbox{\hyperlink{class_node_a6a76240688eddc8a2942618074e28c92}{get\+Latitude}} () const
+\item 
+bool \mbox{\hyperlink{class_node_ad5e2b0cf9850f22ac9668971f66759dc}{operator==}} (const \mbox{\hyperlink{class_node}{Node}} \&n2) const
+\item 
+double \mbox{\hyperlink{class_node_a765bf631776ac8efed4b5626582643ad}{calculate\+Distance}} (\mbox{\hyperlink{class_node}{Node}} \&n2)
+\item 
+void \mbox{\hyperlink{class_node_aafb92e93512d42b7f60bf18878003214}{add\+Street}} (int street\+ID)
+\item 
+const vector$<$ int $>$ \& \mbox{\hyperlink{class_node_ae96d5a45681f9d0517cf927514aec7f5}{get\+Streets}} () const
+\item 
+void \mbox{\hyperlink{class_node_a1c64b31b2afe1d39a10809da9198a016}{set\+Longitude}} (double longitude)
+\item 
+void \mbox{\hyperlink{class_node_ac62ad99961481d9e4b21dd4332717927}{set\+Latitude}} (double latitude)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_ac862318be744cac98cdba7c7648a04d4}\label{class_node_ac862318be744cac98cdba7c7648a04d4}} 
+static unsigned int {\bfseries count} = 1
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_node_adb90577d9d796c4ccbccf41ce2efc6c9}\label{class_node_adb90577d9d796c4ccbccf41ce2efc6c9}} 
+unsigned int {\bfseries id}
+\item 
+\mbox{\Hypertarget{class_node_af1772ed9e687d1e230f21c8fdf955ee9}\label{class_node_af1772ed9e687d1e230f21c8fdf955ee9}} 
+double {\bfseries longitude}
+\item 
+\mbox{\Hypertarget{class_node_a18e537ee3be0b0f494e54d19486b532b}\label{class_node_a18e537ee3be0b0f494e54d19486b532b}} 
+double {\bfseries latitude}
+\item 
+\mbox{\Hypertarget{class_node_ae028d72126fae2e69f65b230ef8b03ce}\label{class_node_ae028d72126fae2e69f65b230ef8b03ce}} 
+vector$<$ int $>$ {\bfseries streets}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_node}{Node}} class containing node information and a vector with the ids of the streets that pass throught it 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_node_a082d5efb0be81faaeb35dc02b2a4fc76}\label{class_node_a082d5efb0be81faaeb35dc02b2a4fc76}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\hyperlink{class_node}{Node}} default constructor \mbox{\Hypertarget{class_node_af4abc294f8eadd6fbf4714150838c709}\label{class_node_af4abc294f8eadd6fbf4714150838c709}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_node}{Node}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em osm\+Id} & node osm id \\
+\hline
+{\em latitude} & node latitude \\
+\hline
+{\em longitude} & node longitude \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_node_aafb92e93512d42b7f60bf18878003214}\label{class_node_aafb92e93512d42b7f60bf18878003214}} 
+\index{Node@{Node}!add\+Street@{add\+Street}}
+\index{add\+Street@{add\+Street}!Node@{Node}}
+\subsubsection{\texorpdfstring{add\+Street()}{addStreet()}}
+{\footnotesize\ttfamily void Node\+::add\+Street (\begin{DoxyParamCaption}\item[{int}]{street\+ID }\end{DoxyParamCaption})}
+
+Adds a street ID do the node 
+\begin{DoxyParams}{Parameters}
+{\em int} & street id to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a765bf631776ac8efed4b5626582643ad}\label{class_node_a765bf631776ac8efed4b5626582643ad}} 
+\index{Node@{Node}!calculate\+Distance@{calculate\+Distance}}
+\index{calculate\+Distance@{calculate\+Distance}!Node@{Node}}
+\subsubsection{\texorpdfstring{calculate\+Distance()}{calculateDistance()}}
+{\footnotesize\ttfamily double Node\+::calculate\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}} \&}]{n2 }\end{DoxyParamCaption})}
+
+Calculates the distance between two nodes. 
+\begin{DoxyParams}{Parameters}
+{\em n2} & Second node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between both nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_af9b4c1c72ce14b69f5e99deb4440f489}\label{class_node_af9b4c1c72ce14b69f5e99deb4440f489}} 
+\index{Node@{Node}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily unsigned int Node\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the node id \begin{DoxyReturn}{Returns}
+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_a6a76240688eddc8a2942618074e28c92}\label{class_node_a6a76240688eddc8a2942618074e28c92}} 
+\index{Node@{Node}!get\+Latitude@{get\+Latitude}}
+\index{get\+Latitude@{get\+Latitude}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Latitude()}{getLatitude()}}
+{\footnotesize\ttfamily double Node\+::get\+Latitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the node Latitude \begin{DoxyReturn}{Returns}
+latitude 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_ad4a79ebbcca46dae4638ffbe4d732399}\label{class_node_ad4a79ebbcca46dae4638ffbe4d732399}} 
+\index{Node@{Node}!get\+Longitude@{get\+Longitude}}
+\index{get\+Longitude@{get\+Longitude}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Longitude()}{getLongitude()}}
+{\footnotesize\ttfamily double Node\+::get\+Longitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter which returns the node Longitude \begin{DoxyReturn}{Returns}
+longitude 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_ae96d5a45681f9d0517cf927514aec7f5}\label{class_node_ae96d5a45681f9d0517cf927514aec7f5}} 
+\index{Node@{Node}!get\+Streets@{get\+Streets}}
+\index{get\+Streets@{get\+Streets}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Streets()}{getStreets()}}
+{\footnotesize\ttfamily const vector$<$ int $>$ \& Node\+::get\+Streets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for streets id \begin{DoxyReturn}{Returns}
+street id vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_ad5e2b0cf9850f22ac9668971f66759dc}\label{class_node_ad5e2b0cf9850f22ac9668971f66759dc}} 
+\index{Node@{Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Node@{Node}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_node}{Node}} \&}]{n2 }\end{DoxyParamCaption}) const}
+
+Overload for the \textquotesingle{}==\textquotesingle{} operator for the \mbox{\hyperlink{class_node}{Node}} class 
+\begin{DoxyParams}{Parameters}
+{\em n2} & \mbox{\hyperlink{class_node}{Node}} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if both nodes have same id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_node_ac62ad99961481d9e4b21dd4332717927}\label{class_node_ac62ad99961481d9e4b21dd4332717927}} 
+\index{Node@{Node}!set\+Latitude@{set\+Latitude}}
+\index{set\+Latitude@{set\+Latitude}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Latitude()}{setLatitude()}}
+{\footnotesize\ttfamily void Node\+::set\+Latitude (\begin{DoxyParamCaption}\item[{double}]{latitude }\end{DoxyParamCaption})}
+
+Setter for latitude 
+\begin{DoxyParams}{Parameters}
+{\em latitude} & latitude \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_node_a1c64b31b2afe1d39a10809da9198a016}\label{class_node_a1c64b31b2afe1d39a10809da9198a016}} 
+\index{Node@{Node}!set\+Longitude@{set\+Longitude}}
+\index{set\+Longitude@{set\+Longitude}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Longitude()}{setLongitude()}}
+{\footnotesize\ttfamily void Node\+::set\+Longitude (\begin{DoxyParamCaption}\item[{double}]{longitude }\end{DoxyParamCaption})}
+
+Setter for longitude 
+\begin{DoxyParams}{Parameters}
+{\em longitude} & longitude \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Node.\+h\item 
+src/Node.\+cpp\end{DoxyCompactItemize}

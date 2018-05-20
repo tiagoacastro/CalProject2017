@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Bike Sharing: Street Class Reference</title>
+<title>CAL Project - Bike Sharing: Street Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Bike Sharing
+   <div id="projectname">CAL Project - Bike Sharing
    </div>
-   <div id="projectbrief">CAL T3 G5</div>
   </td>
  </tr>
  </tbody>
@@ -70,17 +69,17 @@ $(function() {
 <div class="title">Street Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_street_8h_source.html">Street.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a59896daec5696b4242376405e789aab6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a59896daec5696b4242376405e789aab6">Street</a> (unsigned long long int osmId)</td></tr>
-<tr class="separator:a59896daec5696b4242376405e789aab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b18e4f181a3ee52183b200065b6b925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a2b18e4f181a3ee52183b200065b6b925">Street</a> (unsigned long long int osmId, string &amp;name, bool twoWays, int elevation)</td></tr>
-<tr class="separator:a2b18e4f181a3ee52183b200065b6b925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c6b12ed40488038123d2798586a49a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a67c6b12ed40488038123d2798586a49a">Street</a> ()</td></tr>
+<tr class="separator:a67c6b12ed40488038123d2798586a49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9d10bd309a37eebd309aefb678f2fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a5a9d10bd309a37eebd309aefb678f2fc">Street</a> (string &amp;name, bool twoWays, int elevation)</td></tr>
+<tr class="separator:a5a9d10bd309a37eebd309aefb678f2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5bd31425eba6d72a3c81505e720249b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#af5bd31425eba6d72a3c81505e720249b">getId</a> () const</td></tr>
 <tr class="separator:af5bd31425eba6d72a3c81505e720249b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696046dd852490785993a665122f6976"><td class="memItemLeft" align="right" valign="top">unsigned long long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a696046dd852490785993a665122f6976">getOsmId</a> () const</td></tr>
-<tr class="separator:a696046dd852490785993a665122f6976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd581ec643416f80695460ca8c19c73"><td class="memItemLeft" align="right" valign="top">const string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#afcd581ec643416f80695460ca8c19c73">getName</a> () const</td></tr>
 <tr class="separator:afcd581ec643416f80695460ca8c19c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2948b1e4a058de686bd24af9fe5fa1e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_street.html#a2948b1e4a058de686bd24af9fe5fa1e0">isTwoWays</a> () const</td></tr>
@@ -110,9 +109,11 @@ Static Public Attributes</h2></td></tr>
 static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> = 1</td></tr>
 <tr class="separator:aea6a60e70d589d29492fec22554cc513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a59896daec5696b4242376405e789aab6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59896daec5696b4242376405e789aab6">&#9670;&nbsp;</a></span>Street() <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_street.html">Street</a> class containing all of the street info and a vector with all the nodes in it ordered </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a67c6b12ed40488038123d2798586a49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c6b12ed40488038123d2798586a49a">&#9670;&nbsp;</a></span>Street() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,8 +124,7 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
         <tr>
           <td class="memname">Street::Street </td>
           <td>(</td>
-          <td class="paramtype">unsigned long long int&#160;</td>
-          <td class="paramname"><em>osmId</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -134,17 +134,12 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="class_street.html">Street</a> constructor with id </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">osmId</td><td>street osm id </td></tr>
-  </table>
-  </dd>
-</dl>
+<p><a class="el" href="class_street.html">Street</a> constructor with id </p>
 
 </div>
 </div>
-<a id="a2b18e4f181a3ee52183b200065b6b925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b18e4f181a3ee52183b200065b6b925">&#9670;&nbsp;</a></span>Street() <span class="overload">[2/2]</span></h2>
+<a id="a5a9d10bd309a37eebd309aefb678f2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9d10bd309a37eebd309aefb678f2fc">&#9670;&nbsp;</a></span>Street() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,12 +147,6 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
         <tr>
           <td class="memname">Street::Street </td>
           <td>(</td>
-          <td class="paramtype">unsigned long long int&#160;</td>
-          <td class="paramname"><em>osmId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
@@ -183,7 +172,6 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
 <p><a class="el" href="class_street.html">Street</a> constructor where the slope is randomly calculated </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elevation</td><td>int elevation </td></tr>
-    <tr><td class="paramname">id</td><td>street id </td></tr>
     <tr><td class="paramname">name</td><td>street name </td></tr>
     <tr><td class="paramname">twoWays</td><td>flag that checks if the street is both ways </td></tr>
   </table>
@@ -353,24 +341,6 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
 
 </div>
 </div>
-<a id="a696046dd852490785993a665122f6976"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a696046dd852490785993a665122f6976">&#9670;&nbsp;</a></span>getOsmId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned long long int Street::getOsmId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Getter which returns the street Open <a class="el" href="class_street.html">Street</a> Maps id </p><dl class="section return"><dt>Returns</dt><dd>id </dd></dl>
-
-</div>
-</div>
 <a id="a2948b1e4a058de686bd24af9fe5fa1e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2948b1e4a058de686bd24af9fe5fa1e0">&#9670;&nbsp;</a></span>isTwoWays()</h2>
 
@@ -463,8 +433,8 @@ static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>count<
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>BikeSharing-Parte1/src/<a class="el" href="_street_8h_source.html">Street.h</a></li>
-<li>BikeSharing-Parte1/src/Street.cpp</li>
+<li>src/<a class="el" href="_street_8h_source.html">Street.h</a></li>
+<li>src/Street.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
